@@ -1,0 +1,36 @@
+@use 'global' as *;
+
+.section-title {
+
+}
+
+.section-title__english {
+    font-family: $gotu-font-family;
+    font-size: rem(32);
+    line-height: rem(40);
+    text-align: center;
+    @include mq(md) {
+        font-size: rem(40);
+    }
+
+}
+
+.section-title__english::first-letter {
+    text-transform: uppercase;
+    color:$c-accent;
+
+}
+
+
+.section-title__japanese {
+    margin-top: rem(4);
+    text-align: center;
+    font-size: rem(12);
+    line-height: rem(18);
+    color:$c-accent;
+    @include mq(md) {
+        margin-top: rem(8);
+        font-size: rem(18);
+    }
+}
+

@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.test {
+    color:$black;
+}
+
+.test2 {
+    font-family: $serif-font-family;
+}
+
+.test3 {
+    font-family: $gotu-font-family;
+}

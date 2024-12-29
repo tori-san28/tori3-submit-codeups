@@ -1,0 +1,60 @@
+@use 'global' as *;
+
+.pc-nav {
+
+}
+.pc-nav__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+.pc-nav__item {
+    height: inherit;
+    color:$white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.pc-nav__item + .pc-nav__item {
+    margin-left: rem(40);
+}
+
+.pc-nav__item::after {
+    position: absolute;
+    bottom: rem(20);
+    left: 0;
+    content: '';
+    width: 100%;
+    height: rem(2);
+    background: $c-accent;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+
+.pc-nav__item:hover::after {
+    transform: scale(1, 1);
+}
+
+
+.pc-nav__title-english {
+    font-family: $gotu-font-family;
+    font-size: rem(18);
+}
+
+.pc-nav__title-english::first-letter {
+    text-transform: uppercase;
+}
+
+.pc-nav__title-english--allUpper {
+    text-transform: uppercase;
+}
+
+.pc-nav__title-japanese {
+    font-size: rem(10);
+}

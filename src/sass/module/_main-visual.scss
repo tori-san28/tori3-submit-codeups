@@ -1,0 +1,40 @@
+@use 'global' as *;
+
+.main-visual__img {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/common/mv-sp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-visual__img--2 {
+    background-image: url(../images/common/mv2-sp.png);
+}
+
+.main-visual__img--3 {
+    background-image: url(../images/common/mv3-sp.png);
+}
+
+.main-visual__img--4 {
+    background-image: url(../images/common/mv4-sp.png);
+}
+
+.main-visual__header {
+    color:$white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-visual__title {
+    width: rem(248);
+}
+
+.main-visual__subtitle {
+    font-family: $gotu-font-family;
+    font-size: rem(20);
+}
+
