@@ -21,4 +21,14 @@ $('.js-hamburger').on('click', function () {
     loop: true,
   });
 
+  var swiper02 = new Swiper(".js-campaign", {
+    spaceBetween: 24,
+    centeredSlides: false,
+    loop: true,
+    navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+  });
+
 });
