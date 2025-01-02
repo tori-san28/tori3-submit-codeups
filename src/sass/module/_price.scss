@@ -52,24 +52,29 @@
     margin-top: rem(40);
 }
 
-.price__img {
-   position: relative;
-   width: 100%;
-   @include mq(md) {
-    flex:0 1 rem(492);
-   }
+.price__img-sp {
+    aspect-ratio: 345 / 227;
+    overflow:hidden;
 }
 
-.price__img::before {
+// .price__img-sp img{
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
+
+.price__img-pc-outer {
+    flex:0 1 rem(492);
+    position: relative;
+}
+
+.price__img-pc-outer::before {
     content:"";
     display: block;
-    padding-top: 65.8%;
-    @include mq(md) {
-        padding-top: 151.62%;
-    }
+    padding-top: 151.62%;
 }
 
-.price__img img {
+.price__img-pc-inner {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -78,6 +83,14 @@
     height: 100%;
     object-fit: cover;
 }
+
+// アニメーションのため削除
+// .price__img-sp-inner img{
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
+
 
 .price__button {
     margin-top: rem(40);
