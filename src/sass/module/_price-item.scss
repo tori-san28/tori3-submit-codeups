@@ -1,0 +1,31 @@
+@use 'global' as *;
+
+.price-item {
+
+}
+
+.price-item__title {
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 1.5;
+}
+
+.price-item__contents {
+    margin-top: rem(4);
+    border-top: 1px solid $c-accent;
+}
+
+.price-item__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-item__term {
+    font-size: rem(14);
+    line-height: calc(24/14);
+}
+
+.price-item__description {
+    font-size: rem(14);
+    line-height: calc(24/14);
+}

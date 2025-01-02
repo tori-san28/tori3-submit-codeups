@@ -1,19 +1,28 @@
 @use 'global' as *;
 
-.campaign {
+.campaign__inner {
 
 }
 
-.campaign__title {
-
-}
-
-.campaign__items {
-
+.campaign__contents {
+    margin-top: rem(24);
+    width: 100%;
+    padding-left: $padding-sp;
+    @include mq(md) {
+        margin-left: auto;
+        margin-right: 0;
+        max-width: calc(50vw + ($inner * 0.5) + $padding-pc);
+        padding-left: $padding-pc;
+        position: relative;
+    }
 }
 
 .campaign__item {
-
+    max-width: rem(280);
+    width: 100%;
+    @include mq(md) {
+        max-width: rem(333);
+    }
 }
 
 .campaign__button {

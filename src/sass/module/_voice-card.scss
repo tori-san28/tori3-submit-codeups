@@ -1,0 +1,60 @@
+@use 'global' as *;
+
+.voice-card {
+    padding:rem(24) rem(16);
+    border:rem(1) solid $black;
+    box-shadow: rem(2) rem(2) rem(10) rgba(0,0,0,0.25);
+}
+
+.voice-card__wrapper {
+    display: flex;
+    gap:rem(13);
+}
+
+.voice-card__contents {
+    border-bottom: rem(1) solid $c-accent;
+    flex:1 0 rem(149);
+}
+
+.voice-card__age {
+    font-size: rem(12);
+    color:$c-grey3;
+    line-height: 1.5;
+}
+
+.voice-card__business-type {
+    display: inline-block;
+    padding:rem(4) rem(12);
+    color:$c-accent;
+    font-size: rem(12);
+    line-height: calc(21 / 12);
+    border: 1px solid $c-accent;
+}
+
+.voice-card__card-title {
+    margin: rem(4) 0;
+    font-size: rem(16);
+    font-weight: $medium;
+    color:$c-grey3;
+    line-height:1.25;
+    margin-bottom: auto;
+}
+
+.voice-card__img {
+    flex:0 0 rem(151);
+    aspect-ratio: 151 / 117;
+    overflow:hidden;
+}
+
+.voice-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.voice-card__text {
+    margin-top: rem(16);
+    font-size: rem(16);
+    line-height: 1.5;
+}
+

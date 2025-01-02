@@ -1,0 +1,67 @@
+@use 'global' as *;
+
+.voice {
+    @include mq(md) {
+        position: relative;
+    }
+}
+
+.voice::before {
+    @include mq(md) {
+        content:"";
+        position: absolute;
+        z-index: -1;
+        background-image: url(../images/common/voice-fish-right.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(301);
+        height: rem(138);
+        top:rem(-104);
+        left:rem(100);
+    }
+}
+
+.voice::after {
+    @include mq(md) {
+        content:"";
+        position: absolute;
+        z-index: -1;
+        background-image: url(../images/common/voice-tatsu.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(71);
+        height: rem(162);
+        bottom:rem(-60);
+        right:rem(180);
+    }
+}
+
+.voice__inner {
+
+}
+
+.voice__title {
+
+}
+
+.voice__cards {
+    margin-top: rem(40);
+    display: grid;
+    grid-template-columns:1fr;
+    gap:rem(40);
+    @include mq(md) {
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+.voice__card {
+   
+}
+
+.voice__button {
+    margin-top:rem(40);
+    text-align: center;
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}

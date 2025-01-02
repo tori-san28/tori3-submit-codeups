@@ -1,0 +1,27 @@
+@use 'global' as *;
+
+.swiper-button-prev {
+    position: absolute;
+    width: rem(80);
+    height: rem(80);
+    transform: rotate(-90deg) scaleX(-1);
+    top:rem(-75);
+    left:calc(50vw + #{rem(110)});
+}
+
+.swiper-button-prev::after {
+    content:"";
+}
+
+.swiper-button-next {
+    position: absolute;
+    width: rem(80);
+    height: rem(80);
+    transform: rotate(90deg);
+    top:rem(-75);
+    right:rem(220);
+}
+
+.swiper-button-next::after {
+    content:"";
+}
