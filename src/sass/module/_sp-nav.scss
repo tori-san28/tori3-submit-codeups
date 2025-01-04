@@ -23,8 +23,8 @@
     list-style-position: outside;
 }
 
-.sp-nav__item + .sp-nav__item{
-    margin-top: rem(38);
+.sp-nav__item:nth-child(n+2){
+    margin-top: rem(34.6);
 }
 
 .sp-nav__item-link {
@@ -46,16 +46,21 @@
     left:rem(-22);
 }
 
+.sp-nav__item-link--span {
+    display: inline-block;
+}
 
 .sp-nav__sub-items {
-
+    margin-top: rem(20);
+    margin-left: rem(0);
 }
 
 .sp-nav__sub-item {
-    margin-top: rem(24);
     font-size: rem(16);
     font-weight: $normal;
     line-height: calc(18/16);
-    //padding-left: rem(22);
 }
 
+.sp-nav__sub-item:nth-child(n+2) {
+    margin-top: rem(24);
+}

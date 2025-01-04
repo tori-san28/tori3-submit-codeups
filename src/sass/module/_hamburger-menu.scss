@@ -30,9 +30,13 @@ $drawer-color: $white; //ドロワー線の色
     top: 0;
    }
    /*is-OPEN時の動き*/
+   .hamburger-menu.is-open {
+    margin-right: rem(-4);
+   }
    .hamburger-menu.is-open span:nth-child(1) {
-    top: rem(11.5);
-    transform: rotate(45deg);
+    top: rem(12);
+    transform: rotate(36.87deg);
+    width: rem(40);
    }
    
    .hamburger-menu.is-open span:nth-child(2) {
@@ -41,7 +45,8 @@ $drawer-color: $white; //ドロワー線の色
    }
    
    .hamburger-menu.is-open span:nth-child(3) {
-    top: rem(-12.5);
-    transform: rotate(-45deg);
+    top: rem(-12);
+    transform: rotate(-36.87deg);
+    width: rem(40);
    }
    
