@@ -16,7 +16,7 @@
         background-size: contain;
         width: rem(301);
         height: rem(138);
-        top:rem(-104);
+        top:rem(-112);
         left:rem(100);
     }
 }
@@ -31,7 +31,7 @@
         background-size: contain;
         width: rem(71);
         height: rem(162);
-        bottom:rem(-60);
+        bottom:rem(-68);
         right:rem(180);
     }
 }
@@ -51,6 +51,7 @@
     gap:rem(40);
     @include mq(md) {
         grid-template-columns:1fr 1fr;
+        margin-top: rem(32);
     }
 }
 

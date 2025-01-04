@@ -8,6 +8,7 @@
     background-size: cover;
     @include mq(md) {
         background-image: url(../images/common/mv-pc.jpg);
+        height: calc(768 / 1440) * 100vw;
     }
 }
 
@@ -43,10 +44,17 @@
 
 .main-visual-card__title {
     width: rem(248);
+    @include mq(md) {
+        width: rem(496);
+        margin-top: rem(16);
+    }
 }
 
 .main-visual-card__subtitle {
     font-family: $gotu-font-family;
     font-size: rem(20);
+    @include mq(md) {
+        
+    }
 }
 

@@ -16,10 +16,10 @@ $('.js-hamburger').on('click', function () {
 
   //swiper
   var swiper01 = new Swiper(".js-main-visual-swiper", {
-    autoplay: {
-      delay: 5000,
-    },
-    loop: true,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    //loop: true,
   });
 
   var swiper02 = new Swiper(".js-campaign", {
@@ -35,41 +35,36 @@ $('.js-hamburger').on('click', function () {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
         },
-    breakpoints: {
-      768: {
-        navigation: {
-          nextEl:"",
-          prevEl:"",
-        },
-      }
-    },
   });
 
-  //アニメーション
   //要素の取得とスピードの設定
   var box = $('.colorbox'),
-  speed = 700;  
-
+      speed = 700;  
+   
   //.colorboxの付いた全ての要素に対して下記の処理を行う
-  box.each(function(){
-  $(this).append('<div class="color"></div>')
-  var color = $(this).find($('.color')),
-  image = $(this).find('img');
-  var counter = 0;
-
-  image.css('opacity','0');
-  color.css('width','0%');
-  inviewを使って背景色が画面に現れたら処理をする
-  color.on('inview', function(){
-      if(counter == 0){
-        $(this).delay(200).animate({'width':'100%'},speed,function(){
-                image.css('opacity','1');
-                $(this).css({'left':'0' , 'right':'auto'});
-                $(this).animate({'width':'0%'},speed);
-              })
-          counter = 1;
-        }
-  });
-  });
+      box.each(function(){
+          //背景色となるdiv要素を追加
+          $(this).append('<div class="color"></div>')
+          var color = $(this).find($('.color')),
+          image = $(this).find('img');
+          var counter = 0;
+      　 //最初は画像を透明、幅を０％にする。
+          image.css('opacity','0');
+          color.css('width','0%');
+          //inviewを使って背景色が画面に現れたら処理をする
+          //widthを0から100％に伸びる。100%になったら画像を表示（opactity:1）
+          //left:0(right:auto)と切り替え、widthを100%から0%へ縮める
+          //counterを1にして繰り返ししないようにする
+          color.on('inview', function(){
+              if(counter == 0){
+            $(this).delay(200).animate({'width':'100%'},speed,function(){
+                        image.css('opacity','1');
+                        $(this).css({'left':'0' , 'right':'auto'});
+                        $(this).animate({'width':'0%'},speed);
+                      })
+                  counter = 1;
+                }
+          });
+      });
 
 });

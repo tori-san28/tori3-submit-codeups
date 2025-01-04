@@ -13,9 +13,10 @@
 }
 
 .about-us__contents {
-    margin-top: rem(24);
+    margin-top: rem(32);
     @include mq(md) {
         position: relative;
+        margin-top: rem(40);
     }
 }
 
@@ -52,9 +53,8 @@
         max-width: rem(840);
         width: 100%;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: rem(188);
+        right:calc(40 / 1080 * 100%);
     }
 }
 
@@ -67,6 +67,8 @@
         font-size: rem(80);
         line-height: calc(100 / 80);
         flex:0 0 rem(400);
+        color:$white;
+        margin-top: rem(12);
     }
 }
 
@@ -88,9 +90,11 @@
 
 .about-us__button {
     margin-top: rem(50);
+    margin-right: rem(16);
     text-align: center;
     @include mq(md) {
-        margin-top: rem(40);
+        margin-top: rem(36.8);
+        margin-right: 0;
     }
 }
 

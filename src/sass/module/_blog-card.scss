@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .blog-card {
-    padding:rem(16) rem(16) rem(24);
+    padding:rem(16.8) rem(20.8) rem(24);
     width: 100%;
     border:rem(1) solid $black;
     box-shadow: rem(2) rem(2) rem(10) rgba(0,0,0,0.25);
@@ -34,6 +34,9 @@
     font-size: rem(16);
     font-weight: $medium;
     line-height: 1.5;
+    @include mq(md) {
+        margin-left: rem(-5);
+    }
 
 }
 
@@ -43,4 +46,10 @@
     padding-top: rem(16);
     font-size: rem(16);
     line-height: 1.5;
+    letter-spacing: 0.01em;
+    @include mq(md) {
+        padding-top: rem(18);
+        margin-left: rem(-4);
+        letter-spacing: 0;
+    }
 }

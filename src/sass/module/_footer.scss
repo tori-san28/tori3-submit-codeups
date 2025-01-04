@@ -4,6 +4,13 @@
     background-color: $c-accent;
     padding: rem(48) 0 rem(56);
     color:$white;
+    @include mq(md) {
+        padding-top: rem(80);
+    }
+}
+
+.footer__contents {
+
 }
 
 .footer__header {
@@ -27,18 +34,22 @@
 }
 
 .footer__snss {
-    margin-top: rem(16);
+    margin-top: rem(17.6);
     display: flex;
-    gap:rem(16);
+    gap:rem(19.2);
     align-items: center;
+    @include mq(md) {
+        margin-top: rem(28);
+        gap:rem(24);
+    }
 }
 
 .footer__sns1 {
-    width: rem(24);
-    height: rem(24);
+    width: rem(22);
+    height: rem(22);
     @include mq(md) {
-        width: rem(32);
-        height: rem(32);
+        width: rem(26);
+        height: rem(26);
     }
 }
 
@@ -52,7 +63,10 @@
 }
 
 .footer__nav {
-    margin-top: rem(35);
+    margin-top: rem(38.4);
+    @include mq(md) {
+        margin-top: rem(22.4);
+    }
 }
 
 
@@ -60,8 +74,10 @@
     margin-top: rem(40);
     font-size: rem(12);
     line-height: 1.5;
+    font-family: $gotu-font-family;
     text-align: center;
     @include mq(md) {
+        margin-top: rem(80);
         font-size: rem(14);
         line-height: calc(18 / 14);
     }

@@ -13,14 +13,13 @@
     background-size: contain;
     width: rem(109);
     height: rem(50);
-    top:rem(-25);
+    top:rem(-26);
     right:calc(50% - #{rem(170)});
     @include mq(md) {
-        width: rem(301);
-        height: rem(138);
-        right: rem(40);
+        width: rem(309);
+        height: rem(146);
+        right: rem(48);
         top:rem(-40);
-
     }
 }
 
@@ -30,7 +29,7 @@
         border:rem(1) solid $black;
         box-shadow: rem(4) rem(4) rem(10) rgba(0,0,0,0.25);
         padding-top: rem(80);
-        padding-bottom: rem(80);
+        padding-bottom: rem(64);
         padding-left: calc(50 / strip-unit($inner) * 100%);
         padding-right: calc(112 / strip-unit($inner) * 100%);
     }
@@ -53,18 +52,18 @@
 }
 
 .contact__link {
-    margin-top: rem(40);
+    margin-top: rem(24);
     @include mq(md) {
-        margin-top: 0;
+        margin-top: rem(20);
         flex:0 0 rem(315);
     }
 }
 
 .contact__back-to-top {
-    margin-top: rem(36);
+    margin-top: rem(40);
     margin-left: auto;
     margin-right: rem(15);
-    margin-bottom: rem(16);
+    margin-bottom: rem(14.4);
     display: block;
     width: rem(48);
     height: rem(48);
@@ -72,9 +71,8 @@
     @include mq(md) {
         margin-top: rem(60);
         margin-right: rem(20);
-        margin-top: rem(20);
-        width: rem(80);
-        height: rem(80);
+        width: rem(88);
+        height: rem(88);
         
     }
 }

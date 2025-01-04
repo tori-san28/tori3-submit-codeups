@@ -14,14 +14,14 @@
     }
 }
 
-.section-title__english--big {
-    font-size: rem(80);
-    line-height: 1;
-    @include mq(md) {
-       font-size: rem(80);
-       line-height: 1;
-    }
-}
+// .section-title__english--big {
+//     font-size: rem(80);
+//     line-height: 1;
+//     @include mq(md) {
+//        font-size: rem(80);
+//        line-height: 1;
+//     }
+// }
 
 .section-title__english::first-letter {
     text-transform: uppercase;
@@ -42,7 +42,6 @@
     color:$c-accent;
     @include mq(md) {
         margin-top: rem(8);
-        font-size: rem(18);
     }
 }
 

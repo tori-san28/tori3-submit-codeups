@@ -19,6 +19,7 @@
     @include mq(md) {
         display: flex;
         gap:calc(21 / 440 * 100%);
+        padding-top: rem(24);
     }
 }
 
@@ -26,23 +27,36 @@
     text-align: center;
     @include mq(md) {
         flex:0 0 rem(146);
+        text-align: left;
+        margin-top: rem(2);
     }
 }
 
-.contact-location__address,
-.contact-location__tel,
-.contact-location__hours,
-.contact-location__close-days {
+.contact-location__text {
     font-size: rem(16);
     line-height: 1.5;
 }
 
+.contact-location__text:first-child {
+    padding-right: rem(8);
+    @include mq(md) {
+        padding-right: 0;
+    }
+}
+.contact-location__text + .contact-location__text {
+    margin-top: rem(4);
+}
+
 .contact-location__map {
+    margin-top: rem(16);
     position: relative;
     width: 100%;
     background-color: #d9d9d9;
+    border:1px solid $black;
+    box-shadow:0 rem(4) rem(4) rgba(0,0,0,0.25) ;
     @include mq(md) {
         flex:0 1 rem(273);
+        margin-top: 0;
     }
 }
 

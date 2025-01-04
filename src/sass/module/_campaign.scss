@@ -5,10 +5,11 @@
 }
 
 .campaign__contents {
-    margin-top: rem(24);
+    margin-top: rem(27.2);
     width: 100%;
     padding-left: $padding-sp;
     @include mq(md) {
+        margin-top: rem(38);
         margin-left: auto;
         margin-right: 0;
         max-width: calc(50vw + ($inner * 0.5) + $padding-pc);
@@ -28,4 +29,7 @@
 .campaign__button {
     margin-top: rem(40);
     text-align: center;
+    @include mq(md) {
+        margin-top: rem(80);
+    }
 }

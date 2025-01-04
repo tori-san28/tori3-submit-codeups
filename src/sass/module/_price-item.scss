@@ -16,6 +16,7 @@
 }
 
 .price-item__list {
+    margin-top: rem(8);
     display: flex;
     justify-content: space-between;
 }
@@ -23,9 +24,17 @@
 .price-item__term {
     font-size: rem(14);
     line-height: calc(24/14);
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: 1.5;
+    }
 }
 
 .price-item__description {
     font-size: rem(14);
     line-height: calc(24/14);
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: 1.5;
+    }
 }
