@@ -18,7 +18,7 @@
     @include mq(md) {
         width: rem(309);
         height: rem(146);
-        right: rem(48);
+        right:max(calc(50% - #{rem(672)}),rem(48));
         top:rem(-40);
     }
 }

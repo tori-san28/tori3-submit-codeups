@@ -16,10 +16,10 @@ $('.js-hamburger').on('click', function () {
 
   //swiper
   var swiper01 = new Swiper(".js-main-visual-swiper", {
-    // autoplay: {
-    //   delay: 5000,
-    // },
-    // loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    loop: true,
   });
 
   var swiper02 = new Swiper(".js-campaign", {
