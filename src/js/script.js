@@ -19,15 +19,34 @@ $('.js-hamburger').on('click', function () {
     // autoplay: {
     //   delay: 5000,
     // },
-    //loop: true,
+    // loop: true,
   });
 
   var swiper02 = new Swiper(".js-campaign", {
     spaceBetween: 24,
+    slidesPerView: 1.25,
     breakpoints: {
+      500: {
+        spaceBetween: 24,
+        slidesPerView: 2,
+      },
       768: {
         spaceBetween: 40,
-       }
+        slidesPerView: 2.5,
+      },
+      900: {
+        spaceBetween: 40,
+        slidesPerView: 3,
+      },
+      1250: {
+        spaceBetween: 40,
+        slidesPerView: 3.5,
+       },
+      1600: {
+        spaceBetween: 40,
+        slidesPerView: 4,
+       },
+      
   },
     centeredSlides: false,
     loop: true,

@@ -12,6 +12,12 @@
     color:$white;
 }
 
+.sp-nav--footer {
+    display: block;
+    position: static;
+    height: auto;
+}
+
 .sp-nav__items {
     display: flex;
 }
@@ -21,6 +27,10 @@
     padding-left: rem(22);
     list-style-type: none;
     list-style-position: outside;
+}
+
+.sp-nav__items-rows2--footer2  {
+    padding-left: rem(32);
 }
 
 .sp-nav__item:nth-child(n+2){
@@ -49,6 +59,11 @@
 .sp-nav__item-link--span {
     display: inline-block;
 }
+
+.sp-nav__item-link--span span{
+    white-space: nowrap;
+}
+
 
 .sp-nav__sub-items {
     margin-top: rem(20);

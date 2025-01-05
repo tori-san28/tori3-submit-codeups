@@ -5,7 +5,7 @@
     padding: rem(80) 0;
     @include mq(md) {
         position: relative;
-        padding-top: rem(100);
+        padding-top: rem(104);
         padding-bottom: rem(104);
     }
 }
@@ -29,7 +29,9 @@
 }
 
 .price__title {
-
+    @include mq(md) {
+        margin-right: rem(5);
+    }
 }
 
 .price__contents {
@@ -39,7 +41,7 @@
     @include mq(md) {
         flex-direction: row;
         gap:calc(93 / 1080 * 100%);
-        margin-top: rem(44);
+        margin-top: rem(40);
     }
 }
 

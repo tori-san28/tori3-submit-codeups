@@ -1,5 +1,5 @@
 @use 'global' as *;
-
+ 
 .main-visual-card {
     position: relative;
     height: 100vh;
@@ -43,7 +43,8 @@
 }
 
 .main-visual-card__title {
-    width: rem(248);
+    width: rem(251);
+    margin-top: rem(5);
     @include mq(md) {
         width: rem(496);
         margin-top: rem(16);
@@ -53,8 +54,9 @@
 .main-visual-card__subtitle {
     font-family: $gotu-font-family;
     font-size: rem(20);
+    line-height: calc(33 / 20);
     @include mq(md) {
-        
+        margin-top: rem(5);
     }
 }
 

@@ -23,7 +23,9 @@
 }
 
 .information__title {
-
+    @include mq(md) {
+        margin-right: rem(5);
+    }
 }
 
 .information__img {
@@ -84,7 +86,8 @@
     margin-top: rem(40);
     text-align: center;
     @include mq(md) {
-        margin-top: rem(40);
+        margin-top: rem(42);
+        margin-right: rem(2);
     }
 }
 
