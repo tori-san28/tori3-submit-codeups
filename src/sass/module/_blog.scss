@@ -17,7 +17,7 @@
         width: rem(437);
         height: rem(201);
         top:rem(24);
-        left:max(calc(50% - #{rem(620)}),rem(100));
+        left:max(calc(50% - #{rem(620)}), calc(100 / 1440) * 100vw);
     }
 }
 

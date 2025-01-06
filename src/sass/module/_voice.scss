@@ -17,7 +17,8 @@
         width: rem(301);
         height: rem(138);
         top:rem(-112);
-        left:max(calc(50% - #{rem(620)}),rem(100));
+        left:rem(100);
+        left:max(calc(50% - #{rem(620)}), calc(100 / 1440) * 100vw);
     }
 }
 
@@ -32,7 +33,7 @@
         width: rem(71);
         height: rem(162);
         bottom:rem(-68);
-        right:max(calc(50% - #{rem(540)}),rem(180));
+        right:max(calc(50% - #{rem(540)}),calc(180 / 1440) * 100vw);
     }
 }
 

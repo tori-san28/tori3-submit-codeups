@@ -59,7 +59,7 @@
     line-height: calc(24 / 16);
     font-weight: $medium;
     @include mq(md) {
-        margin-top: rem(10);
+        margin-top: rem(8);
     }
 }
 
