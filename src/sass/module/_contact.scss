@@ -13,8 +13,8 @@
     background-size: contain;
     width: rem(109);
     height: rem(50);
-    top:rem(-26);
-    right:calc(50% - #{rem(170)});
+    top:rem(-25.6);
+    right:calc(50% - #{rem(176)});
     @include mq(md) {
         width: rem(309);
         height: rem(146);
@@ -63,14 +63,14 @@
     margin-top: rem(40);
     margin-left: auto;
     margin-right: rem(15);
-    margin-bottom: rem(16);
+    margin-bottom: rem(12);
     display: block;
-    width: rem(48);
-    height: rem(48);
+    width: rem(52);
+    height: rem(52);
     
     @include mq(md) {
         margin-top: rem(60);
-        margin-right: rem(20);
+        margin-right: rem(16);
         width: rem(88);
         height: rem(88);
         margin-bottom: rem(14.4);

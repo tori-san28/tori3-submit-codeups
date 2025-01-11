@@ -7,7 +7,6 @@
 .footer-nav__items {
     display: flex;
     @include mq(md) {
-        //gap:rem(112);
         gap:calc(112 / 1080 * 100%);
     }
 }
@@ -20,7 +19,6 @@
     @include mq(md) {
         width: auto;
         display: flex;
-        //gap:calc(140 / 1080 * 100%);
         gap:rem(140);
     }
 }

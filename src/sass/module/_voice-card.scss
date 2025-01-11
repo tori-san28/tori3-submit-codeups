@@ -36,7 +36,7 @@
 
 .voice-card__business-type {
     display: inline-block;
-    padding:rem(4) rem(12);
+    padding:rem(3.2) rem(11);
     color:$c-accent;
     font-size: rem(12);
     line-height: calc(21 / 12);
@@ -47,12 +47,11 @@
 }
 
 .voice-card__card-title {
-    margin: rem(4) 0;
+    margin-top: rem(4);
     font-size: rem(16);
     font-weight: $medium;
     color:$c-grey3;
     line-height:1.5;
-    margin-bottom: auto;
     @include mq(md) {
         font-size: rem(24);
         margin: rem(6) 0 rem(2);

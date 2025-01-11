@@ -37,13 +37,6 @@
         flex:0 0 rem(540);
     }
 }
- 
-//アニメーションをつけたので削除。
-// .information__img img {
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-// }
 
 .information__sub-contents {
     margin-top: rem(24);
@@ -80,6 +73,9 @@
     font-size: rem(16);
     line-height: 1.5;
     color: $c-grey3;
+    @include mq(md) {
+        margin-top: rem(4.8);
+    }
 }
 
 .information__button {

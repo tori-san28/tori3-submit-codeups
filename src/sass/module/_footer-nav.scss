@@ -8,9 +8,8 @@
     @include mq(md) {
         display: flex;
         justify-content: space-between;
-        gap:calc(100% -#{rem(648)})/3;
-        padding-right: rem(54);
-        padding-left: rem(18);
+        padding-right: rem(52);
+        padding-left: rem(20);
     }
 }
 

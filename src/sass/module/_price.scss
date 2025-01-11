@@ -5,7 +5,7 @@
     padding: rem(80) 0;
     @include mq(md) {
         position: relative;
-        padding-top: rem(104);
+        padding-top: rem(96);
         padding-bottom: rem(104);
     }
 }
@@ -41,7 +41,7 @@
     @include mq(md) {
         flex-direction: row;
         gap:calc(93 / 1080 * 100%);
-        margin-top: rem(40);
+        margin-top: rem(44);
     }
 }
 
@@ -61,12 +61,6 @@
     aspect-ratio: 345 / 227;
     overflow:hidden;
 }
-
-// .price__img-sp img{
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-// }
 
 .price__img-pc-outer {
     flex:0 1 rem(492);
@@ -88,14 +82,6 @@
     height: 100%;
     object-fit: cover;
 }
-
-// アニメーションのため削除
-// .price__img-sp-inner img{
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-// }
-
 
 .price__button {
     margin-top: rem(40);
