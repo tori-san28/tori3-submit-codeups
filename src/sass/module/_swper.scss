@@ -2,9 +2,8 @@
 
 .swiper-button-prev {
     position: absolute;
-    width: rem(88);
-    height: rem(88);
-    transform: rotate(-90deg) scaleX(-1);
+    width: rem(80);
+    height: rem(80);
     top:rem(-84);
     left:calc(50vw + #{rem(144)});
 }
@@ -15,9 +14,8 @@
 
 .swiper-button-next {
     position: absolute;
-    width: rem(88);
-    height: rem(88);
-    transform: rotate(90deg);
+    width: rem(80);
+    height: rem(80);
     top:rem(-84);
     right:rem(178);
 }

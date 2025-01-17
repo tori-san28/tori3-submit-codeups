@@ -47,6 +47,11 @@
     position: relative;
 }
 
+.footer-nav__item-link:hover,
+.footer-nav__sub-item-link:hover {
+    opacity: 0.5;
+}
+
 .footer-nav__item-link::before {
     content: "";
     position: absolute;

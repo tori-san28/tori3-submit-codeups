@@ -10,6 +10,7 @@
     height: 100vh;
     background-color: $c-accent;
     color:$white;
+    overflow-y: auto;
 }
 
 .sp-nav--footer {
@@ -55,6 +56,12 @@
     top: rem(3);
     left:rem(-22);
 }
+
+.sp-nav__item-link:hover,
+.sp-nav__sub-item-link:hover {
+    opacity:0.5;
+}
+
 
 .sp-nav__item-link--span {
     display: inline-block;

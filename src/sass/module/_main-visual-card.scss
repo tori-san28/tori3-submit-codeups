@@ -9,7 +9,7 @@
     background-position:center;
     @include mq(md) {
         background-image: url(../images/common/mv-pc.jpg);
-        height: calc(768 / 1440) * 100vw;
+        //height: calc(768 / 1440) * 100vw;
     }
 }
 

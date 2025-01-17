@@ -13,6 +13,16 @@ $('.js-hamburger').on('click', function () {
       $('.js-header').addClass('is-open');
     }
   });
+  //ドロワーメニューをPCのサイズにリサイズされたら消す。
+  function checkWindowSize() {
+    if ($(window).width() > 767) {
+      $('.js-drawer-menu').fadeOut();
+      $('.js-hamburger').removeClass('is-open');
+    }
+  }
+  $(window).resize(function() {
+    checkWindowSize();
+  });
 
   //swiper
   var swiper01 = new Swiper(".js-main-visual-swiper", {

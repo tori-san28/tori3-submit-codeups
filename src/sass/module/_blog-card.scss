@@ -11,6 +11,10 @@
     }
 }
 
+.blog-card:hover {
+    opacity:0.8;
+}
+
 .blog-card__img {
     aspect-ratio: 301 / 201;
     overflow: hidden;
