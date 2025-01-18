@@ -30,12 +30,17 @@
 
 .information__img {
     aspect-ratio: 345 / 227;
+    object-fit: cover;
     overflow:hidden;
     @include mq(md) {
         margin-top: 0;
         aspect-ratio: 540 / 356;
         flex:0 0 rem(540);
     }
+}
+
+.information__img img {
+    height: 100%;
 }
 
 .information__sub-contents {
@@ -79,7 +84,7 @@
 }
 
 .information__button {
-    margin-top: rem(40);
+    margin-top: rem(38);
     text-align: center;
     @include mq(md) {
         margin-top: rem(42);

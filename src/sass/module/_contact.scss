@@ -26,7 +26,6 @@
 .contact__contents {
     @include mq(md) {
         display: flex;
-        border:rem(1) solid $black;
         box-shadow: rem(4) rem(4) rem(10) rgba(0,0,0,0.25);
         padding-top: rem(80);
         padding-bottom: rem(64);

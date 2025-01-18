@@ -9,7 +9,6 @@
     background-position:center;
     @include mq(md) {
         background-image: url(../images/common/mv-pc.jpg);
-        //height: calc(768 / 1440) * 100vw;
     }
 }
 
@@ -44,11 +43,18 @@
 }
 
 .main-visual-card__title {
-    width: rem(251);
-    margin-top: rem(5);
+    font-family: $lato-font-family;
+    font-size: rem(40);
+    font-weight: $normal;
+    line-height: calc(48 / 40);
+    letter-spacing: 0.53em;
+    padding-left: 0.53em;
+    text-transform: uppercase;
     @include mq(md) {
-        width: rem(496);
-        margin-top: rem(24);
+        font-size: rem(80);
+        line-height: calc(100 / 80);
+        letter-spacing: 0.52em;
+        padding-left: 0.52em;
     }
 }
 

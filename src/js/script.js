@@ -18,6 +18,7 @@ $('.js-hamburger').on('click', function () {
     if ($(window).width() > 767) {
       $('.js-drawer-menu').fadeOut();
       $('.js-hamburger').removeClass('is-open');
+      $('.js-header').removeClass('is-open');
     }
   }
   $(window).resize(function() {
