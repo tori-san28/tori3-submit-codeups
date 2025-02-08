@@ -6,3 +6,10 @@
         margin-top: rem(138);
     }
 }
+
+.page-contact--archive-voice {
+    margin-top: rem(106);
+    @include mq(md) {
+        margin-top: rem(138);
+    }
+}

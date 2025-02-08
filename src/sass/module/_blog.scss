@@ -3,6 +3,7 @@
 .blog {
     @include mq(md) {
         position: relative;
+        padding-top: rem(100);
     }
 }
 
@@ -43,9 +44,7 @@
 }
 
 .blog__title {
-    @include mq(md) {
-        padding-top: rem(100);
-    }
+
 }
 
 .blog__contents {

@@ -120,30 +120,20 @@
   </header>
   <main>
     <div class="main-visual page-main-visual">
-      <div class="main-visual__swiper swiper swiper01 js-main-visual-swiper">
-        <div class="main-visual__items swiper-wrapper">
-          <div class="swiper-slide main-visual__item main-visual-card">
-            <div class="main-visual-card__header">
-              <h2 class="main-visual-card__title">diving</h2>
-              <div class="main-visual-card__subtitle">into the ocean</div>
+      <div class="main-visual__wrapper">
+        <div class="main-visual__header">
+          <h2 class="main-visual__title">diving</h2>
+          <div class="main-visual__subtitle">into the ocean</div>
+        </div>
+        <div class="main-visual__swiper swiper swiper01 js-main-visual-swiper">
+          <div class="main-visual__items swiper-wrapper">
+            <div class="swiper-slide main-visual__item main-visual-card">
             </div>
-          </div>
-          <div class="swiper-slide main-visual__item main-visual-card main-visual-card--2">
-            <div class="main-visual-card__header">
-              <h2 class="main-visual-card__title">diving</h2>
-              <div class="main-visual-card__subtitle">into the ocean</div>
+            <div class="swiper-slide main-visual__item main-visual-card main-visual-card--2">
             </div>
-          </div>
-          <div class="swiper-slide main-visual__item main-visual-card main-visual-card--3">
-            <div class="main-visual-card__header">
-              <h2 class="main-visual-card__title">diving</h2>
-              <div class="main-visual-card__subtitle">into the ocean</div>
+            <div class="swiper-slide main-visual__item main-visual-card main-visual-card--3">
             </div>
-          </div>
-          <div class="swiper-slide main-visual__item main-visual-card main-visual-card--4">
-            <div class="main-visual-card__header">
-              <h2 class="main-visual-card__title">diving</h2>
-              <div class="main-visual-card__subtitle">into the ocean</div>
+            <div class="swiper-slide main-visual__item main-visual-card main-visual-card--4">
             </div>
           </div>
         </div>
@@ -165,7 +155,7 @@
                     <img src="./assets/images/common/campaign1-sp.png" alt="campaign1">
                   </div>
                   <div class="campaign-card__contents">
-                    <div class="campaign-card__business-type">ライセンス講習</div>
+                    <div class="campaign-card__business-type"><span>ライセンス講習</span></div>
                     <div class="campaign-card__business-title">ライセンス取得</div>
                     <div class="campaign-card__price-wrapper">
                       <div class="campaign-card__price-title">全部コミコミ(お一人様)</div>
@@ -183,7 +173,7 @@
                     <img src="./assets/images/common/campaign2-sp.png" alt="campaign2">
                   </div>
                   <div class="campaign-card__contents">
-                    <div class="campaign-card__business-type">体験ダイビング</div>
+                    <div class="campaign-card__business-type"><span>体験ダイビング</span></div>
                     <div class="campaign-card__business-title">貸切体験ダイビング</div>
                     <div class="campaign-card__price-wrapper">
                       <div class="campaign-card__price-title">全部コミコミ(お一人様)</div>
@@ -201,7 +191,7 @@
                     <img src="./assets/images/common/campaign3-sp.png" alt="campaign3">
                   </div>
                   <div class="campaign-card__contents">
-                    <div class="campaign-card__business-type">体験ダイビング</div>
+                    <div class="campaign-card__business-type"><span>体験ダイビング</span></div>
                     <div class="campaign-card__business-title">ナイトダイビング</div>
                     <div class="campaign-card__price-wrapper">
                       <div class="campaign-card__price-title">全部コミコミ(お一人様)</div>
@@ -219,7 +209,7 @@
                     <img src="./assets/images/common/campaign4-sp.png" alt="campaign4">
                   </div>
                   <div class="campaign-card__contents">
-                    <div class="campaign-card__business-type">ファンダイビング</div>
+                    <div class="campaign-card__business-type"><span>ファンダイビング</span></div>
                     <div class="campaign-card__business-title">貸切ファンダイビング</div>
                     <div class="campaign-card__price-wrapper">
                       <div class="campaign-card__price-title">全部コミコミ(お一人様)</div>
@@ -532,10 +522,8 @@
           </div>
         </div>
       </div>
-      <a href="#" class="contact__back-to-top">
-        <img src="./assets/images/common/icon-back-to-top.svg" alt="back-to-top">
-      </a>
     </section>
+   
   </main>
   <footer class="footer page-footer">
     <div class="footer__inner inner">
@@ -637,7 +625,9 @@
       </div>
     </div>
   </footer>
-
+  <a href="#" id="back-to-top">
+    <img src="./assets/images/common/icon-back-to-top.svg" alt="back-to-top">
+  </a>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

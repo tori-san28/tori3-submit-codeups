@@ -12,6 +12,13 @@ $('.js-hamburger').on('click', function () {
       $(this).addClass('is-open');
       $('.js-header').addClass('is-open');
     }
+    if (jQuery(".js-header").hasClass("is-open")) {
+      // メニューが開いている間はスクロールを無効にする
+      jQuery("body").css("overflow", "hidden");
+    } else {
+      // メニューが閉じたらスクロールを有効にする
+      jQuery("body").css("overflow", "");
+    }
   });
   //ドロワーメニューをPCのサイズにリサイズされたら消す。
   function checkWindowSize() {
@@ -30,6 +37,11 @@ $('.js-hamburger').on('click', function () {
     autoplay: {
       delay: 5000,
     },
+    effect: 'fade',
+    fadeEffect: {
+    crossFade: true // スライドが完全に切り替わるように
+    },
+    allowTouchMove: false,
     loop: true,
   });
 
@@ -67,34 +79,47 @@ $('.js-hamburger').on('click', function () {
         },
   });
 
+  // トップに戻るボタン
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1000) {
+      $("#back-to-top").fadeIn();
+    } else {
+      $("#back-to-top").fadeOut();
+    }
+  });
+
+  $("#back-to-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 500);
+  });
+
   //要素の取得とスピードの設定
   var box = $('.colorbox'),
       speed = 700;  
    
   //.colorboxの付いた全ての要素に対して下記の処理を行う
-      box.each(function(){
-          //背景色となるdiv要素を追加
-          $(this).append('<div class="color"></div>')
-          var color = $(this).find($('.color')),
-          image = $(this).find('img');
-          var counter = 0;
-      　 //最初は画像を透明、幅を０％にする。
-          image.css('opacity','0');
-          color.css('width','0%');
-          //inviewを使って背景色が画面に現れたら処理をする
-          //widthを0から100％に伸びる。100%になったら画像を表示（opactity:1）
-          //left:0(right:auto)と切り替え、widthを100%から0%へ縮める
-          //counterを1にして繰り返ししないようにする
-          color.on('inview', function(){
-              if(counter == 0){
-            $(this).delay(200).animate({'width':'100%'},speed,function(){
-                        image.css('opacity','1');
-                        $(this).css({'left':'0' , 'right':'auto'});
-                        $(this).animate({'width':'0%'},speed);
-                      })
-                  counter = 1;
-                }
-          });
-      });
+    box.each(function(){
+        //背景色となるdiv要素を追加
+        $(this).append('<div class="color"></div>')
+        var color = $(this).find($('.color')),
+        image = $(this).find('img');
+        var counter = 0;
+    　 //最初は画像を透明、幅を０％にする。
+        image.css('opacity','0');
+        color.css('width','0%');
+        //inviewを使って背景色が画面に現れたら処理をする
+        //widthを0から100％に伸びる。100%になったら画像を表示（opactity:1）
+        //left:0(right:auto)と切り替え、widthを100%から0%へ縮める
+        //counterを1にして繰り返ししないようにする
+        color.on('inview', function(){
+            if(counter == 0){
+          $(this).delay(200).animate({'width':'100%'},speed,function(){
+                      image.css('opacity','1');
+                      $(this).css({'left':'0' , 'right':'auto'});
+                      $(this).animate({'width':'0%'},speed);
+                    })
+                counter = 1;
+              }
+        });
+    });
 
 });

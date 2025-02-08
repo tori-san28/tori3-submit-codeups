@@ -3,11 +3,11 @@
 .sp-nav {
     display: none;
     position: absolute;
-    top:0;
+    top:rem(78);
     left:0;
     right:0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - #{rem(78)}) ;
     background-color: $c-accent;
     color:$white;
     overflow-y: auto;

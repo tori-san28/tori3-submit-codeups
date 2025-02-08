@@ -14,7 +14,7 @@
 }
 
 .header.is-open {
-    background-color: transparent;
+    background-color: $c-accent;
     opacity: 100%;
 }
 
@@ -63,6 +63,6 @@
 }
 
 .header__sp-nav {
-    padding: rem(104) rem(15) 0;
+    padding: rem(25.6) rem(15) 0;
 } 
 

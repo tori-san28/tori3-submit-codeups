@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     height: inherit;
+    gap:rem(40);
 }
 
 .pc-nav__item {
@@ -18,10 +19,6 @@
     flex-direction: column;
     text-align: center;
     position: relative;
-}
-
-.pc-nav__item + .pc-nav__item {
-    margin-left: rem(40);
 }
 
 .pc-nav__item::after {

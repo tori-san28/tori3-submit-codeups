@@ -57,25 +57,3 @@
         flex:0 0 rem(315);
     }
 }
-
-.contact__back-to-top {
-    margin-top: rem(40);
-    margin-left: auto;
-    margin-right: rem(15);
-    margin-bottom: rem(12);
-    display: block;
-    width: rem(52);
-    height: rem(52);
-    
-    @include mq(md) {
-        margin-top: rem(60);
-        margin-right: rem(16);
-        width: rem(88);
-        height: rem(88);
-        margin-bottom: rem(14.4);
-    }
-}
-
-.contact__back-to-top img {
-    width: 100%;
-}
