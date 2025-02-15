@@ -8,11 +8,12 @@
     font-size: rem(16);
     font-weight: $bold;
     line-height: 1.5;
+    border-bottom: 1px solid $c-accent;
+    padding-bottom: rem(4);
 }
 
 .price-item__contents {
-    margin-top: rem(4);
-    border-top: 1px solid $c-accent;
+    
 }
 
 .price-item__list {

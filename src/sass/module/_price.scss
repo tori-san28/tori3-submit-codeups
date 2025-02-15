@@ -20,7 +20,7 @@
         width: rem(437);
         height: rem(201);
         bottom:rem(56);
-        left:max(calc(50% - #{rem(620)}), calc(100 / 1440) * 100vw);
+        left:max(calc(50% - #{rem(620)}), rem((strip-unit($padding-pc))));
     }
 }
 
@@ -35,7 +35,7 @@
 }
 
 .price__contents {
-    margin-top: rem(28);
+    margin-top: rem(29.6);
     display: flex;
     flex-direction: column-reverse;
     @include mq(md) {
@@ -48,7 +48,7 @@
 .price__items {
     margin-top: rem(40);
     @include mq(md) {
-        flex:0 1 rem(492);
+        flex:0 1 calc(492 / 1080 * 100%);
         margin-top: 0;
     }
 }
@@ -67,7 +67,7 @@
 }
 
 .price__img-pc-outer {
-    flex:0 1 rem(492);
+    flex:0 1 calc(492 / 1080 * 100%);
     position: relative;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .price__button {
-    margin-top: rem(40);
+    margin-top: rem(38);
     text-align: center;
     @include mq(md) {
         margin-top: rem(80);

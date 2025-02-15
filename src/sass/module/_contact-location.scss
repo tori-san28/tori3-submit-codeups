@@ -5,6 +5,11 @@
 }
 
 .contact-location__logo {
+    border-bottom: rem(1) solid $c-accent;
+}
+
+
+.contact-location__logo img{
     display: inline-block;
     max-width:rem(174);
     width: 100%;
@@ -14,7 +19,6 @@
 }
 
 .contact-location__contents {
-    border-top: rem(1) solid $c-accent;
     padding: rem(16) 0;
     @include mq(md) {
         display: flex;

@@ -17,7 +17,7 @@
         width: rem(194);
         height: rem(181);
         bottom:rem(-88);
-        right:max(calc(50% - #{rem(637)}), calc(83 / 1440) * 100vw);
+        right:max(calc(50% - #{rem(637)}), rem((strip-unit($padding-pc))));
     }
 }
 
@@ -33,7 +33,7 @@
     margin-top: rem(28);
     @include mq(md) {
         position: relative;
-        margin-top: rem(38);
+        margin-top: rem(41.6);
     }
 }
 

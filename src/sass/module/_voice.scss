@@ -18,7 +18,7 @@
         height: rem(138);
         top:rem(-116);
         left:rem(100);
-        left:max(calc(50% - #{rem(620)}), calc(100 / 1440) * 100vw);
+        left:max(calc(50% - #{rem(620)}), rem((strip-unit($padding-pc))));
     }
 }
 
@@ -33,7 +33,7 @@
         width: rem(71);
         height: rem(162);
         bottom:rem(-68);
-        right:max(calc(50% - #{rem(540)}),calc(180 / 1440) * 100vw);
+        right:max(calc(50% - #{rem(540)}),rem((strip-unit($padding-pc))));
     }
 }
 

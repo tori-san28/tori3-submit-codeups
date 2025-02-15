@@ -18,7 +18,7 @@
     @include mq(md) {
         width: rem(309);
         height: rem(146);
-        right:max(calc(50% - #{rem(672)}), calc(48 / 1440) * 100vw);
+        right:max(calc(50% - #{rem(672)}), rem((strip-unit($padding-pc))));
         top:rem(-38);
     }
 }
@@ -40,13 +40,13 @@
     @include mq(md) {
         padding-left: 0;
         padding-right: 0;
-        flex:0 0 rem(440);
+        flex:0 0 calc(440 / (440 + 163 + 315) * 100%);
     }
 }
 
 .contact__line {
     @include mq(md) {
-        flex:0 1 rem(163);
+        flex:0 1 calc(163 / (440 + 163 + 315) * 100%);
     }
 }
 
@@ -54,6 +54,6 @@
     margin-top: rem(24);
     @include mq(md) {
         margin-top: rem(20);
-        flex:0 0 rem(315);
+        flex:0 0 calc(315 / (440 + 163 + 315) * 100%);
     }
 }
