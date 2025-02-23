@@ -38,25 +38,11 @@
     }
 }
 
-
-.blog__inner {
-
-}
-
-.blog__title {
-
-}
-
-
 .blog__cards {
     margin-top: rem(24);
     @include mq(md) {
         margin-top: rem(76.8);
     }
-}
-
-.blog__card {
-   
 }
 
 .blog__button {
