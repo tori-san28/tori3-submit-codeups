@@ -1,34 +1,12 @@
 @use 'global' as *;
- 
+
 .main-visual-card {
-    position: relative;
-    height: 100vh;
-    background-image: url(../images/common/mv-sp.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:center;
-    @include mq(md) {
-        background-image: url(../images/common/mv-pc.jpg);
-    }
+
 }
 
-.main-visual-card--2 {
-    background-image: url(../images/common/mv2-sp.jpg);
-    @include mq(md) {
-        background-image: url(../images/common/mv2-pc.jpg);
-    }
+.main-visual-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.main-visual-card--3 {
-    background-image: url(../images/common/mv3-sp.jpg);
-    @include mq(md) {
-        background-image: url(../images/common/mv3-pc.jpg);
-    }
-}
-
-.main-visual-card--4 {
-    background-image: url(../images/common/mv4-sp.jpg);
-    @include mq(md) {
-        background-image: url(../images/common/mv4-pc.jpg);
-    }
-}

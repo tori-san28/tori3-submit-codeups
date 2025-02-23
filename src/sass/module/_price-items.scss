@@ -1,0 +1,12 @@
+@use 'global' as *;
+
+.price-items {
+    display: flex;
+    flex-direction: column;
+    gap:rem(40);
+}
+
+.price-items__item {
+
+}
+

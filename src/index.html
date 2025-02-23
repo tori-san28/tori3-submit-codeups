@@ -25,7 +25,11 @@
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  
+   <!-- JavaScript -->
+   <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   <script defer src="./assets/js/swiper-bundle.min.js"></script>
+   <script defer src="./assets/js/jquery.inview.min.js"></script>
+   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
   <header class="header js-header">
@@ -116,7 +120,6 @@
         </div>
       </div>
     </div>
-
   </header>
   <main>
     <div class="main-visual page-main-visual">
@@ -128,12 +131,20 @@
         <div class="main-visual__swiper swiper swiper01 js-main-visual-swiper">
           <div class="main-visual__items swiper-wrapper">
             <div class="swiper-slide main-visual__item main-visual-card">
+              <img class= "u-mobile" src='./assets/images/common/mv-sp.jpg' alt='mv1'>
+              <img class= "u-pc" src='./assets/images/common/mv-pc.jpg' alt='mv1'>
             </div>
-            <div class="swiper-slide main-visual__item main-visual-card main-visual-card--2">
+            <div class="swiper-slide main-visual__item main-visual-card">
+              <img class= "u-mobile" src='./assets/images/common/mv2-sp.jpg' alt='mv2'>
+              <img class= "u-pc" src='./assets/images/common/mv2-pc.jpg' alt='mv2'>
             </div>
-            <div class="swiper-slide main-visual__item main-visual-card main-visual-card--3">
+            <div class="swiper-slide main-visual__item main-visual-card">
+              <img class= "u-mobile" src='./assets/images/common/mv3-sp.jpg' alt='mv3'>
+              <img class= "u-pc" src='./assets/images/common/mv3-pc.jpg' alt='mv3'>
             </div>
-            <div class="swiper-slide main-visual__item main-visual-card main-visual-card--4">
+            <div class="swiper-slide main-visual__item main-visual-card">
+              <img class= "u-mobile" src='./assets/images/common/mv4-sp.jpg' alt='mv4'>
+              <img class= "u-pc" src='./assets/images/common/mv4-pc.jpg' alt='mv4'>
             </div>
           </div>
         </div>
@@ -144,7 +155,7 @@
       <div class="campaign__inner">
         <div class="campaign__title section-title">
           <p class="section-title__english">campaign</p>
-          <h3 class="section-title__japanese">キャンペーン</h3>
+          <h2 class="section-title__japanese">キャンペーン</h2>
         </div>
         <div class="campaign__contents">
           <div class="campaign__swiper swiper swiper02 js-campaign">
@@ -240,7 +251,7 @@
       <div class="about-us__inner inner">
         <div class="about-us__title section-title">
           <p class="section-title__english">about us</p>
-          <h3 class="section-title__japanese">私たちについて</h3>
+          <h2 class="section-title__japanese">私たちについて</h2>
         </div>
         <div class="about-us__contents">
           <div class="about-us__img-wrapper">
@@ -271,7 +282,7 @@
       <div class="information__inner inner">
         <div class="information__title section-title">
           <p class="section-title__english">information</p>
-          <h3 class="section-title__japanese">ダイビング情報</h3>
+          <h2 class="section-title__japanese">ダイビング情報</h2>
         </div>
         <div class="information__contents">
           <div class="information__img colorbox">
@@ -279,7 +290,7 @@
           </div>
           <div class="information__sub-contents">
             <div class="information__sub-small-contents">
-              <div class="information__sub-title">ライセンス講習</div>
+              <h3 class="information__sub-title">ライセンス講習</h3>
               <div class="information__text">
                 当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br
                 >正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
@@ -291,63 +302,61 @@
           </div>
         </div>
       </div>
-    </section> 
+    </section>
     <section class="blog page-blog">
       <div class="blog__inner inner">
         <div class="blog__title section-title">
           <p class="section-title__english section-title__english--white-pc">blog</p>
-          <h3 class="section-title__japanese section-title__japanese--white-pc">ブログ</h3>
+          <h2 class="section-title__japanese section-title__japanese--white-pc">ブログ</h2>
         </div>
-        <div class="blog__contents">
-          <div class="blog__cards">
-            <a href="" class="blog__card blog-card">
-                <div class="blog-card__img">
-                  <img src="./assets/images/common/blog1-sp.png" alt="blog1">
-                </div>
-                <div class="blog-card__contents">
-                  <div class="blog-card__date">2023.11.17</div>
-                  <div class="blog-card__card-title">ライセンス取得</div>
-                  <div class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-                    >ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
-                </div>
-            </a>
-            <a href="" class="blog__card blog-card">
-                <div class="blog-card__img">
-                  <img src="./assets/images/common/blog2-sp.png" alt="blog2">
-                </div>
-                <div class="blog-card__contents">
-                  <div class="blog-card__date">2023.11.17</div>
-                  <div class="blog-card__card-title">ウミガメと泳ぐ</div>
-                  <div class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-                    >ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
-                </div>
-            </a>
-            <a href="" class="blog__card blog-card">
-                <div class="blog-card__img">
-                  <img src="./assets/images/common/blog3-sp.png" alt="blog3">
-                </div>
-                <div class="blog-card__contents">
-                  <div class="blog-card__date">2023.11.17</div>
-                  <div class="blog-card__card-title">カクレクマノミ</div>
-                  <div class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-                    >ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
-                </div>
-            </a>
-          </div>
+        <div class="blog__cards blog-cards">
+          <a href="" class="blog-cards__card blog-card">
+              <div class="blog-card__img">
+                <img src="./assets/images/common/blog1-sp.png" alt="blog1">
+              </div>
+              <div class="blog-card__contents">
+                <div class="blog-card__date">2023.11.17</div>
+                <div class="blog-card__card-title">ライセンス取得</div>
+                <div class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
+                  >ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
+              </div>
+          </a>
+          <a href="" class="blog__card blog-card">
+              <div class="blog-card__img">
+                <img src="./assets/images/common/blog2-sp.png" alt="blog2">
+              </div>
+              <div class="blog-card__contents">
+                <div class="blog-card__date">2023.11.17</div>
+                <div class="blog-card__card-title">ウミガメと泳ぐ</div>
+                <div class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
+                  >ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
+              </div>
+          </a>
+          <a href="" class="blog__card blog-card">
+              <div class="blog-card__img">
+                <img src="./assets/images/common/blog3-sp.png" alt="blog3">
+              </div>
+              <div class="blog-card__contents">
+                <div class="blog-card__date">2023.11.17</div>
+                <div class="blog-card__card-title">カクレクマノミ</div>
+                <div class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
+                  >ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</div>
+              </div>
+          </a>
         </div>
         <div class="blog__button main-button">
           <a href="">view more</a>
         </div>
       </div>
-    </section> 
+    </section>
     <section class="voice page-voice">
       <div class="voice__inner inner">
         <div class="voice__title section-title">
           <p class="section-title__english">voice</p>
-          <h3 class="section-title__japanese">お客様の声</h3>
+          <h2 class="section-title__japanese">お客様の声</h2>
         </div>
-        <div class="voice__cards">
-          <div class="voice__card voice-card">
+        <div class="voice__cards voice-cards">
+          <div class="voice-cards__card voice-card">
             <div class="voice-card__wrapper">
               <div class="voice-card__contents">
                 <div class="voice-card__sub-contents">
@@ -390,16 +399,16 @@
           <a href="">view more</a>
         </div>
       </div>
-    </section> 
+    </section>
     <section class="price page-price">
       <div class="price__inner inner">
         <div class="price__title section-title">
           <p class="section-title__english">price</p>
-          <h3 class="section-title__japanese">料金一覧</h3>
+          <h2 class="section-title__japanese">料金一覧</h2>
         </div>
         <div class="price__contents">
-          <div class="price__items">
-            <div class="price__item price-item">
+          <div class="price__items price-items">
+            <div class="price-items__item price-item">
               <div class="price-item__title">ライセンス講習</div>
               <dl class="price-item__contents">
                 <div class="price-item__list">
@@ -416,7 +425,7 @@
                 </div>
               </dl>
             </div>
-            <div class="price__item price-item">
+            <div class="price-items__item price-item">
               <div class="price-item__title">体験ダイビング</div>
               <dl class="price-item__contents">
                 <div class="price-item__list">
@@ -437,7 +446,7 @@
                 </div>
               </dl>
             </div>
-            <div class="price__item price-item">
+            <div class="price-items__item price-item">
               <div class="price-item__title">ファンダイビング</div>
               <dl class="price-item__contents">
                 <div class="price-item__list">
@@ -458,7 +467,7 @@
                 </div>
               </dl>
             </div>
-            <div class="price__item price-item">
+            <div class="price-items__item price-item">
               <div class="price-item__title">スペシャルダイビング</div>
               <dl class="price-item__contents">
                 <div class="price-item__list">
@@ -485,7 +494,7 @@
           <a href="">view more</a>
         </div>
       </div>
-    </section> 
+    </section>
     <section class="contact page-contact">
       <div class="contact__inner inner">
         <div class="contact__contents">
@@ -511,7 +520,7 @@
           <div class="contact__link contact-link">
             <div class="contact-link__title section-title-big">
               <p class="section-title-big__english">contact</p>
-              <h3 class="section-title-big__japanese">お問合せ</h3>
+              <h2 class="section-title-big__japanese">お問合せ</h2>
             </div>
             <div class="contact-link__link">
               <a href="">ご予約・お問い合わせはコチラ</a>
@@ -523,7 +532,7 @@
         </div>
       </div>
     </section>
-   
+
   </main>
   <footer class="footer page-footer">
     <div class="footer__inner inner">
@@ -628,11 +637,5 @@
   <a href="#" id="back-to-top">
     <img src="./assets/images/common/icon-back-to-top.svg" alt="back-to-top">
   </a>
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="./assets/js/swiper-bundle.min.js"></script>
-  <script src="./assets/js/jquery.inview.min.js"></script>
-  <script defer src="./assets/js/script.js"></script>
 </body>
-
 </html>
