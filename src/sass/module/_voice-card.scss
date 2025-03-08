@@ -39,7 +39,7 @@
     color:$c-accent;
     font-size: rem(12);
     line-height: calc(21 / 12);
-    border: 1px solid $c-accent;
+    border: rem(1) solid $c-accent;
     @include mq(md) {
         padding:rem(6) rem(16);
     }
