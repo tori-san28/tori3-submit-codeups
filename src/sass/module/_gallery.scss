@@ -1,0 +1,95 @@
+@use 'global' as *;
+
+.gallery {
+    @include mq(md) {
+        position: relative;
+    }
+}
+
+.gallery::before {
+    @include mq(md) {
+        content:"";
+        position: absolute;
+        z-index: -1;
+        background-image: url(../images/common/contact-fish-left.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem(309);
+        height: rem(146);
+        right:max(calc(50% - #{rem(640)}), rem((strip-unit($padding-pc))));
+        top:rem(-74.4);
+    }
+}
+
+
+.gallery__inner {
+
+}
+
+.gallery__title {
+
+}
+
+.gallery__contents {
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(84.8);
+    }
+}
+
+.gallery__img-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:rem(8);
+    @include mq(md) {
+        display: grid;
+        grid-template-columns: 1fr 0.163fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.gallery__img {
+    width: 100%;
+}
+
+.gallery__img--1 {
+    @include mq(md) {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+}
+
+.gallery__img--2 {
+    @include mq(md) {
+        grid-column: 2 / 4;
+        grid-row:1;
+    }
+}
+
+.gallery__img--3 {
+    @include mq(md) {
+        grid-column: 2 / 4;
+        grid-row:2;
+    }
+}
+
+.gallery__img--4 {
+    @include mq(md) {
+        grid-column: 1 / 3;
+        grid-row:3;
+    }
+}
+
+.gallery__img--5 {
+    @include mq(md) {
+        grid-column: 1 / 3;
+        grid-row:4;
+    }
+}
+
+.gallery__img--6 {
+    @include mq(md) {
+        grid-column: 3;
+        grid-row: 3 / 5;
+    }
+}

@@ -1,0 +1,26 @@
+@use 'global' as *;
+
+.common-back-fish {
+    position: relative;
+}
+
+.common-back-fish::before {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    background-image: url(../images/common/voice-fish-right.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(120);
+    height: rem(55);
+    top:rem(-24);
+    left:rem(16.8);
+    //left:max(calc(50% - #{rem(620)}), calc(100 / 1440) * 100vw);
+@include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top:rem(-68);
+    //left:rem(100);
+    left:max(calc(50% - #{rem(620)}), calc(100 / 1440) * 100vw);
+}
+}

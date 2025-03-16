@@ -1,0 +1,29 @@
+@use 'global' as *;
+
+.archive-campaign {
+
+}
+
+.archive-campaign__inner {
+    
+}
+
+.archive-campaign__business-types {
+
+}
+
+.archive-campaign__items {
+    margin-top: rem(40);
+    @include mq(md) {
+      position: relative;
+      left:rem(8);
+    }
+}
+
+.archive-campaign__pagination {
+    margin-top: rem(70);
+    @include mq(md) {
+        position: relative;
+        left:rem(8);
+      }
+}

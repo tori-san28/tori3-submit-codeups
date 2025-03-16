@@ -1,0 +1,41 @@
+@use 'global' as *;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 rem(12);
+    list-style-type: none;
+    padding: 0;
+}
+
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(38);
+    height: rem(38);
+    border: 1px solid $c-accent;
+    color: $c-accent;
+    font-family: $lato-font-family;
+    font-size: rem(16);
+    font-weight: $bold;
+}
+
+.pagination a:not(:hover) {
+    text-decoration: none;
+}
+
+.pagination__prev {
+    margin-right: rem(28);
+}
+
+.pagination__next {
+    margin-left: rem(28);
+}
+
+.pagination__current a {
+    background-color: $c-accent;
+    color: $white;
+    pointer-events: none;
+}

@@ -8,7 +8,14 @@
 }
 
 .page-contact--archive-voice {
-    margin-top: rem(106);
+    margin-top: rem(105.6);
+    @include mq(md) {
+        margin-top: rem(138);
+    }
+}
+
+.page-contact--aboutus {
+    margin-top: rem(104);
     @include mq(md) {
         margin-top: rem(138);
     }

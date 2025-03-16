@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.page-breadcrumb {
+    margin-top: rem(7.2);
+    @include mq(md) {
+        
+    }
+}

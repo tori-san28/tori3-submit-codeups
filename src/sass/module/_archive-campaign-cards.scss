@@ -1,0 +1,15 @@
+@use 'global' as *;
+
+.archive-campaign-cards {
+    display: grid;
+    grid-template-columns:1fr;
+    gap:rem(30.88);
+    padding-left: rem(32.65);
+    padding-right: rem(32.65);
+    @include mq(md) {
+        gap:rem(76.8) rem(40);
+        grid-template-columns:1fr 1fr;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
