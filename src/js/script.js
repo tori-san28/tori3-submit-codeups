@@ -122,4 +122,24 @@ $('.js-hamburger').on('click', function () {
         });
     });
 
+
+//ここから下層ページ
+//モーダル
+$(".js-openModal").on('click',function(e){
+  e.preventDefault();
+  let target = jQuery(this).data("target");
+  let modal = document.getElementById(target);
+  $("#" + target)[0].showModal();
+  $("html, body").css("overflow", "hidden");
+});
+
+//モーダルコンテンツ以外をクリックしたらモーダルを閉じる
+$("dialog").on("click", function (e) {
+    e.preventDefault();
+    if (!$(e.target).closest(".modal-aboutus__wrapper").length) {
+      $(this)[0].close();
+      $("html, body").css("overflow", "auto");
+      $(document.activeElement).blur();
+    }  
+  });
 });
