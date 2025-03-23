@@ -1,0 +1,22 @@
+@use 'global' as *;
+
+.archive-blog {
+
+}
+
+.archive-blog__inner {
+    display: flex;
+    flex-direction: column;
+    gap:rem(80);
+}
+
+.archive-blog__selected {
+    width: 100%;
+}
+
+.archive-blog__sub-contents {
+    width: 100%;
+    max-width: rem(294);
+    margin-left: auto;
+    margin-right: auto;
+}

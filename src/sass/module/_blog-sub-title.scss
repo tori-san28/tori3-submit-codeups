@@ -1,0 +1,29 @@
+@use 'global' as *;
+
+.blog-sub-title {
+    position: relative;
+    padding:rem(9) 0 rem(6) rem(90);
+}
+
+.blog-sub-title::before {
+    content:"";
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: rem(8);
+    background-color: $c-accent;
+}
+
+.blog-sub-title::after {
+    content:"";
+    position: absolute;
+    width: rem(50);
+    height: rem(50);
+    background-image: url(../images/common/info1-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    left: rem(30);
+    transform: translateY(-50%);
+}

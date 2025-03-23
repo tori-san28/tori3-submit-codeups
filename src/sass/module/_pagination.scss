@@ -7,7 +7,12 @@
     gap: 0 rem(12);
     list-style-type: none;
     padding: 0;
+
+.pagination--home {
+    gap: 0 rem(24);
 }
+}
+
 
 .pagination a {
     display: flex;
@@ -32,6 +37,16 @@
 
 .pagination__next {
     margin-left: rem(28);
+}
+
+.pagination--home .pagination__prev a:hover {
+    background-color: $c-accent;
+    color: $white;
+}
+
+.pagination--home .pagination__next a:hover {
+    background-color: $c-accent;
+    color: $white;
 }
 
 .pagination__current a {
