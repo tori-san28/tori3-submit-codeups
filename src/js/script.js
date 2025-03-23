@@ -183,12 +183,23 @@ jQuery(function ($) {
   //   });
 });
 
-//アコーディオン
+//アコーディオン(faq)
 jQuery(function ($) {
   $(".faq-list:first-of-type .faq-list__answer").css("display", "block");
   // はじめのアコーディオンを開いておく
   $(".faq-list:first-of-type .faq-list__question").addClass("is-open");  
   $(".js-faq-list").on("click", function () {
+    $(this).next().slideToggle(200);
+    $(this).toggleClass("is-open", 200);
+  });
+});
+
+//アコーディオン(blogのアーカイブ)
+jQuery(function ($) {
+  $(".blog-archive-list:first-of-type .blog-archive-list__months").css("display", "block");
+  // はじめのアコーディオンを開いておく
+  $(".blog-archive-list:first-of-type .blog-archive-list__year").addClass("is-open");
+  $(".blog-archive-list__year").on("click", function () {
     $(this).next().slideToggle(200);
     $(this).toggleClass("is-open", 200);
   });

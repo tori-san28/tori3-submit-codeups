@@ -1,17 +1,42 @@
 @use 'global' as *;
 
 .blog-archive-list {
-
+    color: $c-accent;
+    font-size: rem(24);
+    line-height: calc(29 / 24);
 }
 
 .blog-archive-list__year {
-
+    padding-left: rem(32);
+    position: relative;
 }
 
 .blog-archive-list__months {
-
+    display: none;
+    padding-left: rem(32);
 }
 
 .blog-archive-list__month {
+    margin-top: rem(9);
+    padding-left: rem(32);
+    position: relative;
+}
+
+.blog-archive-list__year::before,
+.blog-archive-list__month::before {
+    content:"";
+    position: absolute;
+    width: rem(24);
+    height: rem(24);
+    background-image: url(../images/common/icon-polygon-right.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.blog-archive-list__year.is-open::before {
+    transform: rotate(90deg);
 
 }

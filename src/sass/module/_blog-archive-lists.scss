@@ -1,7 +1,9 @@
 @use 'global' as *;
 
 .blog-archive-lists {
-
+    display: flex;
+    flex-direction: column;
+    gap:rem(4);
 }
 
 .blog-archive-lists__list {
