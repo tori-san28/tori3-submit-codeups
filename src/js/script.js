@@ -3,7 +3,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 //ナビバートグル
 $('.js-hamburger').on('click', function () {
     if ($('.js-hamburger').hasClass('is-open')) {
-      $('.js-drawer-menu').fadeOut();　//fadeOutでメニューをblockに
+      $('.js-drawer-menu').fadeOut();//fadeOutでメニューをblockに
       $(this).removeClass('is-open');
       $('.js-header').removeClass('is-open');
       
@@ -122,9 +122,13 @@ $('.js-hamburger').on('click', function () {
         });
     });
 
+});
+
 
 //ここから下層ページ
+
 //モーダル
+jQuery(function ($) { 
 $(".js-openModal").on('click',function(e){
   e.preventDefault();
   let target = jQuery(this).data("target");
@@ -141,5 +145,51 @@ $("dialog").on("click", function (e) {
       $("html, body").css("overflow", "auto");
       $(document.activeElement).blur();
     }  
+  });
+});
+
+//タブ
+// タブをクリックすると
+jQuery(function ($) {
+  $(".js-tab-menu").on("click", function () {
+    // 現在選択されているタブからis-activeを外す
+    $(".tab-list__menu.is-active").removeClass("is-active");
+    $(".archive-information__contents.is-active").removeClass("is-active");
+    // クリックされたタブにis-activeクラスを付与
+    $(this).addClass("is-active");
+    // クリックされた要素が何番目か取得（クリックしたタブのインデックス番号を取得）
+    const index = $(this).index();
+    // クリックしたタブのインデックス番号と同じコンテンツを表示
+    $(".js-tab-contents").hide().eq(index).fadeIn(300);
+  });
+
+ //タブへダイレクトリンクの実装
+    //リンクからハッシュを取得
+  // $(".sp-nav__sub-item-link,.footer-nav__sub-item-link").on("click", function () {
+  //     const gclass = this.getAttribute('class');
+  //     console.log("class=" + gclass);
+  //     const nlink = gclass.split('js-link-')[1]; // #以降の部分を取得
+  //     console.log(nlink); // 取得した#以降の部分を表示
+  //     console.log("link no=" + nlink);
+  //     //コンテンツ非表示・タブを非アクティブ
+  //     $(".tab-list__menu").removeClass("is-active");
+  //     $(".archive-information__contents").removeClass("is-active");
+  //     //コンテンツ表示
+  //     $(".archive-information__contents").eq(nlink - 1).addClass("is-active");
+  //     //タブのアクティブ化
+  //     $(".tab-list__menu").eq(nlink - 1).addClass("is-active");
+  //     // クリックしたタブのインデックス番号と同じコンテンツを表示
+  //     $(".js-tab-contents").hide().eq(nlink - 1).fadeIn(300);
+  //   });
+});
+
+//アコーディオン
+jQuery(function ($) {
+  $(".faq-list:first-of-type .faq-list__answer").css("display", "block");
+  // はじめのアコーディオンを開いておく
+  $(".faq-list:first-of-type .faq-list__question").addClass("is-open");  
+  $(".js-faq-list").on("click", function () {
+    $(this).next().slideToggle(200);
+    $(this).toggleClass("is-open", 200);
   });
 });

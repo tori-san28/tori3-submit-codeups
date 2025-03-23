@@ -24,3 +24,7 @@
     left:max(calc(50% - #{rem(620)}), calc(100 / 1440) * 100vw);
 }
 }
+
+.common-back-fish--information::before {
+    top:rem(-92);
+}

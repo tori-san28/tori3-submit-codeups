@@ -1,0 +1,20 @@
+@use 'global' as *;
+
+.price-tables {
+    display: flex;
+    flex-direction: column;
+    gap:rem(38);
+    @include mq(md) {
+        gap:rem(73.6);
+    }
+}
+
+.price-tables__table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        width: rem(702);
+    }
+}
+

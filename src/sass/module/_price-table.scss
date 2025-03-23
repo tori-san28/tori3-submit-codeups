@@ -1,0 +1,89 @@
+@use 'global' as *;
+
+.price-table {
+    border-collapse: collapse;
+}
+
+.price-table__head-sp{
+    display: table-cell;
+    background-color: $c-accent;
+    color:$white;
+    font-size: rem(16);
+    padding: rem(8) 0 rem(8) rem(32);
+    position: relative;
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.price-table__head-sp::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-image: url(../images/common/info1-icon-active.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(24);
+    height: rem(24);
+    top: 50%;
+    left: calc(50% - #{rem(60)});
+    transform: translate(-50%,-50%);
+}
+
+.price-table__head-sp--3::before {
+    left: calc(50% - #{rem(68.8)});
+}
+
+
+.price-table__head-sp--4::before {
+    left: calc(50% - #{rem(84)});
+}
+
+.price-table__head-pc{
+    display: none;
+    @include mq(md) {
+    display: table-cell;
+    position: relative;
+    background-color: $c-accent;
+    color:$white;
+    font-size: rem(16);
+    width: calc(200 / 702 * 100%);
+    padding:rem(41) 0 rem(112);
+    }
+}
+
+.price-table__head-pc::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-image: url(../images/common/info1-icon-active.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(64);
+    height: rem(64);
+    left: 50%;
+    top: calc(50% + #{rem(20)});
+    transform: translate(-50%,-50%);
+}
+
+
+.price-table__data {
+    text-align: center;
+    border:rem(1) solid $c-accent;
+    width: 70%;
+    @include mq(md) {
+        width: calc(340 / 702 * 100%);
+        text-align-last: left;
+        padding-left: rem(16);
+    }
+}
+
+.price-table__price {
+    text-align: right;
+    border:rem(1) solid $c-accent;
+    padding: rem(18) rem(16) rem(18) rem(30.4);
+    width: 30%;
+    @include mq(md) {
+        width: calc(162 / 702 * 100%);
+    }
+}

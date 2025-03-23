@@ -1,0 +1,19 @@
+@use 'global' as *;
+
+.faq-lists {
+    display: flex;
+    flex-direction: column;
+    gap:rem(40);
+    @include mq(md) {
+        gap:rem(44);
+    }
+}
+
+.faq-lists__list {
+    width: 100%;
+    @include mq(md) {
+        max-width: rem(700);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

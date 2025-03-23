@@ -1,0 +1,66 @@
+@use 'global' as *;
+
+.faq-list {
+    width: 100%;
+}
+
+.faq-list__question {
+    background: $c-accent;
+    color:$white;
+    padding: rem(18) rem(16);
+    line-height: calc(19 / 16);
+    position: relative;
+    @include mq(md) {
+        padding: rem(28) rem(40);
+        letter-spacing: rem(4.16);
+    }
+}
+
+/* タイトル横のプラスマーク縦線 */
+.faq-list__question::before{
+    position: absolute;
+    content: '';
+    top: calc(50% - #{rem(1)});
+    right: rem(16);
+    width: rem(28);
+    height: rem(1);
+    background-color:#fff;
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+    @include mq(md) {
+        right:rem(40);
+    }
+  }
+
+  .faq-list__question.is-open::before {
+    transform: rotate(180deg);
+  }
+
+  /* タイトル横のプラスマーク横線 */
+  .faq-list__question::after{
+    position: absolute;
+    content: '';
+    top: calc(50% - #{rem(1)});
+    right: rem(16);
+    width: rem(28);
+    height: rem(1);
+    background-color:#fff;
+    transition: all .3s ease-in-out;
+    @include mq(md) {
+        right:rem(40);
+    }
+  }
+
+
+.faq-list__answer {
+    display: none;
+    padding: rem(24) rem(16);
+    font-size: rem(16);
+    border:rem(1) solid $c-accent;
+    line-height: 1.43;
+    @include mq(md) {
+        margin-top: rem(16);
+        padding: rem(40);
+    }
+}
+

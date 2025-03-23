@@ -14,9 +14,13 @@
     }
 }
 
-.page-contact--aboutus {
+.page-contact--aboutus,
+.page-contact--information,
+.page-contact--price,
+.page-contact--faq {
     margin-top: rem(104);
     @include mq(md) {
         margin-top: rem(138);
     }
 }
+
