@@ -9,6 +9,13 @@
     }
 }
 
+.blog-cards--archive {
+    @include mq(md) {
+        grid-template-columns: 1fr 1fr;
+        gap:rem(81.6) rem(40);
+    }
+}
+
 .blog-cards__card {
 
 }

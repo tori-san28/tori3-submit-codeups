@@ -8,10 +8,27 @@
     display: flex;
     flex-direction: column;
     gap:rem(80);
+    @include mq(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        //gap:calc(86 / 1080 * 100%);
+    }
 }
 
 .archive-blog__selected {
     width: 100%;
+    @include mq(md) {
+        width: 65.09259%;
+        max-width: rem(703);
+    }
+}
+
+.archive-blog__main-contents {
+    width: 100%;
+    @include mq(md) {
+        width: 65.37037%;
+        max-width: rem(706);
+    }
 }
 
 .archive-blog__sub-contents {
@@ -19,4 +36,12 @@
     max-width: rem(294);
     margin-left: auto;
     margin-right: auto;
+}
+
+.archive-blog__cards {
+
+}
+
+.archive-blog__pagination {
+    margin-top: rem(80);
 }

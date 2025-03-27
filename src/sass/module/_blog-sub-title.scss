@@ -2,7 +2,7 @@
 
 .blog-sub-title {
     position: relative;
-    padding:rem(9) 0 rem(6) rem(90);
+    padding:rem(8) 0 rem(6) rem(82);
 }
 
 .blog-sub-title::before {
@@ -18,12 +18,12 @@
 .blog-sub-title::after {
     content:"";
     position: absolute;
-    width: rem(50);
-    height: rem(50);
+    width: rem(40);
+    height: rem(40);
     background-image: url(../images/common/info1-icon.svg);
     background-repeat: no-repeat;
     background-size: contain;
     top: 50%;
-    left: rem(30);
+    left: rem(27);
     transform: translateY(-50%);
 }

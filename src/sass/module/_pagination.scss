@@ -7,12 +7,14 @@
     gap: 0 rem(12);
     list-style-type: none;
     padding: 0;
+}
 
 .pagination--home {
     gap: 0 rem(24);
+    @include mq(md) {
+        padding-right: rem(24);
+    }
 }
-}
-
 
 .pagination a {
     display: flex;

@@ -14,6 +14,20 @@
     }
 }
 
+.page-contact--blog {
+    margin-top: rem(112);
+    @include mq(md) {
+        margin-top: rem(144);
+    }
+}
+
+.page-contact--home {
+    margin-top: rem(112);
+    @include mq(md) {
+        margin-top: rem(140);
+    }
+}
+
 .page-contact--aboutus,
 .page-contact--information,
 .page-contact--price,

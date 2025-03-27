@@ -13,12 +13,12 @@
 
 .blog-archive-list__months {
     display: none;
-    padding-left: rem(32);
+    padding-left: rem(30);
 }
 
 .blog-archive-list__month {
-    margin-top: rem(9);
-    padding-left: rem(32);
+    margin-top: rem(8.8);
+    padding-left: rem(24);
     position: relative;
 }
 
@@ -31,12 +31,17 @@
     background-image: url(../images/common/icon-polygon-right.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    top: 50%;
+    top: 20%;
     left: 0;
-    transform: translateY(-50%);
 }
 
-.blog-archive-list__year.is-open::before {
-    transform: rotate(90deg);
+.blog-archive-list__year::before {
+    left:rem(4.8);
+}
 
+
+.blog-archive-list__year.is-open::before {
+    top:30%;
+    left:0;
+    transform: rotate(90deg);
 }
