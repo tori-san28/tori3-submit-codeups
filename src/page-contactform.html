@@ -122,197 +122,89 @@
     </div>
   </header>
   <main>
-    <div class="sub-main-visual sub-main-visual--voice page-sub-main-visual">
-      <h1 class="sub-main-visual__title">Voice</h1>
+    <div class="sub-main-visual sub-main-visual--campaign page-sub-main-visual">
+      <h1 class="sub-main-visual__title">Contact</h1>
       <div class="sub-main-visual__item">
         <picture>
-          <source media='(min-width: 768px)' srcset='./assets/images/common/voice-sub-mv-pc.png'>
-          <img src='./assets/images/common/voice-sub-mv-sp.png' alt='voice-mv'>
+          <source media='(min-width: 768px)' srcset='./assets/images/common/contactform-sub-mv-pc.png'>
+          <img src='./assets/images/common/contactform-sub-mv-sp.png' alt='contact-mv'>
         </picture>
       </div>
     </div>
-    
     <ul class="breadcrumb page-breadcrumb">
-      <div class="breadcrumb__inner inner">TOP > お客様の声</div>
+      <div class="breadcrumb__inner inner">TOP > お問い合わせ</div>
     </ul>
 
-    <section class="archive-voice page-archive-voice common-back-fish">
-      <div class="archive-voice__inner inner">
-       <div class="archive-voice__business-types business-types">
-        <div class="business-types__type business-types__type--active">ALL</div>
-        <div class="business-types__type">ライセンス講習</div>
-        <div class="business-types__type">ファンダイビング</div>
-        <div class="business-types__type">体験ダイビング</div>
-       </div>
-       <div class="archive-voice__cards voice-cards voice-cards--sub">
-        <div class="voice-cards__card voice-card">
-          <div class="voice-card__wrapper">
-            <div class="voice-card__contents">
-              <div class="voice-card__sub-contents">
-                <div class="voice-card__age">20代(女性)</div>
-                <div class="voice-card__business-type">ライセンス講習</div>
-              </div>
-              <h2 class="voice-card__card-title">ここにタイトルが入ります。ここにタイトル</h2>
-            </div>
-            <div class="voice-card__img">
-              <img src="./assets/images/common/voice1-pc.png" alt="voice1">
-            </div>
-          </div>
-          <div class="voice-card__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。
-          </div>
+    <div class="contact-form page-contact-form common-back-fish">
+      <div class="contact-form__inner inner">
+        <div class="contact-form__error">
+          <p>※必須項目が入力されていません。<span class="u-mobile"><br>　</span>入力してください。</p>
         </div>
-        <div class="voice-cards__card voice-card">
-          <div class="voice-card__wrapper">
-            <div class="voice-card__contents">
-              <div class="voice-card__sub-contents">
-                <div class="voice-card__age">30代(男性)</div>
-                <div class="voice-card__business-type">ファンダイビング</div>
+        <div class="contact-form__fields form-field">
+          <form id="js-form" action="" method="post">
+            <dl class="form-field__item">
+              <dt>お名前<span>必須</span></dt>
+              <dd><input type="text" name="" placeholder="沖縄　太郎" required></dd>
+            </dl>
+            <dl class="form-field__item">
+              <dt>メールアドレス<span>必須</span></dt>
+              <dd><input type="email" placeholder="aaa000@ggmail.com" required></dd>
+            </dl>
+            <dl class="form-field__item">
+              <dt>電話番号<span>必須</span></dt>
+              <dd><input type="tel" placeholder="000-0000-0000" required>
+              </dd>
+            </dl>
+            <dl class="form-field__item">
+              <dt>お問合せ項目<span>必須</span></dt>
+              <dd class="form-field__checkbox form-checkbox">
+                <label>
+                  <input type="checkbox" name="" id="" checked>
+                  <span>ダイビング講習について</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="" id="">
+                  <span>ファンデイビングについて</span>
+                </label>
+                <label>
+                  <input type="checkbox" name="" id="">
+                  <span>体験ダイビングについて</span>
+                </label>
+              </dd>
+            </dl>
+            <dl class="form-field__item form-field__item--select">
+              <dt>キャンペーン</dt>
+              <dd class="form-field__select">
+                  <select class="form-select">
+                      <option hidden>キャンペーン内容を選択</option>
+                      <option name="campaign" value="ライセンス取得">ライセンス取得</option>
+                      <option name="campaign" value="貸切体験ダイビング">貸切体験ダイビング</option>
+                      <option name="campaign" value="ナイトダイビング">ナイトダイビング</option>
+                  </select>
+              </dd>
+            </dl>
+            <dl class="form-field__item">
+              <dt>お問合せ内容<span>必須</span></dt>
+              <dd>
+                  <textarea required></textarea>
+              </dd>
+            </dl>
+            <div class="form-field__personal-info form-checkbox form-checkbox--personal-info">
+              <label>
+                <input type="checkbox" name="" id="">
+                <span>個人情報の取り扱いについて同意のうえ<br class="u-mobile">送信します。</span>
+              </label>
+            </div>
+            <div class="form-field__button">
+              <button id="js-submit" type="submit" class="main-button main-button--send">send
+                <span class="main-button__arrow main-button__arrow--send"></span></button>
               </div>
-              <h2 class="voice-card__card-title">ここにタイトルが入ります。ここにタイトル</h2>
-            </div>
-            <div class="voice-card__img">
-              <img src="./assets/images/common/voice2-pc.png" alt="voice2">
-            </div>
-          </div>
-          <div class="voice-card__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。
-          </div>
-        </div>
-        <div class="voice-cards__card voice-card">
-          <div class="voice-card__wrapper">
-            <div class="voice-card__contents">
-              <div class="voice-card__sub-contents">
-                <div class="voice-card__age">30代(女性)</div>
-                <div class="voice-card__business-type">体験ダイビング</div>
-              </div>
-              <h2 class="voice-card__card-title">ここにタイトルが入ります。ここにタイトル</h2>
-            </div>
-            <div class="voice-card__img">
-              <img src="./assets/images/common/voice3-pc.png" alt="voice3">
-            </div>
-          </div>
-          <div class="voice-card__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。
-          </div>
-        </div>
-        <div class="voice-cards__card voice-card">
-          <div class="voice-card__wrapper">
-            <div class="voice-card__contents">
-              <div class="voice-card__sub-contents">
-                <div class="voice-card__age">20代(女性)</div>
-                <div class="voice-card__business-type">体験ダイビング</div>
-              </div>
-              <h2 class="voice-card__card-title">ここにタイトルが入ります。ここにタイトル</h2>
-            </div>
-            <div class="voice-card__img">
-              <img src="./assets/images/common/voice4-pc.png" alt="voice4">
-            </div>
-          </div>
-          <div class="voice-card__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。
-          </div>
-        </div>
-        <div class="voice-cards__card voice-card">
-          <div class="voice-card__wrapper">
-            <div class="voice-card__contents">
-              <div class="voice-card__sub-contents">
-                <div class="voice-card__age">30代(カップル)</div>
-                <div class="voice-card__business-type">ファンダイビング</div>
-              </div>
-              <h2 class="voice-card__card-title">ここにタイトルが入ります。ここにタイトル</h2>
-            </div>
-            <div class="voice-card__img">
-              <img src="./assets/images/common/voice5-pc.png" alt="voice5">
-            </div>
-          </div>
-          <div class="voice-card__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。
-          </div>
-        </div>
-        <div class="voice-cards__card voice-card">
-          <div class="voice-card__wrapper">
-            <div class="voice-card__contents">
-              <div class="voice-card__sub-contents">
-                <div class="voice-card__age">20代(女性)</div>
-                <div class="voice-card__business-type">ライセンス講習</div>
-              </div>
-              <h2 class="voice-card__card-title">ここにタイトルが入ります。ここにタイトル</h2>
-            </div>
-            <div class="voice-card__img">
-              <img src="./assets/images/common/voice6-pc.png" alt="voice6">
-            </div>
-          </div>
-          <div class="voice-card__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br
-            >ここにテキストが入ります。ここにテキストが入ります。
-          </div>
-        </div>
-       </div>
-       <ol class="archive-voice__pagination pagination">
-          <li class="pagination__prev"><a href="#"><</a></li>
-          <li class="pagination__current"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li class="u-desktop"><a href="#">5</a></li>
-          <li class="u-desktop"><a href="#">6</a></li>
-          <li class="pagination__next"><a href="#">></a></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="contact page-contact page-contact--archive-voice">
-      <div class="contact__inner inner">
-        <div class="contact__contents">
-          <div class="contact__location contact-location">
-            <div class="contact-location__logo">
-              <img src="./assets/images/common/icon-codeups-sp-green.svg" alt="logo-green">
-            </div>
-            <div class="contact-location__contents">
-              <div class="contact-location__sub-contents">
-                <p class="contact-location__text">沖縄県那覇市1-1</p>
-                <p class="contact-location__text">TEL:0120-000-0000</p>
-                <p class="contact-location__text">営業時間:8:30-19:00</p>
-                <p class="contact-location__text">定休日:毎週火曜日</p>
-              </div>
-              <div class="contact-location__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57272.98532469251!2d127.64350214684703!3d26.210936387812268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5697141a6b58b%3A0x2cd8aff616585e98!2z5rKW57iE55yM6YKj6KaH5biC!5e0!3m2!1sja!2sjp!4v1736043878967!5m2!1sja!2sjp" width="320" height="590" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="contact__line contact-line">
-            <div class="contact-line__line"></div>
-          </div>
-          <div class="contact__link contact-link">
-            <div class="contact-link__title section-title-big">
-              <p class="section-title-big__english">contact</p>
-              <h2 class="section-title-big__japanese">お問合せ</h2>
-            </div>
-            <div class="contact-link__link">
-              <a href="">ご予約・お問い合わせはコチラ</a>
-            </div>
-            <div class="contact-link__button">
-              <a href="" class="main-button">contact us<span class="main-button__arrow"></span></a>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
-    </section>
-
+    </div>
   </main>
-  <footer class="footer page-footer">
+  <footer class="footer page-footer page-footer--contactform">
     <div class="footer__inner inner">
       <div class="footer__contents">
         <div class="footer__header">

@@ -163,25 +163,35 @@ jQuery(function ($) {
     $(".js-tab-contents").hide().eq(index).fadeIn(300);
   });
 
- //タブへダイレクトリンクの実装
-    //リンクからハッシュを取得
-  // $(".sp-nav__sub-item-link,.footer-nav__sub-item-link").on("click", function () {
-  //     const gclass = this.getAttribute('class');
-  //     console.log("class=" + gclass);
-  //     const nlink = gclass.split('js-link-')[1]; // #以降の部分を取得
-  //     console.log(nlink); // 取得した#以降の部分を表示
-  //     console.log("link no=" + nlink);
-  //     //コンテンツ非表示・タブを非アクティブ
-  //     $(".tab-list__menu").removeClass("is-active");
-  //     $(".archive-information__contents").removeClass("is-active");
-  //     //コンテンツ表示
-  //     $(".archive-information__contents").eq(nlink - 1).addClass("is-active");
-  //     //タブのアクティブ化
-  //     $(".tab-list__menu").eq(nlink - 1).addClass("is-active");
-  //     // クリックしたタブのインデックス番号と同じコンテンツを表示
-  //     $(".js-tab-contents").hide().eq(nlink - 1).fadeIn(300);
-  //   });
 });
+
+//タブのリンクに応じて表示を変更
+document.addEventListener("DOMContentLoaded", function () {
+  // タブボタンとコンテンツを取得
+  var tabs = document.querySelectorAll(".js-tab-menu");
+  var contents = document.querySelectorAll(".js-tab-contents");
+  // URLパラメータからタブIDを取得
+  var urlParams = new URLSearchParams(window.location.search);
+  var initialTab = urlParams.get("tab") || "tab01"; // パラメータがない場合は "tab01"
+  console.log(initialTab);
+  // 初期表示: URLパラメータに基づいて表示
+  tabs.forEach(function (tab) {
+    if (tab.getAttribute("data-number") === initialTab) {
+      tab.classList.add("is-active");
+    } else {
+      tab.classList.remove("is-active");
+    }
+  });
+  contents.forEach(function (content) {
+    if (content.id === initialTab) {
+      content.classList.add("is-active");
+    } else {
+      content.classList.remove("is-active");
+    }
+  });
+
+});
+
 
 //アコーディオン(faq)
 jQuery(function ($) {
@@ -202,5 +212,22 @@ jQuery(function ($) {
   $(".blog-archive-list__year").on("click", function () {
     $(this).next().slideToggle(200);
     $(this).toggleClass("is-open", 200);
+  });
+});
+
+//コンタクトフォームのsendボタン押下
+jQuery(function ($) {
+    $( '#js-submit' ).on('click' , function(e) {
+     e.preventDefault();
+     $('.contact-form__error').removeClass("is-error");
+     $('form').find('.invalid').removeClass('invalid');
+     $('input[required]:invalid,textarea[required]:invalid').each(function(){// 項目が空だったらエラー表示をする
+      $(this).addClass('invalid');
+      $('.contact-form__error').addClass('is-error');
+      });
+    if($('.invalid').length == 0){
+      $('form').submit();
+      console.log('送信しました');
+    }
   });
 });

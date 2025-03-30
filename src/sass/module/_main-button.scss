@@ -73,3 +73,11 @@
 .main-button:hover .main-button__arrow {
     background-image: url(../images/common/button-arrow-green.svg);
 }
+
+.main-button--send {
+    padding:rem(15) rem(116.8) rem(16) rem(51.2);
+}
+
+.main-button__arrow--send {
+    right:rem(56);
+}

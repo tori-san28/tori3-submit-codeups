@@ -1,0 +1,15 @@
+@use 'global' as *;
+
+.form-select {
+    appearance: none;
+    font-size: rem(12);
+    width: 100%;
+    border: 1px solid $c-accent;
+	padding: rem(12.8) 0 rem(8) rem(8);
+    background-image: url(../images/common/icon-polygon.svg);
+    background-position: center right rem(8);
+    background-repeat: no-repeat;
+    @include mq(md) {
+        padding: rem(5.3) 0 rem(5.3) rem(8);
+    }
+}

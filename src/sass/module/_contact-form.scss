@@ -1,0 +1,32 @@
+@use 'global' as *;
+
+.contact-form {
+
+}
+
+.contact-form__inner.inner {
+    @include mq(md) {
+        max-width: rem(700 + strip-unit($padding-pc) * 2);;
+    }
+
+}
+
+.contact-form__error {
+    margin-top: rem(52);
+    display: none;
+    font-size: rem(14);
+    line-height: calc(17 / 14);
+    color:$c-red;
+}
+
+.contact-form__error.is-error{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form__fields {
+    margin-top: rem(54);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}

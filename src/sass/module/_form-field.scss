@@ -1,0 +1,125 @@
+@use 'global' as *;
+
+.form-field {
+
+}
+
+.form-field__item {
+    @include mq(md) {
+        display: flex;
+        border-bottom: rem(1) dotted $c-accent;
+    }
+}
+
+.form-field__item + .form-field__item {
+    margin-top: rem(22.4);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.form-field__item dt{
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(19 / 16);
+    @include mq(md) {
+        width: calc(220 / 700 * 100%);
+    }
+}
+
+.form-field__item dt span {
+    display: inline-block;
+    margin-left: rem(8);
+    color:$white;
+    background-color: $c-red;
+    letter-spacing: 0.25em;
+    text-indent: 0.25em;
+    font-size: rem(12);
+    line-height: 1;
+    padding: rem(3.2) rem(14) rem(3.2);
+}
+
+.form-field__item dd {
+    margin-top: rem(20);
+    padding-bottom: rem(24);
+    border-bottom: rem(1) dotted $c-accent;
+    @include mq(md) {
+        width: calc(480 / 700 * 100%);
+        margin-top: 0;
+        padding-bottom: rem(40);
+        border-bottom: initial;
+    }
+}
+
+.form-field__item--select dd {
+    @include mq(md) {
+        margin-top: rem(-4);
+    }
+}
+
+
+.form-field__item dd input,
+.form-field__item dd textarea
+{
+    width: 100%;
+    border:rem(1) solid $c-accent;
+    line-height: calc(19 / 16);
+    padding: rem(8) 0 rem(11.68) rem(16);
+}
+
+.form-field__item dd input.invalid,
+.form-field__item dd textarea.invalid {
+    border: $c-red;
+    background-color:rgba(201, 72, 0, 0.20);
+    //opacity: 0.2;
+    //color:$black;
+}
+
+// input.invalid,
+// textarea.invalid {
+//   border: 1px solid #C94800;
+//   background: rgba(201, 72, 0, 0.20);
+// }
+
+.form-field__item dd textarea {
+    height: rem(200);
+}
+
+.form-field__item dd input::placeholder {
+    color:$c-grey2;
+}
+
+.form-field__checkbox label{
+    display: block;
+}
+
+
+.form-field__select {
+   
+}
+
+
+.form-field__personal-info {
+    margin-top: rem(35.2);
+    text-align: center;
+    @include mq(md) {
+        margin-top: rem(72);
+    }
+}
+
+.form-field__personal-info label {
+    text-align: left;
+}
+
+.form-field__personal-info label span {
+    font-size: rem(14);
+    line-height: calc(22 / 14);
+}
+
+.form-field__button {
+    margin-top: rem(24);
+    text-align: center;
+    @include mq(md) {
+        margin-top: rem(41.6);
+    }
+}
