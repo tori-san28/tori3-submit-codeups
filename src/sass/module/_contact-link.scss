@@ -25,3 +25,10 @@
     }
 }
 
+.contact-link__button--privacy {
+    margin-top: rem(41.6);
+    @include mq(md) {
+        margin-top: rem(33.6);
+    }
+}
+

@@ -1,0 +1,17 @@
+@use 'global' as *;
+
+.contact-thanks {
+
+}
+
+.contact-thanks__inner {
+
+}
+
+.contact-thanks__text {
+    text-align: center;
+}
+
+.contact-thanks__text + .contact-thanks__text {
+    margin-top: rem(40);
+}

@@ -34,11 +34,11 @@
 <body>
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__title">
+      <div class="header__title">
         <a href="index.html" class="header__logo">
           <img src="./assets/images/common/icon-codeups-sp.svg" alt="CodeUpsロゴ">
         </a>
-      </h1>
+      </div>
       <div class="header__drawer hamburger-menu js-hamburger">
         <span></span>
         <span></span>
@@ -122,7 +122,7 @@
     </div>
   </header>
   <main>
-    <div class="sub-main-visual sub-main-visual--campaign page-sub-main-visual">
+    <section class="sub-main-visual sub-main-visual--campaign page-sub-main-visual">
       <h1 class="sub-main-visual__title">Contact</h1>
       <div class="sub-main-visual__item">
         <picture>
@@ -130,7 +130,7 @@
           <img src='./assets/images/common/contactform-sub-mv-sp.png' alt='contact-mv'>
         </picture>
       </div>
-    </div>
+    </section>
     <ul class="breadcrumb page-breadcrumb">
       <div class="breadcrumb__inner inner">TOP > お問い合わせ</div>
     </ul>
@@ -141,33 +141,33 @@
           <p>※必須項目が入力されていません。<span class="u-mobile"><br>　</span>入力してください。</p>
         </div>
         <div class="contact-form__fields form-field">
-          <form id="js-form" action="" method="post">
+          <form id="js-form" action="">
             <dl class="form-field__item">
               <dt>お名前<span>必須</span></dt>
-              <dd><input type="text" name="" placeholder="沖縄　太郎" required></dd>
+              <dd><input type="text" name="name" placeholder="沖縄　太郎" required></dd>
             </dl>
             <dl class="form-field__item">
               <dt>メールアドレス<span>必須</span></dt>
-              <dd><input type="email" placeholder="aaa000@ggmail.com" required></dd>
+              <dd><input type="email" name="email" placeholder="aaa000@ggmail.com" required></dd>
             </dl>
             <dl class="form-field__item">
               <dt>電話番号<span>必須</span></dt>
-              <dd><input type="tel" placeholder="000-0000-0000" required>
+              <dd><input type="tel" name="tel" placeholder="000-0000-0000" required>
               </dd>
             </dl>
             <dl class="form-field__item">
               <dt>お問合せ項目<span>必須</span></dt>
               <dd class="form-field__checkbox form-checkbox">
                 <label>
-                  <input type="checkbox" name="" id="" checked>
+                  <input type="checkbox" name="inquiry" id="" checked>
                   <span>ダイビング講習について</span>
                 </label>
                 <label>
-                  <input type="checkbox" name="" id="">
+                  <input type="checkbox" name="inquiry" id="">
                   <span>ファンデイビングについて</span>
                 </label>
                 <label>
-                  <input type="checkbox" name="" id="">
+                  <input type="checkbox" name="inquiry" id="">
                   <span>体験ダイビングについて</span>
                 </label>
               </dd>
@@ -186,12 +186,12 @@
             <dl class="form-field__item">
               <dt>お問合せ内容<span>必須</span></dt>
               <dd>
-                  <textarea required></textarea>
+                  <textarea name="message" required></textarea>
               </dd>
             </dl>
             <div class="form-field__personal-info form-checkbox form-checkbox--personal-info">
               <label>
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="p-info" id="">
                 <span>個人情報の取り扱いについて同意のうえ<br class="u-mobile">送信します。</span>
               </label>
             </div>

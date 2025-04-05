@@ -10,3 +10,10 @@
 .page-footer--contactform {
    margin-top: rem(150);
 }
+
+.page-footer--pricacy {
+   margin-top: rem(104);
+   @include mq(md) {
+    margin-top: rem(156);
+   }
+}

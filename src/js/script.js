@@ -81,7 +81,7 @@ $('.js-hamburger').on('click', function () {
 
   // トップに戻るボタン
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 1000) {
+    if ($(this).scrollTop() > 500) {
       $("#back-to-top").fadeIn();
     } else {
       $("#back-to-top").fadeOut();
@@ -189,9 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
       content.classList.remove("is-active");
     }
   });
-
 });
-
 
 //アコーディオン(faq)
 jQuery(function ($) {
@@ -227,7 +225,16 @@ jQuery(function ($) {
       });
     if($('.invalid').length == 0){
       $('form').submit();
+      //location.href = "page-contact-thanks.html";
       console.log('送信しました');
     }
   });
+});
+
+//aタグでidを含むもの
+jQuery(function ($) {
+  $( 'a[href*="html#"]' ).on('click' , function(e) {
+    e.preventDefault();
+    console.log("クリックしました");
+  })
 });

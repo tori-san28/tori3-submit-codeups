@@ -1,0 +1,113 @@
+@use 'global' as *;
+
+.privacy-policy {
+
+}
+
+.privacy-policy__inner.inner {
+    max-width: rem(800 + 2 * strip-unit($padding-pc));
+}
+
+.privacy-policy__title {
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.privacy-policy__contents {
+
+}
+
+.privacy-policy__items {
+    margin-top: rem(44);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.privacy-policy__item:nth-of-type(2) {
+    margin-top: rem(38);
+    @include mq(md) {
+        margin-top: rem(32);
+    }
+}
+
+.privacy-policy__item:nth-of-type(3) {
+    margin-top: rem(32);
+    @include mq(md) {
+        margin-top: rem(32);
+    }
+}
+
+.privacy-policy__item:nth-of-type(4) {
+    margin-top: rem(38);
+    @include mq(md) {
+        margin-top: rem(32);
+    }
+}
+
+.privacy-policy__item:nth-of-type(5) {
+    margin-top: rem(38);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.privacy-policy__item:nth-of-type(6)
+ {
+    margin-top: rem(38);
+    @include mq(md) {
+        margin-top: rem(32);
+    }
+}
+
+.privacy-policy__unordered-list {
+    line-height: 1.9;
+    @include mq(md) {
+        line-height: 1.8;
+    }
+}
+
+.privacy-policy__text {
+    line-height: 1.8;
+    @include mq(md) {
+        line-height: 2;
+    }
+}
+
+.privacy-policy__text--information {
+    line-height: 1.9;
+    @include mq(md) {
+        line-height: 2;
+    }
+}
+
+
+.privacy-policy__ordered-lists {
+    counter-reset: list-counter; /* カウンターをリセット */
+    line-height: 2;
+    @include mq(md) {
+        line-height: 2;
+    }
+}
+
+.privacy-policy__ordered-list {
+    counter-increment: list-counter; /* 各リストアイテムでカウンターをインクリメント */
+    padding-left: rem(24); /* 番号のスペースを確保 */
+    position: relative;
+    @include mq(md) {
+        padding-left: rem(20);
+    }
+}
+
+.privacy-policy__ordered-list::before {
+    content: counter(list-counter) ". "; /* カウンターの値と「.」を表示 */
+    position: absolute;
+    left: rem(5);
+    top: 0;
+}
+
+.privacy-policy__unordered-lists {
+    list-style-type: disc; /* 丸い点 */
+    padding-left: 20px;    /* 左側に少し余白を追加 */
+}
