@@ -1,2 +1,8 @@
 @use 'global' as *;
 
+.page-archive-about-us {
+    margin-top: rem(52.8);
+    @include mq(md) {
+        margin-top: rem(152);
+    }
+}

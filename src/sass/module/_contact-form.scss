@@ -12,11 +12,14 @@
 }
 
 .contact-form__error {
-    margin-top: rem(52);
     display: none;
     font-size: rem(14);
     line-height: calc(17 / 14);
     color:$c-red;
+    padding-bottom: rem(44.8);
+    @include mq(md) {
+        padding-bottom: rem(43.2);
+    }
 }
 
 .contact-form__error.is-error{
@@ -25,8 +28,5 @@
 }
 
 .contact-form__fields {
-    margin-top: rem(54);
-    @include mq(md) {
-        margin-top: rem(40);
-    }
+   
 }

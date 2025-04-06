@@ -25,5 +25,6 @@
     @include mq(md) {
         position: relative;
         left:rem(8);
+        margin-top: rem(76);
       }
 }
