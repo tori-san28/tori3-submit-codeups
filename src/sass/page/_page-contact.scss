@@ -35,11 +35,19 @@
     }
 }
 
+.page-contact--sitemap {
+    margin-top: rem(100);
+    @include mq(md) {
+        margin-top: rem(138);
+    }
+}
+
 
 .page-contact--aboutus,
 .page-contact--information,
 .page-contact--price,
-.page-contact--faq {
+.page-contact--faq,
+.page-contact--terms{
     margin-top: rem(104);
     @include mq(md) {
         margin-top: rem(138);

@@ -17,6 +17,17 @@
     z-index: 1;
 }
 
+.main-button--not-found {
+    color:$c-accent;
+    background-color: $white;
+    border: rem(1) solid $white;
+    padding:rem(15) rem(96) rem(16) rem(40);
+    @include mq(md) {
+        padding:rem(15) rem(85) rem(16) rem(40);
+    }
+}
+
+
 .main-button::first-letter {
     text-transform: uppercase;
 }
@@ -33,6 +44,15 @@
     z-index: -10;
 }
 
+.main-button--not-found::before {
+    border: rem(1) solid $white;
+}
+
+.main-button--not-found:hover::before {
+    background-color: $white;
+    border: rem(1) solid $c-accent;
+}
+
 .main-button::after {
     content: "";
     position: absolute;
@@ -47,8 +67,16 @@
     z-index: -1;
 }
 
+.main-button--not-found::after {
+    background-color: $c-accent;
+}
+
 .main-button:hover {
     color: $c-accent;
+}
+
+.main-button--not-found:hover {
+    color: $white;
 }
 
 .main-button:hover::after {
@@ -70,8 +98,17 @@
     margin-top: rem(-2);
 }
 
+.main-button__arrow--not-found {
+    background-image: url(../images/common/button-arrow-green.svg);
+}
+
+
 .main-button:hover .main-button__arrow {
     background-image: url(../images/common/button-arrow-green.svg);
+}
+
+.main-button:hover .main-button__arrow--not-found {
+    background-image: url(../images/common/button-arrow.svg);
 }
 
 .main-button--send {

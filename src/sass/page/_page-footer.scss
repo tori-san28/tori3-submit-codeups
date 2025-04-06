@@ -17,3 +17,16 @@
     margin-top: rem(156);
    }
 }
+
+.page-footer--sitemap {
+   margin-top: rem(104);
+   @include mq(md) {
+    margin-top: rem(160);
+   }
+}
+.page-footer--not-found {
+   margin-top: rem(-0.6);
+   @include mq(md) {
+    margin-top: rem(-0.6);
+   }
+}

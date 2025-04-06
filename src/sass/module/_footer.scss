@@ -66,6 +66,12 @@
     }
 }
 
+.footer__nav--not-found {
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(20.8);
+    }
+}
 
 .footer__copyright {
     margin-top: rem(36);
