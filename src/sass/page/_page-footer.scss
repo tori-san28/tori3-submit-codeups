@@ -11,6 +11,13 @@
    margin-top: rem(150);
 }
 
+.page-footer--contact-thanks {
+   margin-top: rem(166.4);
+   @include mq(md) {
+    margin-top: rem(116.8);
+   }
+}
+
 .page-footer--pricacy {
    margin-top: rem(104);
    @include mq(md) {

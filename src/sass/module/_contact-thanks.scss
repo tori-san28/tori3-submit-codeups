@@ -13,5 +13,10 @@
 }
 
 .contact-thanks__text + .contact-thanks__text {
-    margin-top: rem(40);
+    margin-top: rem(35.2);
+    line-height: 1.2;
+    @include mq(md) {
+        margin-top: rem(40);
+        line-height: 1.5;
+    }
 }
