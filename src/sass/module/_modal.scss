@@ -1,0 +1,41 @@
+@use 'global' as *;
+
+.modal {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.modal__layer {
+    height: 100%;
+    background: rgba(32, 32, 32, 0.80);
+    cursor: pointer;
+}
+
+.modal__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: hidden;
+    width: calc(100% - #{rem(30)});
+    max-width: rem(600);
+
+    @include mq(md) {
+        max-width: rem(920);
+        width: calc(100% - #{rem(40)});
+    }
+}
+
+.modal__contents {
+}
+
+.modal__contents img {
+    width: 100%;
+    aspect-ratio: 920 / 586;
+    object-fit: cover;
+}
