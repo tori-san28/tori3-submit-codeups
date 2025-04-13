@@ -92,6 +92,13 @@
     }
 }
 
+.site-map__sub-items--price {
+    margin-left: 0;
+    @include mq(md) {
+        margin-left: 0;
+    }
+}
+
 .site-map__sub-item {
     font-size: rem(16);
     font-weight: $normal;

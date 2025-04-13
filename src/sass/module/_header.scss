@@ -29,7 +29,8 @@
     }
 }
 
-.header__inner--aboutus {
+.header__inner--aboutus,
+.header__inner--sitemap {
     padding: 0 rem(24) 0 rem(15);
     @include mq(md) {
         padding:0 rem(40);
