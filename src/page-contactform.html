@@ -132,7 +132,10 @@
       </div>
     </section>
     <ul class="breadcrumb page-breadcrumb">
-      <div class="breadcrumb__inner inner">TOP > お問い合わせ</div>
+      <div class="breadcrumb__inner inner">
+        <li>TOP</li>
+        <li>お問い合わせ</li>
+      </div>
     </ul>
 
     <div class="contact-form page-contact-form common-back-fish">
@@ -155,19 +158,19 @@
               <dd><input type="tel" name="tel" placeholder="000-0000-0000" required>
               </dd>
             </dl>
-            <dl class="form-field__item">
+            <dl class="form-field__item form-field__item--checkbox">
               <dt>お問合せ項目<span>必須</span></dt>
               <dd class="form-field__checkbox form-checkbox">
                 <label>
-                  <input type="checkbox" name="inquiry" id="" checked>
+                  <input type="checkbox" name="inquiry" checked>
                   <span>ダイビング講習について</span>
                 </label>
                 <label>
-                  <input type="checkbox" name="inquiry" id="">
+                  <input type="checkbox" name="inquiry">
                   <span>ファンデイビングについて</span>
                 </label>
                 <label>
-                  <input type="checkbox" name="inquiry" id="">
+                  <input type="checkbox" name="inquiry">
                   <span>体験ダイビングについて</span>
                 </label>
               </dd>
@@ -183,7 +186,7 @@
                   </select>
               </dd>
             </dl>
-            <dl class="form-field__item">
+            <dl class="form-field__item form-field__item--textarea">
               <dt>お問合せ内容<span>必須</span></dt>
               <dd>
                   <textarea name="message" required></textarea>
@@ -191,7 +194,7 @@
             </dl>
             <div class="form-field__personal-info form-checkbox form-checkbox--personal-info">
               <label>
-                <input type="checkbox" name="p-info" id="">
+                <input type="checkbox" name="p-info">
                 <span>個人情報の取り扱いについて同意のうえ<br class="u-mobile">送信します。</span>
               </label>
             </div>
@@ -218,7 +221,7 @@
             <a href="https://www.instagram.com/?locale=ja_JP"  target="_blank" class="footer__sns2"><img src="./assets/images/common/icon-instagram.svg" alt="icon-instagram"></a>
           </div>
         </div>
-        <div class="footer__nav footer-nav">
+        <div class="footer__nav footer__nav--contactform footer-nav">
           <div class="footer-nav__items">
             <div class="footer-nav__items-half">
               <ul class="footer-nav__items-quarter">

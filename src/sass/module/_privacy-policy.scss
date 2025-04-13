@@ -5,7 +5,9 @@
 }
 
 .privacy-policy__inner.inner {
-    max-width: rem(800 + 2 * strip-unit($padding-pc));
+    @include mq(md) {
+        max-width: rem(800 + 2 * strip-unit($padding-pc));
+    }
 }
 
 .privacy-policy__title {

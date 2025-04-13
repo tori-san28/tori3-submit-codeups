@@ -2,5 +2,12 @@
 
 .breadcrumb__inner {
 	font-size: rem(14);
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
 }
 
+.breadcrumb__inner li:not(:last-of-type)::after {
+	content: "›";
+ 	margin: 0 .6em; /* 記号の左右の余白 */
+}

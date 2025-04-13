@@ -24,7 +24,7 @@
     overflow-y: hidden;
     width: calc(100% - #{rem(30)});
     max-width: rem(600);
-
+    height: calc(586 / 768 * 100%);
     @include mq(md) {
         max-width: rem(920);
         width: calc(100% - #{rem(40)});

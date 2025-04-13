@@ -36,3 +36,16 @@
     line-height: 1.4;
 }
 
+.blog-voice-card__card-title--sub {
+    margin-top: rem(9.6);
+    @include mq(md) {
+        margin-top: rem(3.2);
+    }
+}
+
+.blog-voice-card__card-title--sub-archive {
+    margin-top: rem(9.6);
+    @include mq(md) {
+        margin-top: rem(8);
+    }
+}

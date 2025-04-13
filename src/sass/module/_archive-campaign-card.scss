@@ -98,10 +98,10 @@
     align-items: baseline;
     gap:rem(18);
     @include mq(md) {
-        gap:rem(40);
+        gap:rem(44.8);
         justify-content: center;
         margin-top: rem(-4.4);
-        margin-left: rem(20);
+        margin-left: rem(28.8);
         margin-right: rem(20);
     }
 }

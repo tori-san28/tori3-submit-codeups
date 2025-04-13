@@ -20,12 +20,13 @@
 }
 
 .archive-blog-selected__card-title {
-    margin-top: rem(8);
+    margin-top: rem(9.6);
     font-size: rem(24);
     line-height: calc(29 / 24);
-    padding-bottom: rem(10);
+    padding-bottom: rem(8);
     border-bottom: rem(1) solid $c-accent;
     @include mq(md) {
+        margin-top: rem(8);
         font-size: rem(32);
     }
 }

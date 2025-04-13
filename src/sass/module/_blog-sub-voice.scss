@@ -15,4 +15,13 @@
 .blog-sub-voice__button {
     margin-top: rem(48);
     text-align: center;
+    @include mq(md) {
+      margin-top: rem(54.4);
+    }
+}
+
+.blog-sub-voice__button--sub-archive {
+    @include mq(md) {
+        margin-top: rem(48);
+    }
 }

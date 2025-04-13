@@ -6,7 +6,7 @@
     gap:rem(19);
     @include mq(md) {
         justify-content: space-between;
-        gap:auto;
+        gap:initial;
     }
 }
 

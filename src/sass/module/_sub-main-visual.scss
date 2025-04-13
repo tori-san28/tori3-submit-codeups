@@ -3,13 +3,13 @@
 .sub-main-visual {
     position: relative;
     width: 100vw;
-    height: 122.3vw;
+    height: rem(460);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
     @include mq(md) {
         width: 100%;
-        height: 38.05556vw;
+        height: rem(548);
     }
 }
 
@@ -29,4 +29,16 @@
         margin-top: rem(50);
     }
 }
+
+.sub-main-visual__item {
+    width: inherit;
+    height: inherit;
+}
+
+.sub-main-visual__item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 

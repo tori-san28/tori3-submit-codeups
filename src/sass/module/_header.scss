@@ -29,6 +29,13 @@
     }
 }
 
+.header__inner--aboutus {
+    padding: 0 rem(24) 0 rem(15);
+    @include mq(md) {
+        padding:0 rem(40);
+    }
+}
+
 .header__title {
     width: rem(102);
     height: inherit;

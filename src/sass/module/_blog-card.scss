@@ -11,6 +11,14 @@
     }
 }
 
+.blog-card--archive {
+    padding:rem(17.6) rem(22.16) rem(24);
+    @include mq(md) {
+        padding: rem(16) rem(17.6) rem(24);
+    }
+}
+
+
 .blog-card:hover {
     opacity:0.8;
 }
