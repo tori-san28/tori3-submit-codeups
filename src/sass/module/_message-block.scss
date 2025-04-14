@@ -87,6 +87,7 @@
 }
 
 .message-block__sub-title--aboutus {
+    display: inline-block;
     position: relative;
     color:$white;
     left:rem(25);

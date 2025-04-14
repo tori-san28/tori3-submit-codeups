@@ -49,6 +49,13 @@
     }
 }
 
+.site-map__items-quarter--right {
+    min-width: rem(130);
+    @include mq(md) {
+        min-width: rem(150);
+    }
+}
+
 .site-map__item-link {
     font-size: rem(16);
     font-weight: $bold;
