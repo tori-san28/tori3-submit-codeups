@@ -187,9 +187,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //アコーディオン(faq)
 jQuery(function ($) {
-  $(".faq-list:first-of-type .faq-list__answer").css("display", "block");
-  // はじめのアコーディオンを開いておく
-  $(".faq-list:first-of-type .faq-list__question").addClass("is-open");  
+  $(".faq-list .faq-list__answer").css("display", "block");
+  // アコーディオンを開いておく
+  $(".faq-list .faq-list__question").addClass("is-open");  
   $(".js-faq-list").on("click", function () {
     $(this).next().slideToggle(200);
     $(this).toggleClass("is-open", 200);

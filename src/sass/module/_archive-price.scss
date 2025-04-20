@@ -4,8 +4,8 @@
 
 }
 
-.archive-price__inner {
-
+.archive-price__inner.inner {
+    max-width: rem(702 + strip-unit($padding-pc) * 2);
 }
 
 .archive-price__tables {

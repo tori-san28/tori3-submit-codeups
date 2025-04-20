@@ -5,14 +5,13 @@
     flex-direction: column;
     gap:rem(39.2);
     @include mq(md) {
-        gap:rem(44);
+        gap:rem(39.2);
     }
 }
 
 .faq-lists__list {
     width: 100%;
     @include mq(md) {
-        max-width: rem(700);
         margin-left: auto;
         margin-right: auto;
     }

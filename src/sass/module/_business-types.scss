@@ -20,9 +20,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: .3s ease;
 }
 
 .business-types__type--active {
     color:$white;
     background-color: $c-accent;
+}
+
+.business-types__type:hover {
+    color:$white;
+    background-color: $c-accent;   
+}
+
+.business-types__type--active:hover {
+    color:$c-accent;
+    background-color: $white;
 }

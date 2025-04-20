@@ -9,6 +9,7 @@
     background-color: $c-accent;
     color:$white;
     font-size: rem(16);
+    border:rem(1) solid $c-accent;
     padding: rem(8) 0 rem(8) rem(32);
     position: relative;
     @include mq(md) {
@@ -46,6 +47,7 @@
     position: relative;
     background-color: $c-accent;
     color:$white;
+    border:rem(1) solid $c-accent;
     font-size: rem(16);
     width: calc(200 / 702 * 100%);
     padding:rem(41) 0 rem(112);

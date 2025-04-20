@@ -27,6 +27,7 @@
     font-family: $lato-font-family;
     font-size: rem(16);
     font-weight: $bold;
+    transition: all ease .3s;
 }
 
 .pagination a:not(:hover) {
@@ -41,12 +42,9 @@
     margin-left: rem(28);
 }
 
-.pagination--home .pagination__prev a:hover {
-    background-color: $c-accent;
-    color: $white;
-}
-
-.pagination--home .pagination__next a:hover {
+.pagination a:hover,
+.pagination__prev a:hover,
+.pagination__next a:hover {
     background-color: $c-accent;
     color: $white;
 }
@@ -54,5 +52,9 @@
 .pagination__current a {
     background-color: $c-accent;
     color: $white;
-    pointer-events: none;
+}
+
+.pagination__current a:hover {
+    background-color: $white;
+    color: $c-accent;
 }

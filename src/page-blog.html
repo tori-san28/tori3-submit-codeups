@@ -123,7 +123,7 @@
   </header>
   <main>
     <section class="sub-main-visual sub-main-visual--campaign page-sub-main-visual">
-      <h1 class="sub-main-visual__title">Blog</h1>
+      <div class="sub-main-visual__title">Blog</div>
       <div class="sub-main-visual__item">
         <picture>
           <source media='(min-width: 768px)' srcset='./assets/images/common/blog-sub-mv-pc.png'>
@@ -139,32 +139,34 @@
     </ul>
 
     <div class="archive-blog page-archive-blog common-back-fish">
-      <div class="archive-blog__inner inner">
+      <div class="archive-blog__inner archive-blog__inner--archive inner">
         <div class="archive-blog__selected archive-blog-selected">
           <div class="archive-blog-selected__head">
-            <div class="archive-blog-selected__date">2023.11.17</div>
-            <div class="archive-blog-selected__card-title">ライセンス取得</div>
+            <time datetime="2023-11-17" class="archive-blog-selected__date">2023.11.17</time>
+            <h1 class="archive-blog-selected__card-title">ライセンス取得</h1>
           </div>
-          <div class="archive-blog-selected__img">
-            <img src='./assets/images/common/blog1-sp.png' alt='blog'>
+          <div class="archive-blog-selected__container">
+            <div>
+              <img src='./assets/images/common/blog1-sp.png' alt='blog'>
+            </div>
+            <p>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </p>
+            <div>
+              <img src='./assets/images/common/blog1-sp.png' alt='blog'>
+            </div>
+            <p>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </p>
+            <ul>
+              <li>リスト１</li>
+              <li>リスト２</li>
+              <li>リスト３</li>
+            </ul>
+            <p>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </p>
           </div>
-          <p class="archive-blog-selected__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-          </p>
-          <div class="archive-blog-selected__img">
-            <img src='./assets/images/common/blog1-sp.png' alt='blog'>
-          </div>
-          <p class="archive-blog-selected__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-          </p>
-          <ul class="archive-blog-selected__lists">
-            <li class="archive-blog-selected__list">リスト１</li>
-            <li class="archive-blog-selected__list">リスト２</li>
-            <li class="archive-blog-selected__list">リスト３</li>
-          </ul>
-          <p class="archive-blog-selected__text">
-            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-          </p>
           <ol class="archive-blog-selected__pagination pagination pagination--home">
             <li class="pagination__prev"><a href="#">&lt;</a></li>
             <li class="pagination__next"><a href="#">></a></li>
@@ -173,7 +175,7 @@
         <div class="archive-blog__sub-contents archive-blog-sub">
           <div class="archive-blog-sub__popular-news blog-pupular-news">
             <h2 class="blog-popular-news__title blog-sub-title">人気記事</h2>
-            <div class="blog-pupular-news__news blog-sub-card">
+            <a href="#" class="blog-pupular-news__news blog-sub-card">
               <div class="blog-sub-card__img">
                 <img src='./assets/images/common/blog4-sp.png' alt='blog4'>
               </div>
@@ -181,8 +183,8 @@
                 <div class="blog-sub-card__date">2023.11/17</div>
                 <div class="blog-sub-card__title">ライセンス取得</div>
               </div>
-            </div>
-            <div class="blog-pupular-news__news blog-sub-card">
+            </a>
+            <a href="#" class="blog-pupular-news__news blog-sub-card">
               <div class="blog-sub-card__img">
                 <img src='./assets/images/common/blog2-sp.png' alt='blog2'>
               </div>
@@ -190,8 +192,8 @@
                 <div class="blog-sub-card__date">2023.11/17</div>
                 <div class="blog-sub-card__title">ウミガメと泳ぐ</div>
               </div>
-            </div>
-            <div class="blog-pupular-news__news blog-sub-card">
+            </a>
+            <a href="#" class="blog-pupular-news__news blog-sub-card">
               <div class="blog-sub-card__img">
                 <img src='./assets/images/common/blog3-sp.png' alt='blog3'>
               </div>
@@ -199,7 +201,7 @@
                 <div class="blog-sub-card__date">2023.11/17</div>
                 <div class="blog-sub-card__title">カクレクマノミ</div>
               </div>
-            </div>
+            </a>
           </div>
 
           <div class="archive-blog-sub__voice blog-sub-voice">
@@ -268,17 +270,17 @@
               <div class="blog-archive-lists__list blog-archive-list">
                 <div class="blog-archive-list__year">2023</div>
                 <ul class="blog-archive-list__months">
-                  <li class="blog-archive-list__month">3月</li>
-                  <li class="blog-archive-list__month">2月</li>
-                  <li class="blog-archive-list__month">1月</li>
+                  <li class="blog-archive-list__month"><a href="#">3月</a></li>
+                  <li class="blog-archive-list__month"><a href="#">2月</a></li>
+                  <li class="blog-archive-list__month"><a href="#">1月</a></li>
                 </ul>
               </div>
               <div class="blog-archive-lists__list blog-archive-list">
                 <div class="blog-archive-list__year">2022</div>
                 <ul class="blog-archive-list__months">
-                  <li class="blog-archive-list__month">12月</li>
-                  <li class="blog-archive-list__month">11月</li>
-                  <li class="blog-archive-list__month">10月</li>
+                  <li class="blog-archive-list__month"><a href="#">12月</a></li>
+                  <li class="blog-archive-list__month"><a href="#">11月</a></li>
+                  <li class="blog-archive-list__month"><a href="#">10月</a></li>
                 </ul>
               </div>
             </div>

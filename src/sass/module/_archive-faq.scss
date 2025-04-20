@@ -4,8 +4,8 @@
 
 }
 
-.archive-faq__inner {
-
+.archive-faq__inner.inner {
+    max-width: rem(700 + strip-unit($padding-pc) * 2);;
 }
 
 .archive-faq__faqs {

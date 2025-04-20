@@ -23,7 +23,7 @@
     margin-top: rem(9.6);
     font-size: rem(24);
     line-height: calc(29 / 24);
-    padding-bottom: rem(8);
+    //padding-bottom: rem(8);
     border-bottom: rem(1) solid $c-accent;
     @include mq(md) {
         margin-top: rem(8);
@@ -31,11 +31,20 @@
     }
 }
 
-.archive-blog-selected__img {
+.archive-blog-selected__container {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    @include mq(md) {
+        gap:rem(40);
+    }
+}
+
+.archive-blog-selected__container div{
     position: relative;
 }
 
-.archive-blog-selected__img::before {
+.archive-blog-selected__container div::before {
     content:"";
     display: block;
     padding-top: 66.9565%;
@@ -44,7 +53,7 @@
     }
 }
 
-.archive-blog-selected__img img{
+.archive-blog-selected__container div img{
     position: absolute;
     top:50%;
     left:50%;
@@ -54,20 +63,20 @@
     object-fit: cover;
 }
 
-.archive-blog-selected__text {
+.archive-blog-selected__container p {
    
 }
 
-.archive-blog-selected__lists {
+.archive-blog-selected__container ul {
     padding-left: rem(27.2);
 }
 
-.archive-blog-selected__list {
+.archive-blog-selected__container ul li {
     position: relative;
     line-height: 1.7;
 }
 
-.archive-blog-selected__list::before {
+.archive-blog-selected__container ul li::before {
     content: "";
     position: absolute;
     background-image: url(../images/common/blog-hitode.svg);
@@ -75,7 +84,7 @@
     background-size: contain;
     width: rem(18);
     height: rem(18);
-    top: 0;
+    top: rem(5);
     left:rem(-22);
 }
 
