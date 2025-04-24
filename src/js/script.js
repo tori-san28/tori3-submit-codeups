@@ -157,7 +157,6 @@ jQuery(function ($) {
     // クリックしたタブのインデックス番号と同じコンテンツを表示
     $(".js-tab-contents").hide().eq(index).fadeIn(300);
   });
-
 });
 
 //タブのリンクに応じて表示を変更
@@ -219,7 +218,6 @@ jQuery(function ($) {
       });
     if($('.invalid').length == 0){
       $('form').submit();
-      //location.href = "page-contact-thanks.html";
       console.log('送信しました');
     }
   });
