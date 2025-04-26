@@ -14,10 +14,6 @@
     }
 }
 
-.archive-blog__inner--archive {
-    gap:rem(86);
-}
-
 .archive-blog__selected {
     width: 100%;
     @include mq(md) {

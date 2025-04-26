@@ -5,9 +5,11 @@
 }
 
 .form-field__item {
+    padding-bottom: rem(24);
     @include mq(md) {
         display: flex;
         border-bottom: rem(1) dotted $c-accent;
+        padding-bottom: rem(40);
     }
 }
 
@@ -59,22 +61,13 @@
 
 .form-field__item dd {
     margin-top: rem(18.4);
-    padding-bottom: rem(24);
     border-bottom: rem(1) dotted $c-accent;
     @include mq(md) {
         width: calc(480 / 700 * 100%);
         margin-top: 0;
-        padding-bottom: rem(40);
         border-bottom: initial;
     }
 }
-
-// .form-field__item--checkbox dd {
-//     margin-top: rem(20.8);
-//     @include mq(md) {
-//         margin-top: 0;
-//     }
-// }
 
 .form-field__item--select dd {
     @include mq(md) {
@@ -82,17 +75,12 @@
     }
 }
 
-
-.form-field__item--textarea dd {
+.form-field__item--textarea {
     padding-bottom: rem(19.2);
     @include mq(md) {
         padding-bottom: rem(40);
     }
 }
-
-
-
-
 
 .form-field__item dd input,
 .form-field__item dd textarea

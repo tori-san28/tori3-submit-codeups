@@ -23,12 +23,15 @@
     margin-top: rem(9.6);
     font-size: rem(24);
     line-height: calc(29 / 24);
-    //padding-bottom: rem(8);
     border-bottom: rem(1) solid $c-accent;
     @include mq(md) {
         margin-top: rem(8);
         font-size: rem(32);
     }
+}
+
+.archive-blog-selected__thumbnail img {
+    width: 100%;
 }
 
 .archive-blog-selected__container {
@@ -40,27 +43,8 @@
     }
 }
 
-.archive-blog-selected__container div{
-    position: relative;
-}
-
-.archive-blog-selected__container div::before {
-    content:"";
-    display: block;
-    padding-top: 66.9565%;
-    @include mq(md) {
-     padding-top: 66.85714%;
-    }
-}
-
 .archive-blog-selected__container div img{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .archive-blog-selected__container p {
