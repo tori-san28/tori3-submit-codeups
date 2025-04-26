@@ -128,18 +128,30 @@ $('.js-hamburger').on('click', function () {
 //ここから下層ページ
 
 //モーダル
+function observeScrollbarWidth() {
+  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.documentElement.style.setProperty('--scrollbar-width', `${scrollBarWidth}px`);
+}
+
+window.addEventListener('load', observeScrollbarWidth);
+window.addEventListener('resize', observeScrollbarWidth);
+
 jQuery(function ($) { 
 $(".js-openModal").on('click',function(e){
     e.preventDefault();
     $(".modal__contents").html($(this).prop("outerHTML"));
     $(".modal").fadeIn(300);
     $("body,html").css("overflow","hidden");
+    $("body").addClass("open-dialog");
+    $("#back-to-top").addClass("open-dialog");
   });
 
   $(".modal").on('click',function(e){
     e.preventDefault();
     $(".modal").fadeOut(300);
     $("body,html").css("overflow","auto");
+    $("body").removeClass("open-dialog");
+    $("#back-to-top").removeClass("open-dialog");
   });
 });
 
