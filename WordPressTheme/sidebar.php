@@ -10,7 +10,7 @@
     <h2 class="blog-popular-news__title blog-sub-title">人気記事</h2>
     <?php if ($the_query->have_posts()): ?>
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-        <a href="#" class="blog-pupular-news__news blog-sub-card">
+        <a href="<?php the_permalink();?>" class="blog-pupular-news__news blog-sub-card">
             <div class="blog-sub-card__img">
             <?php if(has_post_thumbnail()): ?>
                 <?php the_post_thumbnail();?>
