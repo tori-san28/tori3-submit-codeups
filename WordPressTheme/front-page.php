@@ -263,24 +263,16 @@
               <?php
                 $title1 = SCF::get('title1',$price_id);
                 $list1 = SCF::get('list1',$price_id);
-                $count = 0;
-                $rspan = 0;
               ?>
               <?php if(!empty($title1) && !empty($list1)):?>
-                <div class="price-item__title">ライセンス講習</div>
+                <div class="price-item__title"><?php echo $title1?></div>
                 <dl class="price-item__contents">
-                  <div class="price-item__list">
-                    <dt class="price-item__term">オープンウォーターダイバーコース</dt>
-                    <dd class="price-item__description">¥50,000</dd>
-                  </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">アドバンスドオープンウォーターコース</dt>
-                    <dd class="price-item__description">¥60,000</dd>
-                  </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">レスキュー＋EFRコース</dt>
-                    <dd class="price-item__description">¥70,000</dd>
-                  </div>
+                  <?php foreach($list1 as $item): ?>
+                    <div class="price-item__list">
+                      <dt class="price-item__term"><?php echo $item['course1'];?></dt>
+                      <dd class="price-item__description"><?php echo $item['price1'];?></dd>
+                    </div>
+                  <?php endforeach;?>  
                 </dl>
               <?php endif;?>
             </div>
@@ -288,28 +280,16 @@
               <?php
                   $title2 = SCF::get('title2',$price_id);
                   $list2 = SCF::get('list2',$price_id);
-                  $count = 0;
-                  $rspan = 0;
               ?>
               <?php if(!empty($title2) && !empty($list2)):?>
-                <div class="price-item__title">体験ダイビング</div>
+                <div class="price-item__title"><?php echo $title2?></div>
                 <dl class="price-item__contents">
+                <?php foreach($list2 as $item): ?>
                   <div class="price-item__list">
-                    <dt class="price-item__term">ビーチ体験ダイビング(半日)</dt>
-                    <dd class="price-item__description">¥7,000</dd>
+                    <dt class="price-item__term"><?php echo $item['course2'];?></dt>
+                    <dd class="price-item__description"><?php echo $item['price2'];?></dd>
                   </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">ビーチ体験ダイビング(1日)</dt>
-                    <dd class="price-item__description">¥14,000</dd>
-                  </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">ボート体験ダイビング(半日)</dt>
-                    <dd class="price-item__description">¥10,000</dd>
-                  </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">ボート体験ダイビング(1日)</dt>
-                    <dd class="price-item__description">¥18,000</dd>
-                  </div>
+                <?php endforeach;?>
                 </dl>
               <?php endif;?>
             </div>
@@ -317,28 +297,16 @@
               <?php
                 $title3 = SCF::get('title3',$price_id);
                 $list3 = SCF::get('list3',$price_id);
-                $count = 0;
-                $rspan = 0;
               ?>
               <?php if(!empty($title3) && !empty($list3)):?>
-                <div class="price-item__title">ファンダイビング</div>
+                <div class="price-item__title"><?php echo $title3?></div>
                 <dl class="price-item__contents">
+                <?php foreach($list3 as $item): ?>
                   <div class="price-item__list">
-                    <dt class="price-item__term">ビーチダイビング(2ダイブ)</dt>
-                    <dd class="price-item__description">¥14,000</dd>
+                    <dt class="price-item__term"><?php echo $item['course3'];?></dt>
+                    <dd class="price-item__description"><?php echo $item['price3'];?></dd>
                   </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">ボートダイビング(2ダイブ)</dt>
-                    <dd class="price-item__description">¥18,000</dd>
-                  </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">スペシャルダイビング(2ダイブ)</dt>
-                    <dd class="price-item__description">¥24,000</dd>
-                  </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">ナイトダイビング(1ダイブ)</dt>
-                    <dd class="price-item__description">¥10,000</dd>
-                  </div>
+                <?php endforeach;?>
                 </dl>
               <?php endif;?> 
             </div>
@@ -346,20 +314,16 @@
               <?php
                 $title4 = SCF::get('title4',$price_id);
                 $list4 = SCF::get('list4',$price_id);
-                $count = 0;
-                $rspan = 0;
               ?>
               <?php if(!empty($title4) && !empty($list4)):?>
-                <div class="price-item__title">スペシャルダイビング</div>
+                <div class="price-item__title"><?php echo $title4?></div>
                 <dl class="price-item__contents">
+                <?php foreach($list4 as $item): ?>
                   <div class="price-item__list">
-                    <dt class="price-item__term">貸切ダイビング(2ダイブ)</dt>
-                    <dd class="price-item__description">¥24,000</dd>
+                    <dt class="price-item__term"><?php echo $item['course4'];?></dt>
+                    <dd class="price-item__description"><?php echo $item['price4'];?></dd>
                   </div>
-                  <div class="price-item__list">
-                    <dt class="price-item__term">1日ダイビング(3ダイブ)</dt>
-                    <dd class="price-item__description">¥32,000</dd>
-                  </div>
+                  <?php endforeach;?>
                 </dl>
               <?php endif;?> 
             </div>

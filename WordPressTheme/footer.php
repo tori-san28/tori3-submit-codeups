@@ -9,7 +9,7 @@ $price = esc_url(home_url( '/price/' ));
 $faq = esc_url(home_url( '/faq/' ));
 $contactform = esc_url(home_url( '/contactform/' ));
 $privacy = esc_url(home_url( '/privacy/' ));
-$terms = esc_url(home_url( '/terms/' ));
+$termsservice = esc_url(home_url( '/terms/' ));
 $sitemap = esc_url(home_url( '/sitemap/' ));
 ?>
 <?php if(!is_page('contactform') && !is_page('contact-thanks') && !is_404()):?>
@@ -72,10 +72,16 @@ $sitemap = esc_url(home_url( '/sitemap/' ));
               <ul class="footer-nav__items-quarter">
                 <li class="footer-nav__item">
                   <a href="<?php echo $campaign;?>" class="footer-nav__item-link">キャンペーン</a>
+                  <?php
+                  $terms = get_terms( array(
+                  'taxonomy' => 'campaign_category',
+                  'hide_empty' => true,
+                  ));
+                  ?>
                   <ul class="footer-nav__sub-items">
-                    <li class="footer-nav__sub-item"><a href="#" class="footer-nav__sub-item-link">ライセンス取得</a></li>
-                    <li class="footer-nav__sub-item"><a href="#" class="footer-nav__sub-item-link">貸切体験ダイビング</a></li>
-                    <li class="footer-nav__sub-item"><a href="#" class="footer-nav__sub-item-link">ナイトダイビング</a></li>
+                    <?php foreach ( $terms as $term ):?>
+                    <li class="footer-nav__sub-item"><a href="<?php echo esc_url(get_term_link($term));?>" class="footer-nav__sub-item-link"><?php echo esc_html( $term->name);?></a></li>
+                    <?php endforeach;?>
                   </ul>
                 </li>
                 <li class="footer-nav__item"><a href="<?php echo $aboutus;?>" class="footer-nav__item-link">私たちについて</a></li>
@@ -84,9 +90,9 @@ $sitemap = esc_url(home_url( '/sitemap/' ));
                 <li class="footer-nav__item">
                   <a href="<?php echo $information;?>" class="footer-nav__item-link">ダイビング情報</a>
                   <ul class="footer-nav__sub-items">
-                    <li class="footer-nav__sub-item"><a href="page-information.html?tab=tab01" class="footer-nav__sub-item-link js-link-1">ライセンス講習</a></li>
-                    <li class="footer-nav__sub-item"><a href="page-information.html?tab=tab03" class="footer-nav__sub-item-link js-link-2">体験ダイビング</a></li>
-                    <li class="footer-nav__sub-item"><a href="page-information.html?tab=tab02" class="footer-nav__sub-item-link js-link-3">ファンダイビング</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo $information?>?tab=tab01" class="footer-nav__sub-item-link js-link-1">ライセンス講習</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo $information?>?tab=tab03" class="footer-nav__sub-item-link js-link-2">体験ダイビング</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo $information?>?tab=tab02" class="footer-nav__sub-item-link js-link-3">ファンダイビング</a></li>
                   </ul>
                 </li>
                 <li class="footer-nav__item"><a href="<?php echo $home;?>" class="footer-nav__item-link">ブログ</a></li>
@@ -98,16 +104,16 @@ $sitemap = esc_url(home_url( '/sitemap/' ));
                 <li class="footer-nav__item">
                   <a href="<?php echo $price;?>" class="footer-nav__item-link">料金一覧</a>
                   <ul class="footer-nav__sub-items">
-                    <li class="footer-nav__sub-item"><a href="#" class="footer-nav__sub-item-link">ライセンス講習</a></li>
-                    <li class="footer-nav__sub-item"><a href="#" class="footer-nav__sub-item-link">体験ダイビング</a></li>
-                    <li class="footer-nav__sub-item"><a href="#" class="footer-nav__sub-item-link">ファンダイビング</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo $price;?>#price-table1" class="footer-nav__sub-item-link">ライセンス講習</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo $price;?>#price-table2" class="footer-nav__sub-item-link">体験ダイビング</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo $price;?>#price-table3" class="footer-nav__sub-item-link">ファンダイビング</a></li>
                   </ul>
                 </li>
               </ul>
               <ul class="footer-nav__items-quarter">
                 <li class="footer-nav__item"><a href="<?php echo $faq;?>" class="footer-nav__item-link">よくある質問</a></li>
                 <li class="footer-nav__item"><a href="<?php echo $privacy;?>" class="footer-nav__item-link footer-nav__item-link--span">プライバシー<span>ポリシー</span></a></li>
-                <li class="footer-nav__item"><a href="<?php echo $terms;?>" class="footer-nav__item-link">利用規約</a></li>
+                <li class="footer-nav__item"><a href="<?php echo $termsservice;?>" class="footer-nav__item-link">利用規約</a></li>
                 <li class="footer-nav__item"><a href="<?php echo $contactform;?>" class="footer-nav__item-link">お問い合わせ</a></li>
               </ul>
             </div>
