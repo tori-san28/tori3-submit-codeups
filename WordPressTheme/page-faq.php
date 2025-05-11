@@ -19,8 +19,8 @@
         <div class="archive-faq__faqs faq-lists">
           <?php  foreach($faqs as $item): ?>
             <div class="faq-lists__list faq-list">
-              <p class="faq-list__question js-faq-list is-open"><?php echo nl2br($item['question']);?></p>
-              <p class="faq-list__answer"><?php echo nl2br($item['answer']);?></p>
+              <p class="faq-list__question js-faq-list is-open"><?php echo esc_html(nl2br($item['question']));?></p>
+              <p class="faq-list__answer"><?php echo esc_html(nl2br($item['answer']));?></p>
             </div>
           <?php endforeach;?>  
         </div>

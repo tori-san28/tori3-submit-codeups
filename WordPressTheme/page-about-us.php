@@ -58,8 +58,8 @@
                     <?php $image_full = wp_get_attachment_image_src($item['picture1'] , 'full'); ?>
                     <?php $image_medium = wp_get_attachment_image_src($item['picture1'] , 'medium'); ?>
                  <picture>
-                  <source media='(min-width: 768px)' srcset='<?php echo $image_full[0]; ?>'>
-                  <img src='<?php echo $image_medium[0]; ?>' alt='gallery-picture'>
+                  <source media='(min-width: 768px)' srcset='<?php echo esc_url($image_full[0]); ?>'>
+                  <img src='<?php echo esc_url($image_medium[0]); ?>' alt='gallery-picture'>
                  </picture>
                 <?php endif;?>
               </div>

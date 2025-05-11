@@ -15,7 +15,7 @@
     <section class="archive-voice page-archive-voice common-back-fish">
       <div class="archive-voice__inner inner">
        <div class="archive-voice__business-types business-types">
-         <a href="<?php echo get_post_type_archive_link('voice'); ?>" class="business-types__type business-types__type--active">ALL</a>
+         <a href="<?php echo esc_url(get_post_type_archive_link('voice')); ?>" class="business-types__type business-types__type--active">ALL</a>
           <?php
             $terms = get_terms( array(
             'taxonomy' => 'voice_category',
@@ -44,10 +44,10 @@
               <div class="voice-card__wrapper">
               <div class="voice-card__contents">
               <div class="voice-card__sub-contents">
-                <div class="voice-card__age"><?php echo get_field('age').'('. get_field('sex').')'; ?></div>
+                <div class="voice-card__age"><?php echo esc_html(get_field('age')).'('. esc_html(get_field('sex')).')'; ?></div>
                 <div class="voice-card__business-type"><?php echo esc_html($first_term); ?></div>
               </div>
-              <h2 class="voice-card__card-title"><?php echo wp_trim_words(get_the_title(), 20,''); ?></h2>
+              <h2 class="voice-card__card-title"><?php echo esc_html(wp_trim_words(get_the_title(), 20,'')); ?></h2>
             </div>
             <div class="voice-card__img">
               <?php if(has_post_thumbnail()): ?>
@@ -58,7 +58,7 @@
             </div>
           </div>
           <div class="voice-card__text">
-          <?php echo nl2br(get_the_excerpt()); ?>
+          <?php echo esc_html(nl2br(get_the_excerpt())); ?>
           </div>
         </div>
         <?php endwhile;?>

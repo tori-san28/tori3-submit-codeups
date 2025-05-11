@@ -91,7 +91,7 @@
           </div>
         </div>
         <div class="campaign__button">
-          <a href="<?php echo esc_url(home_url( '/campaign/' ));?>" class="main-button">view more<span class="main-button__arrow"></span></a>
+          <a href="<?php echo get_campaign_url();?>" class="main-button">view more<span class="main-button__arrow"></span></a>
         </div>
       </div>
     </section> 
@@ -119,7 +119,7 @@
                 >ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
               </div>
               <div class="message-block__button">
-                <a href="<?php echo esc_url(home_url( '/about-us/' ));?>" class="main-button">view more<span class="main-button__arrow"></span></a>
+                <a href="<?php echo get_aboutus_url();?>" class="main-button">view more<span class="main-button__arrow"></span></a>
               </div>
             </div>
           </div>
@@ -145,7 +145,7 @@
                 >正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
               </div>
               <div class="information__button">
-                <a href="<?php echo esc_url(home_url( '/information/' ));?>" class="main-button">view more<span class="main-button__arrow"></span></a>
+                <a href="<?php echo get_information_url();?>" class="main-button">view more<span class="main-button__arrow"></span></a>
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@
          <?php endif; wp_reset_postdata(); ?>
         </div>
         <div class="blog__button">
-          <a href="<?php echo esc_url(home_url( '/blog/' ));?>" class="main-button">view more<span class="main-button__arrow"></span></a>
+          <a href="<?php echo get_blog_url();?>" class="main-button">view more<span class="main-button__arrow"></span></a>
         </div>
       </div>
     </section>
@@ -241,7 +241,7 @@
         </div>
 
          <div class="voice__button">
-            <a href="<?php echo esc_url(home_url( '/voice/' ));?>" class="main-button">view more<span class="main-button__arrow"></span></a>
+            <a href="<?php echo get_voice_url();?>" class="main-button">view more<span class="main-button__arrow"></span></a>
          </div>
       </div>
     </section>
@@ -265,12 +265,12 @@
                 $list1 = SCF::get('list1',$price_id);
               ?>
               <?php if(!empty($title1) && !empty($list1)):?>
-                <div class="price-item__title"><?php echo $title1?></div>
+                <div class="price-item__title"><?php echo esc_html($title1);?></div>
                 <dl class="price-item__contents">
                   <?php foreach($list1 as $item): ?>
                     <div class="price-item__list">
-                      <dt class="price-item__term"><?php echo $item['course1'];?></dt>
-                      <dd class="price-item__description"><?php echo $item['price1'];?></dd>
+                      <dt class="price-item__term"><?php echo esc_html($item['course1']);?></dt>
+                      <dd class="price-item__description"><?php echo esc_html($item['price1']);?></dd>
                     </div>
                   <?php endforeach;?>  
                 </dl>
@@ -282,12 +282,12 @@
                   $list2 = SCF::get('list2',$price_id);
               ?>
               <?php if(!empty($title2) && !empty($list2)):?>
-                <div class="price-item__title"><?php echo $title2?></div>
+                <div class="price-item__title"><?php echo esc_html($title2);?></div>
                 <dl class="price-item__contents">
                 <?php foreach($list2 as $item): ?>
                   <div class="price-item__list">
-                    <dt class="price-item__term"><?php echo $item['course2'];?></dt>
-                    <dd class="price-item__description"><?php echo $item['price2'];?></dd>
+                    <dt class="price-item__term"><?php echo esc_html($item['course2']);?></dt>
+                    <dd class="price-item__description"><?php echo esc_html($item['price2']);?></dd>
                   </div>
                 <?php endforeach;?>
                 </dl>
@@ -299,12 +299,12 @@
                 $list3 = SCF::get('list3',$price_id);
               ?>
               <?php if(!empty($title3) && !empty($list3)):?>
-                <div class="price-item__title"><?php echo $title3?></div>
+                <div class="price-item__title"><?php echo esc_html($title3);?></div>
                 <dl class="price-item__contents">
                 <?php foreach($list3 as $item): ?>
                   <div class="price-item__list">
-                    <dt class="price-item__term"><?php echo $item['course3'];?></dt>
-                    <dd class="price-item__description"><?php echo $item['price3'];?></dd>
+                    <dt class="price-item__term"><?php echo esc_html($item['course3']);?></dt>
+                    <dd class="price-item__description"><?php echo esc_html($item['price3']);?></dd>
                   </div>
                 <?php endforeach;?>
                 </dl>
@@ -316,12 +316,12 @@
                 $list4 = SCF::get('list4',$price_id);
               ?>
               <?php if(!empty($title4) && !empty($list4)):?>
-                <div class="price-item__title"><?php echo $title4?></div>
+                <div class="price-item__title"><?php echo esc_html($title4);?></div>
                 <dl class="price-item__contents">
                 <?php foreach($list4 as $item): ?>
                   <div class="price-item__list">
-                    <dt class="price-item__term"><?php echo $item['course4'];?></dt>
-                    <dd class="price-item__description"><?php echo $item['price4'];?></dd>
+                    <dt class="price-item__term"><?php echo esc_html($item['course4']);?></dt>
+                    <dd class="price-item__description"><?php echo esc_html($item['price4']);?></dd>
                   </div>
                   <?php endforeach;?>
                 </dl>
@@ -338,7 +338,7 @@
           </div>
         </div>
         <div class="price__button">
-          <a href="<?php echo esc_url(home_url( '/price/' ));?>" class="main-button">view more<span class="main-button__arrow"></span></a>
+          <a href="<?php echo get_price_url();?>" class="main-button">view more<span class="main-button__arrow"></span></a>
         </div>
       </div>
     </section>

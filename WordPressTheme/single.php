@@ -35,8 +35,8 @@
             <?php endwhile;?>
           <?php endif;?>
           <ol class="archive-blog-selected__pagination pagination pagination--home">
-            <li class="pagination__prev"><?php previous_post_link('%link', '<');?></li>
-            <li class="pagination__next"><?php next_post_link('%link', '>');?></li>
+            <li class="pagination__prev"><?php esc_url(previous_post_link('%link', '<'));?></li>
+            <li class="pagination__next"><?php esc_url(next_post_link('%link', '>'));?></li>
           </ol>
         </div>
         

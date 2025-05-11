@@ -25,7 +25,7 @@
            <?php if(!empty($title1) && !empty($list1)):?>
             <table id="price-table1" class="price-tables__table price-table">
               <tr>
-                <th class="price-table__head-sp" colspan="2"><?php echo $title1?></th>
+                <th class="price-table__head-sp" colspan="2"><?php echo esc_html($title1);?></th>
               </tr>
               <!-- rowspanのためのカウント -->
               <?php foreach($list1 as $item) {$rspan = $rspan + 1;}?>
@@ -33,14 +33,14 @@
               <?php  foreach($list1 as $item): ?>
                 <tr>
                 <?php if($count == 0):?>
-                  <th class="price-table__head-pc" rowspan="<?php echo $rspan ?>"><?php echo $title1?></th>
+                  <th class="price-table__head-pc" rowspan="<?php echo $rspan ?>"><?php echo esc_html($title1);?></th>
                   <?php $count = $count + 1;?>
                 <?php endif;?>
                 <td class="price-table__data">
-                  <span class="u-desktop"><?php echo $item['course1'];?></span>
-                  <span class="u-mobile"><?php echo nl2br($item['course1']);?></span>
+                  <span class="u-desktop"><?php echo esc_html($item['course1']);?></span>
+                  <span class="u-mobile"><?php echo esc_html(nl2br($item['course1']));?></span>
                 </td>
-                <td class="price-table__price"><?php echo $item['price1'];?></td>
+                <td class="price-table__price"><?php echo esc_html($item['price1']);?></td>
               </tr>
               <?php  endforeach;?>
             </table>
@@ -55,7 +55,7 @@
            <?php if(!empty($title2) && !empty($list2)):?>
             <table id="price-table2" class="price-tables__table price-table">
               <tr>
-                <th class="price-table__head-sp" colspan="2"><?php echo $title2?></th>
+                <th class="price-table__head-sp" colspan="2"><?php echo esc_html($title2);?></th>
               </tr>
                <!-- rowspanのためのカウント -->
                <?php foreach($list2 as $item) {$rspan = $rspan + 1;}?>
@@ -63,14 +63,14 @@
               <?php  foreach($list2 as $item): ?>
                 <tr>
                 <?php if($count == 0):?>
-                  <th class="price-table__head-pc" rowspan="<?php echo $rspan ?>"><?php echo $title2?></th>
+                  <th class="price-table__head-pc" rowspan="<?php echo $rspan ?>"><?php echo esc_html($title2);?></th>
                   <?php $count = $count + 1;?>
                 <?php endif;?>
                 <td class="price-table__data">
-                  <span class="u-desktop"><?php echo $item['course2'];?></span>
-                  <span class="u-mobile"><?php echo nl2br($item['course2']);?></span>
+                  <span class="u-desktop"><?php echo esc_html($item['course2']);?></span>
+                  <span class="u-mobile"><?php echo esc_html(nl2br($item['course2']));?></span>
                 </td>
-                <td class="price-table__price"><?php echo $item['price2'];?></td>
+                <td class="price-table__price"><?php echo esc_html($item['price2']);?></td>
               </tr>
               <?php  endforeach;?>
             </table>
@@ -93,14 +93,14 @@
               <?php  foreach($list3 as $item): ?>
                 <tr>
                 <?php if($count == 0):?>
-                  <th class="price-table__head-pc" rowspan="<?php echo $rspan ?>"><?php echo $title3?></th>
+                  <th class="price-table__head-pc" rowspan="<?php echo $rspan ?>"><?php echo esc_html($title3);?></th>
                   <?php $count = $count + 1;?>
                 <?php endif;?>
                 <td class="price-table__data">
-                  <span class="u-desktop"><?php echo $item['course3'];?></span>
-                  <span class="u-mobile"><?php echo nl2br($item['course3']);?></span>
+                  <span class="u-desktop"><?php echo esc_html($item['course3']);?></span>
+                  <span class="u-mobile"><?php echo esc_html(nl2br($item['course3']));?></span>
                 </td>
-                <td class="price-table__price"><?php echo $item['price3'];?></td>
+                <td class="price-table__price"><?php echo esc_html($item['price3']);?></td>
               </tr>
               <?php  endforeach;?>
             </table>
@@ -115,7 +115,7 @@
            <?php if(!empty($title4) && !empty($list4)):?>
             <table id="price-table4" class="price-tables__table price-table">
               <tr>
-                <th class="price-table__head-sp" colspan="2"><?php echo $title4?></th>
+                <th class="price-table__head-sp" colspan="2"><?php echo esc_html($title4);?></th>
               </tr>
                <!-- rowspanのためのカウント -->
                <?php foreach($list4 as $item) {$rspan = $rspan + 1;}?>
@@ -123,14 +123,14 @@
               <?php  foreach($list4 as $item): ?>
                 <tr>
                 <?php if($count == 0):?>
-                  <th class="price-table__head-pc" rowspan="<?php echo $rspan ?>"><?php echo $title4?></th>
+                  <th class="price-table__head-pc" rowspan="<?php echo $rspan ?>"><?php echo esc_html($title4);?></th>
                   <?php $count = $count + 1;?>
                 <?php endif;?>
                 <td class="price-table__data">
-                  <span class="u-desktop"><?php echo $item['course4'];?></span>
-                  <span class="u-mobile"><?php echo nl2br($item['course4']);?></span>
+                  <span class="u-desktop"><?php echo esc_html($item['course4']);?></span>
+                  <span class="u-mobile"><?php echo esc_html(nl2br($item['course4']));?></span>
                 </td>
-                <td class="price-table__price"><?php echo $item['price4'];?></td>
+                <td class="price-table__price"><?php echo esc_html($item['price4']);?></td>
               </tr>
               <?php  endforeach;?>
             </table>

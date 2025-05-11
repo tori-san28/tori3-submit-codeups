@@ -46,15 +46,15 @@
                 <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/noimage.jpg' alt='no-image'>
             <?php endif;?>
             </div>
-            <div class="blog-voice-card__age"><?php echo get_field('age').'('. get_field('sex').')'; ?></div>
+            <div class="blog-voice-card__age"><?php echo esc_html(get_field('age')).'('. esc_html(get_field('sex')).')'; ?></div>
             <div class="blog-voice-card__card-title blog-voice-card__card-title--sub">
-            <?php echo wp_trim_words(get_the_title(), 20,''); ?>
+            <?php echo esc_html(wp_trim_words(get_the_title(), 20,'')); ?>
             </div>
         </div>
         <?php endwhile; ?>
     <?php endif; wp_reset_postdata(); ?>
     <div class="blog-sub-voice__button">
-        <a href="<?php echo esc_url(home_url( '/voice/' ));?>" class="main-button">view more<span class="main-button__arrow"></span></a>
+        <a href="<?php echo get_voice_url();?>" class="main-button">view more<span class="main-button__arrow"></span></a>
     </div>
     </div>
 
@@ -97,7 +97,7 @@
         <?php endif; wp_reset_postdata(); ?>
     </div>
     <div class="blog-sub-campaign__button">
-        <a href="<?php echo esc_url(home_url( '/campaign/' ));?>" class="main-button">view more<span class="main-button__arrow"></span></a>
+        <a href="<?php echo get_campaign_url();?>" class="main-button">view more<span class="main-button__arrow"></span></a>
     </div>
     </div>
 
