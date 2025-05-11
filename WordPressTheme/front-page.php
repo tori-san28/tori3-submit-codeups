@@ -14,10 +14,10 @@
                 <div class="swiper-slide main-visual__item main-visual-card">
                  <?php if(!empty($item['picture'])):?>
                    <?php $image_full = wp_get_attachment_image_src($item['picture'] , 'full'); ?>
-                   <?php $image_medium = wp_get_attachment_image_src($item['picture'] , 'medium'); ?>
+                   <?php $image_large = wp_get_attachment_image_src($item['picture'] , 'large'); ?>
                   <picture>
                     <source media='(min-width: 768px)' srcset='<?php echo $image_full[0]; ?>'>
-                    <img src='<?php echo $image_medium[0]; ?>' alt='swiper-picture'>
+                    <img src='<?php echo $image_large[0]; ?>' alt='swiper-picture'>
                   </picture>
                  <?php endif;?> 
                 </div>

@@ -1,15 +1,15 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 //ナビバートグル
-$('.js-hamburger').on('click', function () {
+$('.js-hamburger, .js-drawer-menu').on('click', function () {
     if ($('.js-hamburger').hasClass('is-open')) {
       $('.js-drawer-menu').fadeOut();//fadeOutでメニューをblockに
-      $(this).removeClass('is-open');
+      $('.js-hamburger').removeClass('is-open');
       $('.js-header').removeClass('is-open');
       
     } else {
       $('.js-drawer-menu').fadeIn();
-      $(this).addClass('is-open');
+      $('.js-hamburger').addClass('is-open');
       $('.js-header').addClass('is-open');
     }
     if (jQuery(".js-header").hasClass("is-open")) {
@@ -124,9 +124,7 @@ $('.js-hamburger').on('click', function () {
 
 });
 
-
 //ここから下層ページ
-
 //モーダル
 function observeScrollbarWidth() {
   const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
@@ -204,7 +202,7 @@ jQuery(function ($) {
   });
 });
 
-//アコーディオン(blogのアーカイブ)
+//アコーディオン(sidebar.phpのblogアーカイブリスト)
 jQuery(function ($) {
   $(".blog-archive-list:first-of-type .blog-archive-list__months").css("display", "block");
   // はじめのアコーディオンを開いておく
@@ -215,6 +213,37 @@ jQuery(function ($) {
   });
 });
 
+//プライスページのスクロール調整
+  jQuery(window).on('load', function () {
+    // ページが読み込まれたときに、URLにハッシュがあるかチェック
+    if (window.location.hash) {
+      var headerHeight = jQuery(".js-header").height(); // ヘッダーの高さを取得
+      var target = jQuery(window.location.hash); // ハッシュのターゲット要素を取得
+      if (target.length) {
+        var position = target.offset().top; // ヘッダーの高さを引いて位置を調整
+        jQuery("html, body").animate({
+          scrollTop: position - headerHeight
+        }, 0); // ページをスクロール位置に移動
+      }
+    }
+});
+// 同じページ内のリンクをクリックしたときの処理
+ jQuery(function($){
+  // ヘッダーの高さ（ピクセル数）を指定
+  var headerHeight = $('.js-header').outerHeight(); // ヘッダーのクラス名に応じて変更
+  $('.js-page-link').on('click', function(e){
+    console.log(headerHeight);
+    var target = $(this.hash);
+    if (target.length) {
+      e.preventDefault();
+
+      // スクロール位置を調整してアニメーション
+      $('html, body').animate({
+        scrollTop: target.offset().top - headerHeight
+      }, 500); // 500はスクロール時間（ミリ秒）
+    }
+  });
+});
 //コンタクトフォームのsendボタン押下
 jQuery(function ($) {
     $( '#js-submit' ).on('click' , function(e) {
@@ -230,12 +259,4 @@ jQuery(function ($) {
       console.log('送信しました');
     }
   });
-});
-
-//aタグでidを含むもの
-jQuery(function ($) {
-  $( 'a[href*="html#"]' ).on('click' , function(e) {
-    e.preventDefault();
-    console.log("クリックしました");
-  })
 });

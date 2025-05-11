@@ -112,9 +112,17 @@
 }
 
 .main-button--send {
-    padding:rem(15) rem(116.8) rem(16) rem(51.2);
+    padding:rem(9) rem(32) rem(9) rem(48);
 }
 
 .main-button__arrow--send {
-    right:rem(56);
+    right:rem(52.8);
+}
+
+.main-button--send input {
+    color: $white;
+}
+
+.main-button--send:hover input {
+    color: $c-accent;
 }

@@ -36,7 +36,7 @@
           <?php endif;?>
           </div>
           <div class="archive-blog__pagination">
-            <?php wp_pagenavi(); ?>
+            <?php if(function_exists('wp_pagenavi')){wp_pagenavi();}?>
           </div>
         </div>
 

@@ -1,17 +1,3 @@
-<?php
-$home = esc_url(home_url( '/' ));
-$campaign = esc_url(home_url( '/campaign/' ));
-$aboutus = esc_url(home_url( '/about-us/' ));
-$information = esc_url(home_url( '/information/' ));
-$blog = esc_url(home_url( '/blog/' ));
-$voice = esc_url(home_url( '/voice/' ));
-$price = esc_url(home_url( '/price/' ));
-$faq = esc_url(home_url( '/faq/' ));
-$contactform = esc_url(home_url( '/contactform/' ));
-$privacy = esc_url(home_url( '/privacy/' ));
-$termsservice = esc_url(home_url( '/terms/' ));
-$sitemap = esc_url(home_url( '/sitemap/' ));
-?>
 <?php if(!is_page('contactform') && !is_page('contact-thanks') && !is_404()):?>
 <section class="contact page-contact">
       <div class="contact__inner inner">
@@ -44,7 +30,7 @@ $sitemap = esc_url(home_url( '/sitemap/' ));
               <a href="">ご予約・お問い合わせはコチラ</a>
             </div>
             <div class="contact-link__button">
-              <a href="<?php echo $contactform;?>" class="main-button">contact us<span class="main-button__arrow"></span></a>
+              <a href="<?php echo get_contactform_url();?>" class="main-button">contact us<span class="main-button__arrow"></span></a>
             </div>
           </div>
         </div>
@@ -57,7 +43,7 @@ $sitemap = esc_url(home_url( '/sitemap/' ));
       <div class="footer__contents">
         <div class="footer__header">
           <div class="footer__title">
-            <a href="<?php echo $home;?>" class="footer__logo">
+            <a href="<?php echo get_homepage_url();?>" class="footer__logo">
               <img src="<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/icon-codeups-sp.svg" alt="CodeUpsロゴ">
             </a>
           </div>
@@ -71,7 +57,7 @@ $sitemap = esc_url(home_url( '/sitemap/' ));
             <div class="footer-nav__items-half">
               <ul class="footer-nav__items-quarter">
                 <li class="footer-nav__item">
-                  <a href="<?php echo $campaign;?>" class="footer-nav__item-link">キャンペーン</a>
+                  <a href="<?php echo get_campaign_url();?>" class="footer-nav__item-link">キャンペーン</a>
                   <?php
                   $terms = get_terms( array(
                   'taxonomy' => 'campaign_category',
@@ -84,37 +70,37 @@ $sitemap = esc_url(home_url( '/sitemap/' ));
                     <?php endforeach;?>
                   </ul>
                 </li>
-                <li class="footer-nav__item"><a href="<?php echo $aboutus;?>" class="footer-nav__item-link">私たちについて</a></li>
+                <li class="footer-nav__item"><a href="<?php echo get_aboutus_url();?>" class="footer-nav__item-link">私たちについて</a></li>
               </ul>
               <ul class="footer-nav__items-quarter">
                 <li class="footer-nav__item">
-                  <a href="<?php echo $information;?>" class="footer-nav__item-link">ダイビング情報</a>
+                  <a href="<?php echo get_information_url();?>" class="footer-nav__item-link">ダイビング情報</a>
                   <ul class="footer-nav__sub-items">
-                    <li class="footer-nav__sub-item"><a href="<?php echo $information?>?tab=tab01" class="footer-nav__sub-item-link js-link-1">ライセンス講習</a></li>
-                    <li class="footer-nav__sub-item"><a href="<?php echo $information?>?tab=tab03" class="footer-nav__sub-item-link js-link-2">体験ダイビング</a></li>
-                    <li class="footer-nav__sub-item"><a href="<?php echo $information?>?tab=tab02" class="footer-nav__sub-item-link js-link-3">ファンダイビング</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo get_information_url()?>?tab=tab01" class="footer-nav__sub-item-link js-link-1">ライセンス講習</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo get_information_url()?>?tab=tab03" class="footer-nav__sub-item-link js-link-2">体験ダイビング</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo get_information_url()?>?tab=tab02" class="footer-nav__sub-item-link js-link-3">ファンダイビング</a></li>
                   </ul>
                 </li>
-                <li class="footer-nav__item"><a href="<?php echo $home;?>" class="footer-nav__item-link">ブログ</a></li>
+                <li class="footer-nav__item"><a href="<?php echo get_blog_url();?>" class="footer-nav__item-link">ブログ</a></li>
               </ul>
             </div>
             <div class="footer-nav__items-half">
               <ul class="footer-nav__items-quarter">
-                <li class="footer-nav__item"><a href="<?php echo $voice;?>" class="footer-nav__item-link">お客様の声</a></li>
+                <li class="footer-nav__item"><a href="<?php echo get_voice_url();?>" class="footer-nav__item-link">お客様の声</a></li>
                 <li class="footer-nav__item">
-                  <a href="<?php echo $price;?>" class="footer-nav__item-link">料金一覧</a>
+                  <a href="<?php echo get_price_url();?>" class="footer-nav__item-link">料金一覧</a>
                   <ul class="footer-nav__sub-items">
-                    <li class="footer-nav__sub-item"><a href="<?php echo $price;?>#price-table1" class="footer-nav__sub-item-link">ライセンス講習</a></li>
-                    <li class="footer-nav__sub-item"><a href="<?php echo $price;?>#price-table2" class="footer-nav__sub-item-link">体験ダイビング</a></li>
-                    <li class="footer-nav__sub-item"><a href="<?php echo $price;?>#price-table3" class="footer-nav__sub-item-link">ファンダイビング</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo get_price_url();?>#price-table1" class="js-page-link footer-nav__sub-item-link">ライセンス講習</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo get_price_url();?>#price-table2" class="js-page-link footer-nav__sub-item-link">体験ダイビング</a></li>
+                    <li class="footer-nav__sub-item"><a href="<?php echo get_price_url();?>#price-table3" class="js-page-link footer-nav__sub-item-link">ファンダイビング</a></li>
                   </ul>
                 </li>
               </ul>
               <ul class="footer-nav__items-quarter">
-                <li class="footer-nav__item"><a href="<?php echo $faq;?>" class="footer-nav__item-link">よくある質問</a></li>
-                <li class="footer-nav__item"><a href="<?php echo $privacy;?>" class="footer-nav__item-link footer-nav__item-link--span">プライバシー<span>ポリシー</span></a></li>
-                <li class="footer-nav__item"><a href="<?php echo $termsservice;?>" class="footer-nav__item-link">利用規約</a></li>
-                <li class="footer-nav__item"><a href="<?php echo $contactform;?>" class="footer-nav__item-link">お問い合わせ</a></li>
+                <li class="footer-nav__item"><a href="<?php echo get_faq_url();?>" class="footer-nav__item-link">よくある質問</a></li>
+                <li class="footer-nav__item"><a href="<?php echo get_privacy_url();?>" class="footer-nav__item-link footer-nav__item-link--span">プライバシー<span>ポリシー</span></a></li>
+                <li class="footer-nav__item"><a href="<?php echo get_termsservice_url();?>" class="footer-nav__item-link">利用規約</a></li>
+                <li class="footer-nav__item"><a href="<?php echo get_contactform_url();?>" class="footer-nav__item-link">お問い合わせ</a></li>
               </ul>
             </div>
           </div>

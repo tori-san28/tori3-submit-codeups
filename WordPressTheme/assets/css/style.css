@@ -1540,6 +1540,116 @@ a {
 
 /*チェックボックスの指定*/
 
+.form-acceptance-cf7 input[type=checkbox] {
+	display: none;
+}
+
+.form-acceptance-cf7 .wpcf7-list-item-label {
+	display: block;
+	font-size: 0.875rem;
+	padding-left: 1rem;
+	position: relative;
+	transition: 0.3s ease;
+}
+
+.form-acceptance-cf7 .wpcf7-list-item-label::before {
+	background: #fff;
+	border: 1px solid #408F95;
+	content: "";
+	display: block;
+	height: 1.375rem;
+	left: -1.2rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1.375rem;
+}
+
+.form-acceptance-cf7 input[type=checkbox] + span::after {
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+.form-acceptance-cf7 input[type=checkbox]:checked + span::after {
+	border-bottom: 0.125rem solid #C94800;
+	border-left: 0.125rem solid #C94800;
+	content: "";
+	display: block;
+	height: 0.6875rem;
+	left: -1.2rem;
+	margin-left: 0.1em;
+	margin-top: -0.1em;
+	opacity: 1;
+	position: absolute;
+	top: 50%; /*チェックマークじゃない場合は以下を変更する*/
+	transform: translateY(-50%) rotate(-45deg);
+	width: 1.2375rem;
+}
+
+/*チェックボックスの指定*/
+
+.form-checkbox-cf7 span {
+	margin-top: -1.25rem;
+}
+
+.form-checkbox-cf7 span + span {
+	margin-top: 0.4rem;
+}
+
+.form-checkbox-cf7 input[type=checkbox] {
+	display: none;
+}
+
+.form-checkbox-cf7 span {
+	display: block;
+	line-height: 1;
+	margin-left: -0.000625rem;
+}
+
+.form-checkbox-cf7 span label {
+	display: inline-block;
+	font-size: 1rem;
+	padding-left: 1.5rem;
+	position: relative;
+	transition: 0.3s ease;
+}
+
+.form-checkbox-cf7 span label::before {
+	background: #fff;
+	border: 1px solid #408F95;
+	content: "";
+	display: block;
+	height: 0.875rem;
+	left: 0;
+	position: absolute;
+	top: calc(50% - 0.625rem);
+	transform: translateY(-50%);
+	width: 0.875rem;
+}
+
+.form-checkbox-cf7 input[type=checkbox] + span::after {
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+.form-checkbox-cf7 input[type=checkbox]:checked + span::after {
+	border-bottom: 0.125rem solid #C94800;
+	border-left: 0.125rem solid #C94800;
+	content: "";
+	display: block;
+	height: 0.4375rem;
+	left: 0;
+	margin-left: 0.1em;
+	margin-top: -0.1em;
+	opacity: 1;
+	position: absolute;
+	top: calc(50% - 0.625rem); /*チェックマークじゃない場合は以下を変更する*/
+	transform: translateY(-50%) rotate(-45deg);
+	width: 0.7875rem;
+}
+
+/*チェックボックスの指定*/
+
 .form-checkbox label {
 	line-height: 1.1875;
 }
@@ -1691,15 +1801,6 @@ a {
 .form-field__personal-info {
 	margin-top: 2.3rem;
 	text-align: center;
-}
-
-.form-field__personal-info label {
-	text-align: left;
-}
-
-.form-field__personal-info label span {
-	font-size: 0.875rem;
-	line-height: 1.5714285714;
 }
 
 .form-field__button {
@@ -2007,11 +2108,19 @@ a {
 }
 
 .main-button--send {
-	padding: 0.9375rem 7.3rem 1rem 3.2rem;
+	padding: 0.5625rem 2rem 0.5625rem 3rem;
 }
 
 .main-button__arrow--send {
-	right: 3.5rem;
+	right: 3.3rem;
+}
+
+.main-button--send input {
+	color: #fff;
+}
+
+.main-button--send:hover input {
+	color: #408F95;
 }
 
 .main-visual-card img {
@@ -3751,7 +3860,7 @@ html {
 }
 
 .form-field__item:nth-of-type(5) {
-	margin-top: 2.7rem;
+	margin-top: 2.5rem;
 }
 
 .form-field__item dt {
@@ -3766,15 +3875,15 @@ html {
 }
 
 .form-field__item--select dd {
-	margin-top: -0.25rem;
+	margin-top: -2rem;
 }
 
 .form-field__item--textarea {
-	padding-bottom: 2.5rem;
+	padding-bottom: 2rem;
 }
 
 .form-field__personal-info {
-	margin-top: 4.5rem;
+	margin-top: 5rem;
 }
 
 .form-field__button {

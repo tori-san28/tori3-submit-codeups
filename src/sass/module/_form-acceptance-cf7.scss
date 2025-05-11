@@ -1,0 +1,59 @@
+@use 'global' as *;
+
+/*チェックボックスの指定*/
+$check-position: rem(-20);
+$check-fz: rem(14);//フォントサイズ
+$check-size: rem(22);//外枠の幅高さ
+$check-bg-cr: #fff;//外枠の背景色
+$check-border-cr: #408F95;//外枠の色
+$check-bg-cr-inner: #C94800;//チェックマークの背景色
+$check-space: rem(2);//チェックマークと文字の距離
+$check-space-betweenRadio: rem(16);//ラジオボタンの間の距離
+$check-weight: rem(2);//チェックマークの線の太さ(px)
+
+.form-acceptance-cf7 input[type="checkbox"] {
+    display: none;
+}
+
+.form-acceptance-cf7 .wpcf7-list-item-label {
+    display: block;
+    position: relative;
+    font-size: $check-fz;
+    padding-left: $check-space-betweenRadio;
+    transition: 0.3s ease;
+}
+
+.form-acceptance-cf7 .wpcf7-list-item-label::before {
+    position: absolute;
+    content: "";
+    top: calc(50%);
+    left: rem(-19.2);
+    transform: translateY(-50%);
+    background: $check-bg-cr;
+    border: 1px solid $check-border-cr;
+    width: $check-size;
+    height: $check-size;
+    display: block;
+}
+
+.form-acceptance-cf7 input[type="checkbox"] + span::after {
+    opacity: 0;
+	transition: 0.3s ease;
+}
+
+.form-acceptance-cf7 input[type="checkbox"]:checked + span::after {
+    content: "";
+    position: absolute;
+    top: calc(50%);
+    left: rem(-19.2);
+    display: block;
+    opacity: 1;
+    /*チェックマークじゃない場合は以下を変更する*/
+    transform: translateY(-50%) rotate(-45deg);
+    width: calc($check-size * 0.9);
+    height: calc($check-size * 0.5);
+    margin-top: -0.1em;
+    margin-left: 0.1em;
+    border-left: $check-weight solid $check-bg-cr-inner;
+    border-bottom: $check-weight solid $check-bg-cr-inner;
+}

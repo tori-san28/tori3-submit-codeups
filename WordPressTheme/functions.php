@@ -58,6 +58,20 @@ function Change_menulabel() {
 	add_action( 'init', 'Change_objectlabel' );
 	add_action( 'admin_menu', 'Change_menulabel' );
 
+//各ページのurlを取得する関数
+function get_homepage_url() {return esc_url( home_url( '/' ) );}
+function get_campaign_url() {return esc_url( home_url( '/campaign/' ) );}
+function get_aboutus_url() {return esc_url( home_url( '/about-us/' ) );}
+function get_information_url() {return esc_url( home_url( '/information/' ) );}
+function get_blog_url() {return esc_url( home_url( '/blog/' ) );}
+function get_voice_url() {return esc_url( home_url( '/voice/' ) );}
+function get_price_url() {return esc_url( home_url( '/price/' ) );}
+function get_faq_url() {return esc_url( home_url( '/faq/' ) );}
+function get_contactform_url() {return esc_url( home_url( '/contactform/' ) );}
+function get_privacy_url() {return esc_url( home_url( '/privacy/' ) );}
+function get_termsservice_url() {return esc_url( home_url( '/terms/' ) );}
+function get_sitemappage_url() {return esc_url( home_url( '/sitemap/' ) );}
+
 // home.php（つまりブログのホームページ）に表示される投稿数（記事数）を変更
 function change_home_posts_per_page( $query ) {
 		if ( $query->is_home() && $query->is_main_query() ) {
@@ -80,5 +94,48 @@ function change_posts_per_page( $query ) {
 	} 
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+// ContactForm7で自動挿入されるPタグ、brタグを削除
+  add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+  function wpcf7_autop_return_false() {
+    return false;
+  }
+
+// ContactForm7でキャンペーン項目の選択肢をキャンペーンページカテゴリーから動的取得
+function custom_get_select_values($tag, $unused) {
+	//tagの名前をチェック
+	if ( $tag['name'] != 'select-item' ) {
+			return $tag;
+	}
+    // データを取得する
+      $terms = get_terms( array(
+            'taxonomy' => 'campaign_category',
+            'hide_empty' => false,
+      ));
+	if(!is_wp_error($terms) && !empty($terms)){
+		$tag['raw_values'] = [];
+        $tag['values'] = [];
+		$tag['raw_values'][] = "";
+        $tag['values'][] = "";
+		foreach ( $terms as $term ) {
+      		$tag['raw_values'][] = $term->name;
+            $tag['values'][] = $term->name;
+    	}
+	}
+  return $tag;
+}
+add_filter('wpcf7_form_tag', 'custom_get_select_values', 10 ,2);
+
+// Contact Form7の送信ボタンをクリックした後の遷移先設定
+ function add_origin_thanks_page() {
+	?>
+   <script type="text/javascript">
+        document.addEventListener('wpcf7mailsent', function(event) {
+           window.location.href = '<?php echo esc_url(get_permalink(17)); ?>'; 
+        }, false);
+    </script>
+	 <?php
+ }
+ add_action( 'wp_footer', 'add_origin_thanks_page' );
 
 ?>

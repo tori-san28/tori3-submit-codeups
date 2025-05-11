@@ -9,17 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <?php wp_head();?>
 </head>
-<?php
-$home = esc_url(home_url( '/' ));
-$campaign = esc_url(home_url( '/campaign/' ));
-$aboutus = esc_url(home_url( '/about-us/' ));
-$information = esc_url(home_url( '/information/' ));
-$blog = esc_url(home_url( '/blog/' ));
-$voice = esc_url(home_url( '/voice/' ));
-$price = esc_url(home_url( '/price/' ));
-$faq = esc_url(home_url( '/faq/' ));
-$contact = esc_url(home_url( '/contactform/' ));
-?>
+
 <body>
 <?php wp_body_open(); ?>
   <header class="header js-header">
@@ -29,7 +19,7 @@ $contact = esc_url(home_url( '/contactform/' ));
       <?php else:?>
        <div class="header__title">
       <?php endif;?>
-        <a href="<?php echo $home;?>" class="header__logo">
+        <a href="<?php echo get_homepage_url();?>" class="header__logo">
           <img src="<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/icon-codeups-sp.svg" alt="CodeUpsロゴ">
         </a>
       <?php if (is_front_page()):?>  
@@ -44,35 +34,35 @@ $contact = esc_url(home_url( '/contactform/' ));
       </div>
       <div class="header__pc-nav pc-nav">
           <div class="pc-nav__items">
-            <a href="<?php echo $campaign;?>" class="pc-nav__item">
+            <a href="<?php echo get_campaign_url();?>" class="pc-nav__item">
                 <div class="pc-nav__title-english">campaign</div>
                 <div class="pc-nav__title-japanese">キャンペーン</div>
             </a>
-            <a href="<?php echo $aboutus;?>" class="pc-nav__item">
+            <a href="<?php echo get_aboutus_url();?>" class="pc-nav__item">
               <div class="pc-nav__title-english">about us</div>
               <div class="pc-nav__title-japanese">私たちについて</div>
             </a>
-            <a href="<?php echo $information;?>" class="pc-nav__item">
+            <a href="<?php echo get_information_url();?>" class="pc-nav__item">
               <div class="pc-nav__title-english">information</div>
               <div class="pc-nav__title-japanese">ダイビング情報</div>
             </a>
-            <a href="<?php echo $blog;?>" class="pc-nav__item">
+            <a href="<?php echo get_blog_url();?>" class="pc-nav__item">
               <div class="pc-nav__title-english">blog</div>
               <div class="pc-nav__title-japanese">ブログ</div>
             </a>
-            <a href="<?php echo $voice;?>" class="pc-nav__item">
+            <a href="<?php echo get_voice_url();?>" class="pc-nav__item">
               <div class="pc-nav__title-english">voice</div>
               <div class="pc-nav__title-japanese">お客様の声</div>
             </a>
-            <a href="<?php echo $price;?>" class="pc-nav__item">
+            <a href="<?php echo get_price_url();?>" class="pc-nav__item">
               <div class="pc-nav__title-english">price</div>
               <div class="pc-nav__title-japanese">料金一覧</div>
             </a>
-            <a href="<?php echo $faq;?>" class="pc-nav__item">
+            <a href="<?php echo get_faq_url();?>" class="pc-nav__item">
               <div class="pc-nav__title-english pc-nav__title-english--allUpper">faq</div>
               <div class="pc-nav__title-japanese">よくある質問</div>
             </a>
-            <a href="<?php echo $contactform;?>" class="pc-nav__item">
+            <a href="<?php echo get_contactform_url();?>" class="pc-nav__item">
               <div class="pc-nav__title-english">contact</div>
               <div class="pc-nav__title-japanese">お問合せ</div>
             </a>
@@ -82,38 +72,44 @@ $contact = esc_url(home_url( '/contactform/' ));
         <div class="sp-nav__items sp-nav__items--drawer">
           <ul class="sp-nav__items-half">
             <li class="sp-nav__item">
-              <a href="<?php echo $campaign;?>" class="sp-nav__item-link">キャンペーン</a>
+              <a href="<?php echo get_campaign_url();?>" class="sp-nav__item-link">キャンペーン</a>
+              <?php
+              $terms = get_terms( array(
+              'taxonomy' => 'campaign_category',
+              'hide_empty' => true,
+              ));
+              ?>
               <ul class="sp-nav__sub-items">
-                <li class="sp-nav__sub-item"><a href="#" class="sp-nav__sub-item-link">ライセンス取得</a></li>
-                <li class="sp-nav__sub-item"><a href="#" class="sp-nav__sub-item-link">貸切体験ダイビング</a></li>
-                <li class="sp-nav__sub-item"><a href="#" class="sp-nav__sub-item-link">ナイトダイビング</a></li>
+              <?php foreach ( $terms as $term ):?>
+                <li class="sp-nav__sub-item"><a href="<?php echo esc_url(get_term_link($term));?>" class="sp-nav__sub-item-link"><?php echo esc_html( $term->name);?></a></li>
+              <?php endforeach;?>
               </ul>
             </li>
-            <li class="sp-nav__item"><a href="<?php echo $aboutus;?>" class="sp-nav__item-link">私たちについて</a></li>
+            <li class="sp-nav__item"><a href="<?php echo get_aboutus_url();?>" class="sp-nav__item-link">私たちについて</a></li>
             <li class="sp-nav__item">
-              <a href="page-information.html" class="sp-nav__item-link">ダイビング情報</a>
+              <a href="<?php echo get_information_url()?>" class="sp-nav__item-link">ダイビング情報</a>
               <ul class="sp-nav__sub-items">
-                <li class="sp-nav__sub-item"><a href="page-information.html?tab=tab01" class="sp-nav__sub-item-link js-link-1">ライセンス講習</a></li>
-                <li class="sp-nav__sub-item"><a href="page-information.html?tab=tab03" class="sp-nav__sub-item-link js-link-2">体験ダイビング</a></li>
-                <li class="sp-nav__sub-item"><a href="page-information.html?tab=tab02" class="sp-nav__sub-item-link js-link-3">ファンダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo get_information_url()?>?tab=tab01" class="sp-nav__sub-item-link js-link-1">ライセンス講習</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo get_information_url()?>?tab=tab03" class="sp-nav__sub-item-link js-link-2">体験ダイビング</a></li>
+                <li class="sp-nav__sub-item"><a href="<?php echo get_information_url()?>?tab=tab02" class="sp-nav__sub-item-link js-link-3">ファンダイビング</a></li>
               </ul>
             </li>
-            <li class="sp-nav__item"><a href="<?php echo $blog;?>" class="sp-nav__item-link">ブログ</a></li>
+            <li class="sp-nav__item"><a href="<?php echo get_blog_url();?>" class="sp-nav__item-link">ブログ</a></li>
           </ul>
           <ul class="sp-nav__items-half">
-            <li class="sp-nav__item"><a href="<?php echo $voice;?>" class="sp-nav__item-link">お客様の声</a></li>
+            <li class="sp-nav__item"><a href="<?php echo get_voice_url();?>" class="sp-nav__item-link">お客様の声</a></li>
             <li class="sp-nav__item">
-              <a href="<?php echo $price;?>" class="sp-nav__item-link">料金一覧</a>
+              <a href="<?php echo get_price_url();?>" class="sp-nav__item-link">料金一覧</a>
               <ul class="sp-nav__sub-items">
-                <li class="sp-nav__sub-item"><a href="#" class="sp-nav__sub-item-link">ライセンス講習</a></li>
-                <li class="sp-nav__sub-item"><a href="#" class="sp-nav__sub-item-link">体験ダイビング</a></li>
-                <li class="sp-nav__sub-item"><a href="#" class="sp-nav__sub-item-link">ファンダイビング</a></li>
+                  <li class="sp-nav__sub-item"><a href="<?php echo get_price_url();?>#price-table1" class="js-page-link sp-nav__sub-item-link">ライセンス講習</a></li>
+                  <li class="sp-nav__sub-item"><a href="<?php echo get_price_url();?>#price-table2" class="js-page-link sp-nav__sub-item-link">体験ダイビング</a></li>
+                  <li class="sp-nav__sub-item"><a href="<?php echo get_price_url();?>#price-table3" class="js-page-link sp-nav__sub-item-link">ファンダイビング</a></li>
               </ul>
             </li>
-            <li class="sp-nav__item"><a href="<?php echo $faq;?>" class="sp-nav__item-link">よくある質問</a></li>
-            <li class="sp-nav__item"><a href="<?php echo $privacy;?>" class="sp-nav__item-link sp-nav__item-link--span">プライバシー<span>ポリシー</span></a></li>
-            <li class="sp-nav__item"><a href="<?php echo $terms;?>" class="sp-nav__item-link">利用規約</a></li>
-            <li class="sp-nav__item"><a href="<?php echo $contactform;?>" class="sp-nav__item-link">お問い合わせ</a></li>
+            <li class="sp-nav__item"><a href="<?php echo get_faq_url();?>" class="sp-nav__item-link">よくある質問</a></li>
+            <li class="sp-nav__item"><a href="<?php echo get_privacy_url();?>" class="sp-nav__item-link sp-nav__item-link--span">プライバシー<span>ポリシー</span></a></li>
+            <li class="sp-nav__item"><a href="<?php echo get_termsservice_url();?>" class="sp-nav__item-link">利用規約</a></li>
+            <li class="sp-nav__item"><a href="<?php echo get_contactform_url();?>" class="sp-nav__item-link">お問い合わせ</a></li>
           </ul>
         </div>
       </div>
