@@ -138,4 +138,22 @@ add_filter('wpcf7_form_tag', 'custom_get_select_values', 10 ,2);
  }
  add_action( 'wp_footer', 'add_origin_thanks_page' );
 
+//brタグを残したまま抜粋を行い文字数を指定できる独自関数 
+function get_custom_excerpt_with_br($content, $length = 80) {
+    // <br> タグ以外のHTMLタグを除去
+    $content = strip_tags($content, '<br>');
+
+    // 全角スペース・改行などを正規化
+    $content = trim(preg_replace('/\s+/', ' ', $content));
+
+    // 指定した文字数で切り取り（マルチバイト対応）
+    if (mb_strlen($content) > $length) {
+        $excerpt = mb_substr($content, 0, $length) . '...';
+    } else {
+        $excerpt = $content;
+    }
+
+    return $excerpt;
+}
+
 ?>

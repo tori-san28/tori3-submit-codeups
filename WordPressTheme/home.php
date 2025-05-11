@@ -29,7 +29,12 @@
                 <div class="blog-card__contents">
                   <time datetime="<?php the_time('c')?>" class="blog-card__date"><?php the_time('Y.m.d')?></time> 
                   <div class="blog-card__card-title"><?php the_title();?></div>
-                  <div class="blog-card__text"><?php the_excerpt(); ?></div>
+                  <div class="blog-card__text">
+                    <?php
+                     $post_content = get_the_content();
+                     echo get_custom_excerpt_with_br($post_content,89); 
+                     ?>
+                  </div>
                 </div>
               </a>
             <?php endwhile;?>

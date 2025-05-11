@@ -64,7 +64,10 @@
             </div>
           </div>
           <div class="voice-card__text">
-          <?php echo nl2br(get_the_excerpt()); ?>
+            <?php
+            $post_content = get_the_content();
+            echo get_custom_excerpt_with_br($post_content,177);
+            ?>
           </div>
         </div>
         <?php endwhile;?>

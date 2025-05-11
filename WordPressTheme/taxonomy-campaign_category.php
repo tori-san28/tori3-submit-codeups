@@ -66,7 +66,12 @@
                         <div class="archive-campaign-card__price-after"><?php echo $price_after; ?></div>
                       </div>
                       <div class="archive-campaign-card__texts u-desktop">
-                        <div class="archive-campaign-card__text"><?php the_excerpt(); ?></div>
+                        <div class="archive-campaign-card__text">
+                          <?php
+                           $post_content = get_the_content();
+                           echo get_custom_excerpt_with_br($post_content,154);
+                           ?>
+                        </div>
                         <div class="archive-campaign-card__dates"><?php echo get_field('campaign-dates'); ?></div>
                         <div class="archive-campaign-card__link">ご予約・お問い合わせはコチラ</div>
                       </div>

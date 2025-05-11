@@ -61,13 +61,18 @@
                         <div class="archive-campaign-card__price-after"><?php echo esc_html($price_after); ?></div>
                       </div>
                       <div class="archive-campaign-card__texts u-desktop">
-                        <div class="archive-campaign-card__text"><?php the_excerpt(); ?></div>
+                        <div class="archive-campaign-card__text">
+                          <?php 
+                          $post_content = get_the_content();
+                          echo get_custom_excerpt_with_br($post_content,154);
+                          ?>
+                        </div>
                         <div class="archive-campaign-card__dates"><?php echo esc_html(get_field('campaign-dates')); ?></div>
                         <div class="archive-campaign-card__link">ご予約・お問い合わせはコチラ</div>
                       </div>
                     </div>
                     <div class="archive-campaign-card__button u-desktop">
-                      <a href="<?php echo esc_url(home_url( '/contactform/' ));?>" class="main-button">contact us<span class="main-button__arrow"></span></a>
+                      <a href="<?php echo get_contactform_url();?>" class="main-button">contact us<span class="main-button__arrow"></span></a>
                     </div>
                   </div>
                 </div>
