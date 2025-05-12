@@ -87,7 +87,7 @@ function change_posts_per_page( $query ) {
     }
     //１ページあたりの表示数を6へ変更
     if ( is_post_type_archive( 'campaign' ) ) {
-         $query->set( 'posts_per_page', 6 );
+         $query->set( 'posts_per_page', 4 );
      }
 	 if ( is_post_type_archive( 'voice' ) ) {
 		$query->set( 'posts_per_page', 6 );
@@ -154,6 +154,24 @@ function get_custom_excerpt_with_br($content, $length = 80) {
     }
 
     return $excerpt;
+}
+
+//PVカウント用のコード追加
+function set_post_views($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if ($count == '') {
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '1');
+    } else {
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+function get_post_views($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    return $count ? $count : '0';
 }
 
 ?>

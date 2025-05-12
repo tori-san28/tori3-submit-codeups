@@ -41,7 +41,8 @@
         </div>
         
         <?php get_sidebar(); ?>
-      
+        <!-- 表示数をカウントアップ -->
+        <?php set_post_views(get_the_ID()); ?>
       </div>
     </div>
 

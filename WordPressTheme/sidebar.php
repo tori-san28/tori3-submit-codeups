@@ -3,6 +3,9 @@
     $args = array(
     'post_type' => 'post',
     'posts_per_page' => '3',
+    'meta_key' => 'post_views_count',
+    'orderby' => 'meta_value_num',
+    'order' => 'DESC'
     );
     $the_query = new WP_Query($args);
     ?>
