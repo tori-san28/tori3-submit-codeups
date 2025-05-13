@@ -402,7 +402,7 @@ a {
 }
 
 .archive-blog__pagination {
-	margin-top: 5rem;
+	margin-top: 4.6rem;
 }
 
 .archive-campaign-card {
@@ -863,7 +863,7 @@ a {
 }
 
 .blog-cards--archive {
-	gap: 2.3rem;
+	gap: 1.9rem;
 }
 
 .blog-pupular-news__news {
@@ -3348,6 +3348,10 @@ html {
 	width: 65.37037%;
 }
 
+.archive-blog__pagination {
+	margin-top: 4.5rem;
+}
+
 .archive-campaign-card__img::before {
 	padding-top: 66.73077%;
 }
@@ -3490,7 +3494,7 @@ html {
 }
 
 .blog-cards--archive {
-	gap: 5.1rem 2.5rem;
+	gap: 4.7rem 2.5rem;
 	grid-template-columns: 1fr 1fr;
 }
 

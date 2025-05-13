@@ -75,7 +75,7 @@ function get_sitemappage_url() {return esc_url( home_url( '/sitemap/' ) );}
 // home.php（つまりブログのホームページ）に表示される投稿数（記事数）を変更
 function change_home_posts_per_page( $query ) {
 		if ( $query->is_home() && $query->is_main_query() ) {
-			$query->set( 'posts_per_page', 6 ); // 表示件数を6件に変更（必要に応じて変更）
+			$query->set( 'posts_per_page', 10 ); // 表示件数を6件に変更（必要に応じて変更）
 		}
 	}
 add_action( 'pre_get_posts', 'change_home_posts_per_page' );

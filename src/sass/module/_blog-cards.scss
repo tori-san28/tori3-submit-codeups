@@ -10,10 +10,10 @@
 }
 
 .blog-cards--archive {
-    gap:rem(36.8);
+    gap:rem(30.4);
     @include mq(md) {
         grid-template-columns: 1fr 1fr;
-        gap:rem(81.6) rem(40);
+        gap:rem(75.2) rem(40);
     }
 }
 
