@@ -209,6 +209,10 @@ a {
 }
 
 .page-contact {
+	margin-top: 6.5rem;
+}
+
+.page-contact--sp-short {
 	margin-top: 5.125rem;
 }
 
@@ -230,14 +234,6 @@ a {
 
 .page-contact--sitemap {
 	margin-top: 6.25rem;
-}
-
-.page-contact--aboutus,
-.page-contact--information,
-.page-contact--price,
-.page-contact--faq,
-.page-contact--terms {
-	margin-top: 6.5rem;
 }
 
 .page-footer {
@@ -324,6 +320,7 @@ a {
 }
 
 .archive-blog-selected__thumbnail img {
+	height: auto; /* 縦横比を維持して縮尺に応じて高さも変化 */
 	width: 100%;
 }
 
@@ -402,7 +399,7 @@ a {
 }
 
 .archive-blog__pagination {
-	margin-top: 4.6rem;
+	margin-top: 5.1rem;
 }
 
 .archive-campaign-card {
@@ -830,7 +827,7 @@ a {
 }
 
 .blog-card__contents {
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 }
 
 .blog-card__date {
@@ -863,7 +860,7 @@ a {
 }
 
 .blog-cards--archive {
-	gap: 1.9rem;
+	gap: 2.4rem;
 }
 
 .blog-pupular-news__news {
@@ -1004,7 +1001,7 @@ a {
 }
 
 .blog__button {
-	margin-top: 2.5rem;
+	margin-top: 2.8rem;
 	text-align: center;
 }
 
@@ -3199,6 +3196,10 @@ html {
 	margin-top: 8.625rem;
 }
 
+.page-contact--sp-short {
+	margin-top: 8.625rem;
+}
+
 .page-contact--archive-voice {
 	margin-top: 8.625rem;
 }
@@ -3219,16 +3220,12 @@ html {
 	margin-top: 8.625rem;
 }
 
-.page-contact--aboutus,
-.page-contact--information,
-.page-contact--price,
-.page-contact--faq,
-.page-contact--terms {
-	margin-top: 8.625rem;
-}
-
 .page-footer {
 	margin-top: 10.25rem;
+}
+
+.page-footer--contactform {
+	margin-top: 10.625rem;
 }
 
 .page-footer--contact-thanks {

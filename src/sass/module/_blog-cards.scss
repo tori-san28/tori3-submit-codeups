@@ -10,7 +10,7 @@
 }
 
 .blog-cards--archive {
-    gap:rem(30.4);
+    gap:rem(38.4);
     @include mq(md) {
         grid-template-columns: 1fr 1fr;
         gap:rem(75.2) rem(40);

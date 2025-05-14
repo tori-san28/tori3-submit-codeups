@@ -22,13 +22,13 @@
                 <h1 class="archive-blog-selected__card-title"><?php the_title();?></h1>
               </div>
 
-              <div class="archive-blog-selected__thumbnail">
+              <figure class="archive-blog-selected__thumbnail">
                 <?php if(has_post_thumbnail()): ?>
-                  <?php the_post_thumbnail();?>
+                  <?php the_post_thumbnail('full');?>
                 <?php else: ?>  
                   <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/noimage.jpg' alt='no-image'>
                 <?php endif;?>
-              </div>
+              </figure>
               <div class="archive-blog-selected__container">
                 <?php the_content();?>
               </div>  

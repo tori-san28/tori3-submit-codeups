@@ -9,6 +9,9 @@
 
 .page-footer--contactform {
    margin-top: rem(150);
+   @include mq(md) {
+      margin-top: rem(170);
+   }
 }
 
 .page-footer--contact-thanks {

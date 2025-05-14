@@ -1,5 +1,9 @@
 <?php if(!is_page('contactform') && !is_page('contact-thanks') && !is_404()):?>
-<section class="contact page-contact">
+  <?php if(is_front_page()):?>
+    <section class="contact page-contact page-contact--short">
+  <?php else:?>   
+    <section class="contact page-contact">
+  <?php endif;?>   
       <div class="contact__inner inner">
         <div class="contact__contents">
           <div class="contact__location contact-location">
@@ -38,7 +42,17 @@
     </section>
     <?php endif;?>
   </main>
-  <footer class="footer page-footer">
+  <?php if(is_page('contactform')): ?>
+   <footer class="footer page-footer page-footer--contactform">
+  <?php elseif(is_page('contact-thanks')):?>
+   <footer class="footer page-footer page-footer--contact-thanks">
+  <?php elseif(is_page('sitemap')):?>
+    <footer class="footer page-footer page-footer--sitemap">
+  <?php elseif(is_404()):?>
+    <footer class="footer page-footer page-footer--not-found">
+  <?php else:?>  
+    <footer class="footer page-footer">
+  <?php endif;?>    
     <div class="footer__inner inner">
       <div class="footer__contents">
         <div class="footer__header">

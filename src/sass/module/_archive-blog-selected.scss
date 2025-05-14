@@ -32,6 +32,8 @@
 
 .archive-blog-selected__thumbnail img {
     width: 100%;
+    height: auto; /* 縦横比を維持して縮尺に応じて高さも変化 */
+   
 }
 
 .archive-blog-selected__container {
