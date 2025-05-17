@@ -55,8 +55,11 @@ function Change_menulabel() {
 	$labels->not_found = $name.'が見つかりませんでした';
 	$labels->not_found_in_trash = 'ゴミ箱に'.$name.'は見つかりませんでした';
 	}
-	add_action( 'init', 'Change_objectlabel' );
-	add_action( 'admin_menu', 'Change_menulabel' );
+add_action( 'init', 'Change_objectlabel' );
+add_action( 'admin_menu', 'Change_menulabel' );
+
+//管理バー（Admin Bar）を非表示
+add_filter('show_admin_bar', '__return_false');
 
 //wordpressの管理画面で不要な画面を非表示
 function remove_dashboard_widgets() {
@@ -82,7 +85,7 @@ add_action('wp_dashboard_setup', 'custom_dashboard_widget');
 
 function custom_dashboard_widget_display() {
     echo '<ul>';
-	echo '<li><a href="' . admin_url('edit.php?post_type=blog') . '">ブログ一覧</a></li>';
+	echo '<li><a href="' . admin_url('edit.php?post_type=post') . '">ブログ一覧</a></li>';
 	echo '<li><a href="' . admin_url('edit.php?post_type=campaign') . '">キャンペーン一覧</a></li>';
 	echo '<li><a href="' . admin_url('edit.php?post_type=voice') . '">お客様の声一覧</a></li>';
 	echo '<li><a href="' . admin_url('post.php?post=' . 7 . '&action=edit') . '">トップページへのリンク（メインビュー写真の追加変更）</a></li>';

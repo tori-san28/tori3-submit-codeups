@@ -3740,7 +3740,7 @@ html {
 }
 
 .faq-list__question {
-	padding: 1.75rem 2.75rem 1.75rem 2.5rem;
+	padding: 1.75rem 4.5rem 1.75rem 2.5rem;
 }
 
 .faq-list__question::before {
