@@ -3,7 +3,7 @@
 .price-tables {
     display: flex;
     flex-direction: column;
-    gap:rem(38);
+    gap:rem(36.8);
     @include mq(md) {
         gap:rem(73.6);
     }
@@ -13,8 +13,5 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    // @include mq(md) {
-    //     width: rem(702);
-    // }
 }
 

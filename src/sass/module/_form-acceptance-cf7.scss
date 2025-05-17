@@ -21,19 +21,25 @@ $check-weight: rem(2);//チェックマークの線の太さ(px)
     font-size: $check-fz;
     padding-left: $check-space-betweenRadio;
     transition: 0.3s ease;
+    text-align: left;
+    font-size: rem(14);
 }
 
 .form-acceptance-cf7 .wpcf7-list-item-label::before {
     position: absolute;
     content: "";
-    top: calc(50%);
-    left: rem(-19.2);
-    transform: translateY(-50%);
+    top: 0;
+    left: rem(-16);
     background: $check-bg-cr;
     border: 1px solid $check-border-cr;
     width: $check-size;
     height: $check-size;
     display: block;
+    @include mq(md) {
+        top: calc(50%);
+        left: rem(-19.2);
+        transform: translateY(-50%);
+    }
 }
 
 .form-acceptance-cf7 input[type="checkbox"] + span::after {

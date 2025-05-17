@@ -58,6 +58,42 @@ function Change_menulabel() {
 	add_action( 'init', 'Change_objectlabel' );
 	add_action( 'admin_menu', 'Change_menulabel' );
 
+//wordpressの管理画面で不要な画面を非表示
+function remove_dashboard_widgets() {
+   	remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' ); // サイトヘルスステータス
+  	remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' ); // 概要
+  	remove_meta_box( 'dashboard_activity', 'dashboard', 'normal' ); // アクティビティ
+  	remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' ); // クイックドラフト
+  	remove_meta_box( 'dashboard_primary', 'dashboard', 'side' ); // WordPress イベントとニュース
+	remove_action('welcome_panel', 'wp_welcome_panel'); 
+}
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
+
+//カスタムダッシュボードウィジェットでよく使うメニューへのリンクを表示
+function custom_dashboard_widget() {
+    wp_add_dashboard_widget(
+        'custom_quick_links', // ウィジェットID
+        'よく使うメニュー',   // タイトル
+        'custom_dashboard_widget_display' // 表示関数
+    );
+}
+
+add_action('wp_dashboard_setup', 'custom_dashboard_widget');
+
+function custom_dashboard_widget_display() {
+    echo '<ul>';
+	echo '<li><a href="' . admin_url('edit.php?post_type=blog') . '">ブログ一覧</a></li>';
+	echo '<li><a href="' . admin_url('edit.php?post_type=campaign') . '">キャンペーン一覧</a></li>';
+	echo '<li><a href="' . admin_url('edit.php?post_type=voice') . '">お客様の声一覧</a></li>';
+	echo '<li><a href="' . admin_url('post.php?post=' . 7 . '&action=edit') . '">トップページへのリンク（メインビュー写真の追加変更）</a></li>';
+	echo '<li><a href="' . admin_url('post.php?post=' . 11 . '&action=edit') . '">私たちについてページへのリンク（ギャラリーの写真追加）</a></li>';
+	echo '<li><a href="' . admin_url('post.php?post=' . 19 . '&action=edit') . '">料金ページへのリンク(新しい料金コースリストの追加)</a></li>';
+	echo '<li><a href="' . admin_url('post.php?post=' . 27 . '&action=edit') . '">FAQページへのリンク(新しい質問と回答の追加)</a></li>';
+    echo '<li><a href="' . admin_url('post.php?post=' . 21 . '&action=edit') . '">プライバシーポリシーページへのリンク</a></li>';
+	echo '<li><a href="' . admin_url('post.php?post=' . 23 . '&action=edit') . '">利用規約ページへのリンク</a></li>';
+	echo '</ul>';
+}
+
 //各ページのurlを取得する関数
 function get_homepage_url() {return esc_url( home_url( '/' ) );}
 function get_campaign_url() {return esc_url( home_url( '/campaign/' ) );}

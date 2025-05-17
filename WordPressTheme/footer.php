@@ -1,6 +1,8 @@
 <?php if(!is_page('contactform') && !is_page('contact-thanks') && !is_404()):?>
   <?php if(is_front_page()):?>
     <section class="contact page-contact page-contact--short">
+  <?php elseif(is_page('privacy')):?>
+    <section class="contact page-contact page-contact--privacy">
   <?php else:?>   
     <section class="contact page-contact">
   <?php endif;?>   
@@ -33,8 +35,12 @@
             <div class="contact-link__link">
               <a href="">ご予約・お問い合わせはコチラ</a>
             </div>
-            <div class="contact-link__button">
-              <a href="<?php echo get_contactform_url();?>" class="main-button">contact us<span class="main-button__arrow"></span></a>
+            <?php if(is_page('sitemap')):?>
+              <div class="contact-link__button contact-link__button--sitemap">
+            <?php else:?>
+              <div class="contact-link__button">
+            <?php endif;?>
+            <a href="<?php echo get_contactform_url();?>" class="main-button">contact us<span class="main-button__arrow"></span></a>
             </div>
           </div>
         </div>

@@ -241,7 +241,7 @@ a {
 }
 
 .page-footer--contactform {
-	margin-top: 9.375rem;
+	margin-top: 9.5rem;
 }
 
 .page-footer--contact-thanks {
@@ -1238,7 +1238,7 @@ a {
 }
 
 .contact-link__button--sitemap {
-	margin-top: 2.6rem;
+	margin-top: 2.3rem;
 }
 
 .contact-link__button--price {
@@ -1347,9 +1347,9 @@ a {
 .faq-list__question {
 	background: #408F95;
 	color: #fff;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	line-height: 1.1875;
-	padding: 1.125rem 1rem;
+	padding: 1.125rem 2.75rem 1.125rem 1rem;
 	position: relative;
 }
 
@@ -1544,8 +1544,10 @@ a {
 .form-acceptance-cf7 .wpcf7-list-item-label {
 	display: block;
 	font-size: 0.875rem;
+	font-size: 0.875rem;
 	padding-left: 1rem;
 	position: relative;
+	text-align: left;
 	transition: 0.3s ease;
 }
 
@@ -1555,10 +1557,9 @@ a {
 	content: "";
 	display: block;
 	height: 1.375rem;
-	left: -1.2rem;
+	left: -1rem;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 0;
 	width: 1.375rem;
 }
 
@@ -1721,6 +1722,7 @@ a {
 }
 
 .form-field__item {
+	border-bottom: 0.0625rem dotted #408F95;
 	padding-bottom: 1.5rem;
 }
 
@@ -1757,12 +1759,15 @@ a {
 }
 
 .form-field__item dd {
-	border-bottom: 0.0625rem dotted #408F95;
 	margin-top: 1.15rem;
 }
 
+.form-field__item--select dd {
+	margin-top: -0.75rem;
+}
+
 .form-field__item--textarea {
-	padding-bottom: 1.2rem;
+	padding-bottom: 1.5rem;
 }
 
 .form-field__item dd input,
@@ -2535,7 +2540,7 @@ a {
 .price-tables {
 	display: flex;
 	flex-direction: column;
-	gap: 2.375rem;
+	gap: 2.3rem;
 }
 
 .price-tables__table {
@@ -3735,7 +3740,7 @@ html {
 }
 
 .faq-list__question {
-	padding: 1.75rem 2.5rem;
+	padding: 1.75rem 2.75rem 1.75rem 2.5rem;
 }
 
 .faq-list__question::before {
@@ -3840,12 +3845,17 @@ html {
 	margin-top: 5rem;
 }
 
+.form-acceptance-cf7 .wpcf7-list-item-label::before {
+	left: -1.2rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 .form-checkbox--personal-info span {
 	padding-left: 2.5rem;
 }
 
 .form-field__item {
-	border-bottom: 0.0625rem dotted #408F95;
 	display: flex;
 	padding-bottom: 2.5rem;
 }
@@ -3869,8 +3879,6 @@ html {
 }
 
 .form-field__item dd {
-	border-bottom: 0;
-	border-bottom: initial;
 	margin-top: 0;
 	width: 68.5714285714%;
 }

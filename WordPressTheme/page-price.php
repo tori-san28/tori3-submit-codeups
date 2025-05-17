@@ -38,7 +38,7 @@
                 <?php endif;?>
                 <td class="price-table__data">
                   <span class="u-desktop"><?php echo esc_html($item['course1']);?></span>
-                  <span class="u-mobile"><?php echo esc_html(nl2br($item['course1']));?></span>
+                  <span class="u-mobile"><?php echo nl2br($item['course1']);?></span>
                 </td>
                 <td class="price-table__price"><?php echo esc_html($item['price1']);?></td>
               </tr>
@@ -68,7 +68,7 @@
                 <?php endif;?>
                 <td class="price-table__data">
                   <span class="u-desktop"><?php echo esc_html($item['course2']);?></span>
-                  <span class="u-mobile"><?php echo esc_html(nl2br($item['course2']));?></span>
+                  <span class="u-mobile"><?php echo nl2br($item['course2']);?></span>
                 </td>
                 <td class="price-table__price"><?php echo esc_html($item['price2']);?></td>
               </tr>
@@ -98,7 +98,7 @@
                 <?php endif;?>
                 <td class="price-table__data">
                   <span class="u-desktop"><?php echo esc_html($item['course3']);?></span>
-                  <span class="u-mobile"><?php echo esc_html(nl2br($item['course3']));?></span>
+                  <span class="u-mobile"><?php echo nl2br($item['course3']);?></span>
                 </td>
                 <td class="price-table__price"><?php echo esc_html($item['price3']);?></td>
               </tr>
@@ -128,7 +128,7 @@
                 <?php endif;?>
                 <td class="price-table__data">
                   <span class="u-desktop"><?php echo esc_html($item['course4']);?></span>
-                  <span class="u-mobile"><?php echo esc_html(nl2br($item['course4']));?></span>
+                  <span class="u-mobile"><?php echo nl2br($item['course4']);?></span>
                 </td>
                 <td class="price-table__price"><?php echo esc_html($item['price4']);?></td>
               </tr>
