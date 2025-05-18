@@ -9,6 +9,7 @@
     background-image: url(../images/common/icon-polygon.svg);
     background-position: top rem(11.2) right rem(8);
     background-repeat: no-repeat;
+    color:$black;
     @include mq(md) {
         padding: rem(5.3) 0 rem(5.3) rem(8);
     }

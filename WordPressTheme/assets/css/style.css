@@ -241,7 +241,7 @@ a {
 }
 
 .page-footer--contactform {
-	margin-top: 9.5rem;
+	margin-top: 9.125rem;
 }
 
 .page-footer--contact-thanks {
@@ -1579,9 +1579,32 @@ a {
 	margin-top: -0.1em;
 	opacity: 1;
 	position: absolute;
-	top: 50%; /*チェックマークじゃない場合は以下を変更する*/
-	transform: translateY(-50%) rotate(-45deg);
+	top: 0.3rem; /*チェックマークじゃない場合は以下を変更する*/
+	transform: rotate(-45deg);
 	width: 1.2375rem;
+}
+
+.form-button-cf7 {
+	position: relative;
+}
+
+.main-button.form-button-cf7 {
+	padding: 1.1rem 6.3125rem 0.9rem 3.1rem;
+}
+
+.form-button-cf7 input {
+	color: #fff;
+}
+
+.form-button-cf7:hover input {
+	color: #408F95;
+}
+
+.form-button-cf7 .wpcf7-spinner {
+	position: absolute;
+	right: 0%;
+	top: 0%;
+	z-index: 999;
 }
 
 /*チェックボックスの指定*/
@@ -1818,6 +1841,7 @@ a {
 	background-position: top 0.7rem right 0.5rem;
 	background-repeat: no-repeat;
 	border: 0.0625rem solid #408F95;
+	color: #111;
 	font-size: 0.75rem;
 	padding: 0.6rem 0 0.7rem 0.5rem;
 	width: 100%;
@@ -2109,20 +2133,8 @@ a {
 	background-image: url(../images/common/button-arrow.svg);
 }
 
-.main-button--send {
-	padding: 0.5625rem 2rem 0.5625rem 3rem;
-}
-
-.main-button__arrow--send {
+.main-button__arrow--cf7 {
 	right: 3.3rem;
-}
-
-.main-button--send input {
-	color: #fff;
-}
-
-.main-button--send:hover input {
-	color: #408F95;
 }
 
 .main-visual-card img {
@@ -2467,7 +2479,7 @@ a {
 .price-items {
 	display: flex;
 	flex-direction: column;
-	gap: 2.5rem;
+	gap: 2.4rem;
 }
 
 .price-table {
@@ -3218,7 +3230,7 @@ html {
 }
 
 .page-contact--privacy {
-	margin-top: 9.125rem;
+	margin-top: 8.75rem;
 }
 
 .page-contact--sitemap {
@@ -3230,7 +3242,7 @@ html {
 }
 
 .page-footer--contactform {
-	margin-top: 10.625rem;
+	margin-top: 10.2rem;
 }
 
 .page-footer--contact-thanks {
@@ -3351,7 +3363,7 @@ html {
 }
 
 .archive-blog__pagination {
-	margin-top: 4.5rem;
+	margin-top: 5rem;
 }
 
 .archive-campaign-card__img::before {
@@ -3496,7 +3508,7 @@ html {
 }
 
 .blog-cards--archive {
-	gap: 4.7rem 2.5rem;
+	gap: 5.2rem 2.5rem;
 	grid-template-columns: 1fr 1fr;
 }
 
@@ -3851,6 +3863,11 @@ html {
 	transform: translateY(-50%);
 }
 
+.form-acceptance-cf7 input[type=checkbox]:checked + span::after {
+	top: 50%;
+	transform: translateY(-50%) rotate(-45deg);
+}
+
 .form-checkbox--personal-info span {
 	padding-left: 2.5rem;
 }
@@ -3896,7 +3913,7 @@ html {
 }
 
 .form-field__button {
-	margin-top: 2.6rem;
+	margin-top: 2.7rem;
 }
 
 .form-select {
@@ -4128,6 +4145,10 @@ html {
 .price-item__description {
 	font-size: 1rem;
 	line-height: 1.5;
+}
+
+.price-items {
+	gap: 2.5rem;
 }
 
 .price-table__head-sp {

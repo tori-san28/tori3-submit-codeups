@@ -111,18 +111,7 @@
     background-image: url(../images/common/button-arrow.svg);
 }
 
-.main-button--send {
-    padding:rem(9) rem(32) rem(9) rem(48);
-}
-
-.main-button__arrow--send {
+.main-button__arrow--cf7 {
     right:rem(52.8);
 }
 
-.main-button--send input {
-    color: $white;
-}
-
-.main-button--send:hover input {
-    color: $c-accent;
-}

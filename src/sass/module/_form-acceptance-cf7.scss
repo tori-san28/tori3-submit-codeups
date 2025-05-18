@@ -50,16 +50,20 @@ $check-weight: rem(2);//チェックマークの線の太さ(px)
 .form-acceptance-cf7 input[type="checkbox"]:checked + span::after {
     content: "";
     position: absolute;
-    top: calc(50%);
+    top: rem(4.8);
     left: rem(-19.2);
     display: block;
     opacity: 1;
     /*チェックマークじゃない場合は以下を変更する*/
-    transform: translateY(-50%) rotate(-45deg);
+    transform: rotate(-45deg);
     width: calc($check-size * 0.9);
     height: calc($check-size * 0.5);
     margin-top: -0.1em;
     margin-left: 0.1em;
     border-left: $check-weight solid $check-bg-cr-inner;
     border-bottom: $check-weight solid $check-bg-cr-inner;
+    @include mq(md) {
+        top: calc(50%);
+         transform: translateY(-50%) rotate(-45deg);
+    }
 }

@@ -1,0 +1,23 @@
+@use 'global' as *;
+
+.form-button-cf7 {
+    position: relative;
+}
+
+.main-button.form-button-cf7 {
+    padding:rem(17.6) rem(101) rem(14.4) rem(49.6);
+}
+
+.form-button-cf7 input {
+    color: $white;
+}
+
+.form-button-cf7:hover input {
+    color: $c-accent;
+}
+.form-button-cf7 .wpcf7-spinner {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 999;
+}

@@ -111,6 +111,14 @@ function get_privacy_url() {return esc_url( home_url( '/privacy/' ) );}
 function get_termsservice_url() {return esc_url( home_url( '/terms/' ) );}
 function get_sitemappage_url() {return esc_url( home_url( '/sitemap/' ) );}
 
+// 数字をコンマ付きの円貨で返す共通関数
+function format_price_yen($price) {
+    if (!is_numeric($price)) {
+        return $price; // 数字でなければそのまま返す
+    }
+    return esc_html('&yen;' . number_format($price));
+}
+
 // home.php（つまりブログのホームページ）に表示される投稿数（記事数）を変更
 function change_home_posts_per_page( $query ) {
 		if ( $query->is_home() && $query->is_main_query() ) {

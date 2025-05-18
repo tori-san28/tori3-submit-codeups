@@ -40,8 +40,7 @@
                   <span class="u-desktop"><?php echo esc_html($item['course1']);?></span>
                   <span class="u-mobile"><?php echo nl2br($item['course1']);?></span>
                 </td>
-                <?php $price1 = '&yen;' . number_format($item['price1']);?>
-                <td class="price-table__price"><?php echo esc_html($price1);?></td>
+                <td class="price-table__price"><?php echo format_price_yen($item['price1']);?></td>
               </tr>
               <?php  endforeach;?>
             </table>
@@ -71,8 +70,7 @@
                   <span class="u-desktop"><?php echo esc_html($item['course2']);?></span>
                   <span class="u-mobile"><?php echo nl2br($item['course2']);?></span>
                 </td>
-                <?php $price2 = '&yen;' . number_format($item['price2']);?>
-                <td class="price-table__price"><?php echo esc_html($price2);?></td>
+                <td class="price-table__price"><?php echo format_price_yen($item['price2']);?></td>
               </tr>
               <?php  endforeach;?>
             </table>
@@ -102,8 +100,7 @@
                   <span class="u-desktop"><?php echo esc_html($item['course3']);?></span>
                   <span class="u-mobile"><?php echo nl2br($item['course3']);?></span>
                 </td>
-                <?php $price3 = '&yen;' . number_format($item['price3']);?>
-                <td class="price-table__price"><?php echo esc_html($price3);?></td>
+                <td class="price-table__price"><?php echo format_price_yen($item['price3']);?></td>
               </tr>
               <?php  endforeach;?>
             </table>
@@ -133,8 +130,7 @@
                   <span class="u-desktop"><?php echo esc_html($item['course4']);?></span>
                   <span class="u-mobile"><?php echo nl2br($item['course4']);?></span>
                 </td>
-                <?php $price4 = '&yen;' . number_format($item['price4']);?>
-                <td class="price-table__price"><?php echo esc_html($price4);?></td>
+                <td class="price-table__price"><?php echo format_price_yen($item['price4']);?></td>
               </tr>
               <?php  endforeach;?>
             </table>

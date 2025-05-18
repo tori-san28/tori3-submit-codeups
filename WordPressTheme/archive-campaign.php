@@ -55,10 +55,8 @@
                     <div class="archive-campaign-card__price-wrapper">
                       <div class="archive-campaign-card__price-title">全部コミコミ(お一人様)</div>
                       <div class="archive-campaign-card__price-pre-after">
-                        <?php $price_pre = '&yen;' . number_format(get_field('price-pre')); ?>
-                        <?php $price_after = '&yen;' . number_format(get_field('price-after')); ?>
-                        <div class="archive-campaign-card__price-pre"><?php echo esc_html($price_pre); ?></div>
-                        <div class="archive-campaign-card__price-after"><?php echo esc_html($price_after); ?></div>
+                        <div class="archive-campaign-card__price-pre"><?php echo esc_html(format_price_yen(get_field('price-pre'))); ?></div>
+                        <div class="archive-campaign-card__price-after"><?php echo esc_html(format_price_yen(get_field('price-after'))); ?></div>
                       </div>
                       <div class="archive-campaign-card__texts u-desktop">
                         <div class="archive-campaign-card__text">

@@ -14,7 +14,7 @@
                 <div class="swiper-slide main-visual__item main-visual-card">
                  <?php if(!empty($item['picture'])):?>
                    <?php $image_full = wp_get_attachment_image_src($item['picture'] , 'full'); ?>
-                   <?php $image_large = wp_get_attachment_image_src($item['picture'] , 'large'); ?>
+                   <?php $image_large = wp_get_attachment_image_src($item['picture-sp'] , 'full'); ?>
                   <picture>
                     <source media='(min-width: 768px)' srcset='<?php echo $image_full[0]; ?>'>
                     <img src='<?php echo $image_large[0]; ?>' alt='swiper-picture'>
@@ -70,10 +70,8 @@
                       <div class="campaign-card__price-wrapper">
                         <div class="campaign-card__price-title">全部コミコミ(お一人様)</div>
                         <div class="campaign-card__price-pre-after">
-                          <?php $price_pre = '&yen;' . number_format(get_field('price-pre')); ?>
-                          <?php $price_after = '&yen;' . number_format(get_field('price-after')); ?>
-                          <div class="campaign-card__price-pre"><?php echo $price_pre; ?></div>
-                          <div class="campaign-card__price-after"><?php echo $price_after; ?></div>
+                          <div class="campaign-card__price-pre"><?php echo format_price_yen(get_field('price-pre')); ?></div>
+                          <div class="campaign-card__price-after"><?php echo format_price_yen(get_field('price-after')); ?></div>
                         </div>
                       </div>
                     </div>
@@ -278,7 +276,7 @@
                   <?php foreach($list1 as $item): ?>
                     <div class="price-item__list">
                       <dt class="price-item__term"><?php echo esc_html($item['course1']);?></dt>
-                      <dd class="price-item__description"><?php echo esc_html($item['price1']);?></dd>
+                      <dd class="price-item__description"><?php echo format_price_yen($item['price1']);?></dd>
                     </div>
                   <?php endforeach;?>  
                 </dl>
@@ -295,7 +293,7 @@
                 <?php foreach($list2 as $item): ?>
                   <div class="price-item__list">
                     <dt class="price-item__term"><?php echo esc_html($item['course2']);?></dt>
-                    <dd class="price-item__description"><?php echo esc_html($item['price2']);?></dd>
+                    <dd class="price-item__description"><?php echo format_price_yen($item['price2']);?></dd>
                   </div>
                 <?php endforeach;?>
                 </dl>
@@ -312,7 +310,7 @@
                 <?php foreach($list3 as $item): ?>
                   <div class="price-item__list">
                     <dt class="price-item__term"><?php echo esc_html($item['course3']);?></dt>
-                    <dd class="price-item__description"><?php echo esc_html($item['price3']);?></dd>
+                    <dd class="price-item__description"><?php echo format_price_yen($item['price3']);?></dd>
                   </div>
                 <?php endforeach;?>
                 </dl>
@@ -329,7 +327,7 @@
                 <?php foreach($list4 as $item): ?>
                   <div class="price-item__list">
                     <dt class="price-item__term"><?php echo esc_html($item['course4']);?></dt>
-                    <dd class="price-item__description"><?php echo esc_html($item['price4']);?></dd>
+                    <dd class="price-item__description"><?php echo format_price_yen($item['price4']);?></dd>
                   </div>
                   <?php endforeach;?>
                 </dl>

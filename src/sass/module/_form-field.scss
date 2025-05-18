@@ -113,7 +113,6 @@
   
 }
 
-
 .form-field__personal-info {
     margin-top: rem(36.8);
     text-align: center;
@@ -122,19 +121,10 @@
     }
 }
 
-.form-field__personal-info label {
-    //text-align: left;
-}
-
-// .form-field__personal-info label span {
-//     font-size: rem(14);
-//     line-height: calc(22 / 14);
-// }
-
 .form-field__button {
     margin-top: rem(25.6);
     text-align: center;
     @include mq(md) {
-        margin-top: rem(41.6);
+        margin-top: rem(43.2);
     }
 }
