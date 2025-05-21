@@ -72,22 +72,60 @@ function remove_dashboard_widgets() {
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 
+//カスタムダッシュボードウィジェットのメニュー
 //カスタムダッシュボードウィジェットでよく使うメニューへのリンクを表示
 function custom_dashboard_widget() {
-    wp_add_dashboard_widget(
-        'custom_quick_links', // ウィジェットID
-        'よく使うメニュー',   // タイトル
-        'custom_dashboard_widget_display' // 表示関数
+	wp_add_dashboard_widget(
+        'custom_quick_links_1', // ウィジェットID
+        'ブログのメニュー',   // タイトル
+        'custom_dashboard_widget_display_blog' // 表示関数
+    );
+	wp_add_dashboard_widget(
+        'custom_quick_links_campaign', // ウィジェットID
+        'キャンペーンのメニュー',   // タイトル
+        'custom_dashboard_widget_display_campaign' // 表示関数
+    );
+	wp_add_dashboard_widget(
+        'custom_quick_links_voice', // ウィジェットID
+        'お客様の声のメニュー',   // タイトル
+        'custom_dashboard_widget_display_voice' // 表示関数
+    );
+	wp_add_dashboard_widget(
+        'custom_quick_links_others', // ウィジェットID
+        'その他のメニュー',   // タイトル
+        'custom_dashboard_widget_display_others' // 表示関数
     );
 }
 
 add_action('wp_dashboard_setup', 'custom_dashboard_widget');
 
-function custom_dashboard_widget_display() {
+//ブログ
+function custom_dashboard_widget_display_blog() {
     echo '<ul>';
-	echo '<li><a href="' . admin_url('edit.php?post_type=post') . '">ブログ一覧</a></li>';
-	echo '<li><a href="' . admin_url('edit.php?post_type=campaign') . '">キャンペーン一覧</a></li>';
-	echo '<li><a href="' . admin_url('edit.php?post_type=voice') . '">お客様の声一覧</a></li>';
+	echo '<li><a href="' . admin_url('post-new.php?post_type=post') . '">新規投稿</a></li>';
+	echo '<li><a href="' . admin_url('edit.php?post_type=post') . '">一覧ページ</a></li>';
+	echo '</ul>';
+}
+
+//キャンペーン
+function custom_dashboard_widget_display_campaign() {
+    echo '<ul>';
+	echo '<li><a href="' . admin_url('post-new.php?post_type=campaign') . '">新規投稿</a></li>';
+	echo '<li><a href="' . admin_url('edit.php?post_type=campaign') . '">一覧ページ</a></li>';
+	echo '</ul>';
+}
+
+//お客様の声
+function custom_dashboard_widget_display_voice() {
+    echo '<ul>';
+	echo '<li><a href="' . admin_url('post-new.php?post_type=voice') . '">新規投稿</a></li>';
+	echo '<li><a href="' . admin_url('edit.php?post_type=voice') . '">一覧ページ</a></li>';
+	echo '</ul>';
+}
+
+//固定メニュー
+function custom_dashboard_widget_display_others() {
+    echo '<ul>';
 	echo '<li><a href="' . admin_url('post.php?post=' . 7 . '&action=edit') . '">トップページへのリンク（メインビュー写真の追加変更）</a></li>';
 	echo '<li><a href="' . admin_url('post.php?post=' . 11 . '&action=edit') . '">私たちについてページへのリンク（ギャラリーの写真追加）</a></li>';
 	echo '<li><a href="' . admin_url('post.php?post=' . 19 . '&action=edit') . '">料金ページへのリンク(新しい料金コースリストの追加)</a></li>';

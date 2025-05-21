@@ -33,7 +33,7 @@
               <h2 class="section-title-big__japanese">お問合せ</h2>
             </div>
             <div class="contact-link__link">
-              <a href="">ご予約・お問い合わせはコチラ</a>
+              <a href="<?php echo get_contactform_url();?>">ご予約・お問い合わせはコチラ</a>
             </div>
             <?php if(is_page('sitemap')):?>
               <div class="contact-link__button contact-link__button--sitemap">
@@ -116,10 +116,11 @@
                   </ul>
                 </li>
               </ul>
-              <ul class="footer-nav__items-quarter">
+              <ul class="footer-nav__items-quarter footer-nav__items-quarter--fifth">
                 <li class="footer-nav__item"><a href="<?php echo get_faq_url();?>" class="footer-nav__item-link">よくある質問</a></li>
                 <li class="footer-nav__item"><a href="<?php echo get_privacy_url();?>" class="footer-nav__item-link footer-nav__item-link--span">プライバシー<span>ポリシー</span></a></li>
                 <li class="footer-nav__item"><a href="<?php echo get_termsservice_url();?>" class="footer-nav__item-link">利用規約</a></li>
+                <li class="footer-nav__item"><a href="<?php echo get_sitemappage_url();?>" class="footer-nav__item-link">サイトマップ</a></li>
                 <li class="footer-nav__item"><a href="<?php echo get_contactform_url();?>" class="footer-nav__item-link">お問い合わせ</a></li>
               </ul>
             </div>

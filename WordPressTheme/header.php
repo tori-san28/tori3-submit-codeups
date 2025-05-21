@@ -106,10 +106,11 @@
                   <li class="sp-nav__sub-item"><a href="<?php echo get_price_url();?>#price-table3" class="js-page-link sp-nav__sub-item-link">ファンダイビング</a></li>
               </ul>
             </li>
-            <li class="sp-nav__item"><a href="<?php echo get_faq_url();?>" class="sp-nav__item-link">よくある質問</a></li>
-            <li class="sp-nav__item"><a href="<?php echo get_privacy_url();?>" class="sp-nav__item-link sp-nav__item-link--span">プライバシー<span>ポリシー</span></a></li>
-            <li class="sp-nav__item"><a href="<?php echo get_termsservice_url();?>" class="sp-nav__item-link">利用規約</a></li>
-            <li class="sp-nav__item"><a href="<?php echo get_contactform_url();?>" class="sp-nav__item-link">お問い合わせ</a></li>
+            <li class="sp-nav__item sp-nav__item"><a href="<?php echo get_faq_url();?>" class="sp-nav__item-link">よくある質問</a></li>
+            <li class="sp-nav__item sp-nav__item--fifth"><a href="<?php echo get_privacy_url();?>" class="sp-nav__item-link sp-nav__item-link--span">プライバシー<span>ポリシー</span></a></li>
+            <li class="sp-nav__item sp-nav__item--fifth"><a href="<?php echo get_termsservice_url();?>" class="sp-nav__item-link">利用規約</a></li>
+            <li class="sp-nav__item sp-nav__item--fifth"><a href="<?php echo get_sitemappage_url();?>" class="sp-nav__item-link">サイトマップ</a></li>
+            <li class="sp-nav__item sp-nav__item--fifth"><a href="<?php echo get_contactform_url();?>" class="sp-nav__item-link">お問い合わせ</a></li>
           </ul>
         </div>
       </div>

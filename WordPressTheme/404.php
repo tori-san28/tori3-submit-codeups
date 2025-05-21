@@ -7,7 +7,7 @@
           <h1 class="not-found__main-title">404</h1>
           <p class="not-found__text">申し訳ありません。<br>お探しのページが見つかりません。</p>
           <div class="not-found__button">
-            <a href="" class="main-button main-button--not-found">page TOP<span class="main-button__arrow main-button__arrow--not-found"></span></a>
+            <a href="<?php echo get_homepage_url();?>" class="main-button main-button--not-found">page TOP<span class="main-button__arrow main-button__arrow--not-found"></span></a>
           </div>
         </div>
       </div>

@@ -49,6 +49,13 @@
     }
 }
 
+.footer-nav__items-quarter--fifth {
+    gap:rem(18);
+    @include mq(md) {
+        gap:rem(22);
+    }
+}
+
 .footer-nav__item-link {
     font-size: rem(16);
     font-weight: $bold;
