@@ -2677,6 +2677,23 @@ a {
 	top: 0;
 }
 
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+.recaptcha-text {
+	font-size: 0.7em;
+	margin-top: 2em;
+}
+
+.recaptcha-text p:last-child {
+	margin-top: 0.5em;
+}
+
+.recaptcha-text p:last-child {
+	margin-top: 1em;
+}
+
 .section-title-big__english {
 	font-family: "Gotu", serif;
 	font-size: 5rem;

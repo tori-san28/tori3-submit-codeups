@@ -1,4 +1,4 @@
-<div class="archive-blog__sub-contents archive-blog-sub">
+<aside class="archive-blog__sub-contents archive-blog-sub">
     <?php
     $args = array(
     'post_type' => 'post',
@@ -133,4 +133,4 @@
         </ul>
     </div>
     </div>
-</div>
+</aside>

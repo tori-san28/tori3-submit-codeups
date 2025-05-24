@@ -223,6 +223,27 @@ add_filter('wpcf7_form_tag', 'custom_get_select_values', 10 ,2);
  }
  add_action( 'wp_footer', 'add_origin_thanks_page' );
 
+// OGP設定
+function add_ogp_meta_tags() {
+  if (is_singular()) {
+    global $post;
+    $og_title = get_the_title();
+    $og_description = get_the_excerpt();
+    $og_url = get_permalink();
+    $og_image = get_the_post_thumbnail_url($post->ID, 'full');
+
+    echo '<meta property="og:title" content="' . esc_attr($og_title) . '" />' . "\n";
+    echo '<meta property="og:description" content="' . esc_attr($og_description) . '" />' . "\n";
+    echo '<meta property="og:url" content="' . esc_url($og_url) . '" />' . "\n";
+    if ($og_image) {
+        echo '<meta property="og:image" content="' . esc_url($og_image) . '" />' . "\n";
+    }
+    echo '<meta property="og:type" content="article" />' . "\n";
+    echo '<meta property="og:site_name" content="' . get_bloginfo('name') . '" />' . "\n";
+  }
+}
+add_action('wp_head', 'add_ogp_meta_tags');
+
 //brタグを残したまま抜粋を行い文字数を指定できる独自関数 
 function get_custom_excerpt_with_br($content, $length = 80) {
     // <br> タグ以外のHTMLタグを除去

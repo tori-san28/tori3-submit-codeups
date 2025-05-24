@@ -1,0 +1,16 @@
+@use 'global' as *;
+
+.grecaptcha-badge { 
+    visibility: hidden; 
+}
+
+.recaptcha-text {
+    font-size: .7em;
+    margin-top: 2em;
+  }
+  .recaptcha-text p:last-child {
+    margin-top: .5em;
+  }
+  .recaptcha-text p:last-child {
+    margin-top: 1em;
+  }
