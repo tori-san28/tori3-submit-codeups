@@ -14,9 +14,6 @@
 
     <div class="contact-form page-contact-form common-back-fish">
       <div class="contact-form__inner inner">
-        <div class="contact-form__error">
-          <p>※必須項目が入力されていません。<span class="u-mobile"><br>　</span>入力してください。</p>
-        </div>
         <div class="contact-form__fields form-field">
           <?php echo do_shortcode('[contact-form-7 id="ac1edc1" title="お問い合せ"]')?>
         </div>

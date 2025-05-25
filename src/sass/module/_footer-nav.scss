@@ -50,9 +50,9 @@
 }
 
 .footer-nav__items-quarter--fifth {
-    gap:rem(18);
+    gap:rem(20.8);
     @include mq(md) {
-        gap:rem(22);
+        gap:rem(19.2);
     }
 }
 

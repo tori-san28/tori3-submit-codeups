@@ -244,19 +244,3 @@ jQuery(function ($) {
     }
   });
 });
-//コンタクトフォームのsendボタン押下
-jQuery(function ($) {
-    $( '#js-submit' ).on('click' , function(e) {
-     e.preventDefault();
-     $('.contact-form__error').removeClass("is-error");
-     $('form').find('.invalid').removeClass('invalid');
-     $('input[required]:invalid,textarea[required]:invalid').each(function(){// 項目が空だったらエラー表示をする
-      $(this).addClass('invalid');
-      $('.contact-form__error').addClass('is-error');
-      });
-    if($('.invalid').length == 0){
-      $('form').submit();
-      console.log('送信しました');
-    }
-  });
-});
