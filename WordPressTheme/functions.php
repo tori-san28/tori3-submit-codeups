@@ -135,6 +135,34 @@ function custom_dashboard_widget_display_others() {
 	echo '</ul>';
 }
 
+//その他のメニューの表示を変更
+function disable_editor_for_specific_page() {
+    // 固定ページのIDまたはスラッグを指定
+    $page_top = 7;
+    $page_aboutus = 11;
+    $page_faq = 27; 
+    $page_price = 19;
+    $page_privacy = 21;
+    $page_terms = 23;
+
+    $post_id = isset($_GET['post']) ? $_GET['post'] : (isset($_POST['post_ID']) ? $_POST['post_ID'] : null);
+
+    if ($post_id == $page_top || $post_id == $page_aboutus ||$post_id == $page_faq || $post_id == $page_price) {
+        remove_post_type_support('page', 'editor');
+    }
+    if ($post_id == $page_top || $post_id == $page_aboutus ||$post_id == $page_faq || $post_id == $page_price || $post_id == $page_privacy || $post_id == $page_terms) {
+        remove_post_type_support( 'page', 'comments' );
+        remove_post_type_support( 'page', 'author' );
+        remove_post_type_support( 'page', 'revisions' );
+        remove_post_type_support( 'page', 'page-attributes' );
+        remove_post_type_support( 'page', 'thumbnail' );
+    }
+}
+add_action('admin_init', 'disable_editor_for_specific_page');
+
+
+
+
 //各ページのurlを取得する関数
 function get_homepage_url() {return esc_url( home_url( '/' ) );}
 function get_campaign_url() {return esc_url( home_url( '/campaign/' ) );}
