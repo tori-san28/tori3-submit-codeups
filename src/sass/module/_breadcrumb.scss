@@ -7,7 +7,12 @@
 	list-style: none;
 }
 
-.breadcrumb__inner li:not(:last-of-type)::after {
-	content: "›";
- 	margin: 0 .6em; /* 記号の左右の余白 */
+.breadcrumb__inner span:first-of-type
+ {
+	margin-right: rem(3);
+}
+
+.breadcrumb__inner span:nth-of-type(n+2)
+ {
+	margin-left: rem(6);
 }

@@ -4,8 +4,8 @@
       <h1 class="sub-main-visual__title">Site MAP</h1>
       <div class="sub-main-visual__item">
         <picture>
-          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/policy-sub-mv-pc.png'>
-          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/policy-sub-mv-sp.png' alt='policy-mv'>
+          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/policy-sub-mv-pc.webp'>
+          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/policy-sub-mv-sp.webp' alt='policy-mv'>
         </picture>
       </div>
     </section>

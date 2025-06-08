@@ -4,8 +4,8 @@
       <h1 class="sub-main-visual__title">Voice</h1>
       <div class="sub-main-visual__item">
         <picture>
-          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/voice-sub-mv-pc.png'>
-          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/voice-sub-mv-sp.png' alt='voice-mv'>
+          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/voice-sub-mv-pc.webp'>
+          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/voice-sub-mv-sp.webp' alt='voice-mv'>
         </picture>
       </div>
     </section>
@@ -21,11 +21,13 @@
             'taxonomy' => 'voice_category',
             'hide_empty' => true,
             ));
-            foreach ( $terms as $term ) {
-              echo '<div><a class="business-types__type" href="' 
-              . esc_url( get_term_link( $term ) ) . '">' 
-              . esc_html( $term->name ) . '</a></div>';
-            }
+            if (!empty($terms) && !is_wp_error($terms)) : ?>
+              <?php foreach ($terms as $term) : ?>
+                  <a href="<?php echo esc_url(get_term_link($term)); ?>" class="business-types__type">
+                      <?php echo esc_html($term->name); ?>
+                  </a>
+              <?php endforeach; ?>
+            <?php endif; ?>  
           ?>  
        </div>
        <div class="archive-voice__cards voice-cards voice-cards--sub">
@@ -47,7 +49,7 @@
                 <div class="voice-card__age"><?php echo esc_html(get_field('age')).'('. esc_html(get_field('sex')).')'; ?></div>
                 <div class="voice-card__business-type"><?php echo esc_html($first_term); ?></div>
               </div>
-              <h2 class="voice-card__card-title"><?php echo esc_html(wp_trim_words(get_the_title(), 20,'')); ?></h2>
+              <h2 class="voice-card__card-title"><?php echo esc_html(get_the_title()); ?></h2>
             </div>
             <div class="voice-card__img">
               <?php if(has_post_thumbnail()): ?>
@@ -58,10 +60,7 @@
             </div>
           </div>
           <div class="voice-card__text">
-            <?php 
-            $post_content = get_the_content();
-            echo get_custom_excerpt_with_br($post_content,177);
-            ?>
+            <?php the_content();?>
           </div>
         </div>
         <?php endwhile;?>

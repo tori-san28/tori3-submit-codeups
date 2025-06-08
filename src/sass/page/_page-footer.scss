@@ -6,37 +6,3 @@
     margin-top: rem(164);
    }
 }
-
-.page-footer--contactform {
-   margin-top: rem(42);
-   @include mq(md) {
-      margin-top: rem(70.4);
-   }
-}
-
-.page-footer--contact-thanks {
-   margin-top: rem(166.4);
-   @include mq(md) {
-    margin-top: rem(116.8);
-   }
-}
-
-.page-footer--pricacy {
-   margin-top: rem(104);
-   @include mq(md) {
-    margin-top: rem(156);
-   }
-}
-
-.page-footer--sitemap {
-   margin-top: rem(104);
-   @include mq(md) {
-    margin-top: rem(160);
-   }
-}
-.page-footer--not-found {
-   margin-top: rem(-0.6);
-   @include mq(md) {
-    margin-top: rem(-0.6);
-   }
-}

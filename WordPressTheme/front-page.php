@@ -133,7 +133,7 @@
         </div>
         <div class="information__contents">
           <div class="information__img colorbox">
-            <img src="<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/information-pc.png" alt="information-img">
+            <img src="<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/information-pc.webp" alt="information-img">
           </div>
           <div class="information__sub-contents">
             <div class="information__sub-small-contents">
@@ -337,8 +337,8 @@
           <div class="price__img-outer">
               <div class="price__img-inner colorbox">
                 <picture>
-                  <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/price-pc.png'>
-                  <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/price-sp.png' alt='price-img'>
+                  <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/price-pc.webp'>
+                  <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/price-sp.webp' alt='price-img'>
                 </picture>
               </div>
           </div>

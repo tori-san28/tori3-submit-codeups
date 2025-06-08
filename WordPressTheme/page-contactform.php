@@ -4,8 +4,8 @@
       <h1 class="sub-main-visual__title">Contact</h1>
       <div class="sub-main-visual__item">
         <picture>
-          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/contactform-sub-mv-pc.png'>
-          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/contactform-sub-mv-sp.png' alt='contact-mv'>
+          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/contactform-sub-mv-pc.webp'>
+          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/contactform-sub-mv-sp.webp' alt='contact-mv'>
         </picture>
       </div>
     </section>

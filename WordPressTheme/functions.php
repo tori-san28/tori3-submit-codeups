@@ -58,9 +58,6 @@ function Change_menulabel() {
 add_action( 'init', 'Change_objectlabel' );
 add_action( 'admin_menu', 'Change_menulabel' );
 
-//管理バー（Admin Bar）を非表示
-add_filter('show_admin_bar', '__return_false');
-
 //wordpressの管理画面で不要な画面を非表示
 function remove_dashboard_widgets() {
    	remove_meta_box( 'dashboard_site_health', 'dashboard', 'normal' ); // サイトヘルスステータス

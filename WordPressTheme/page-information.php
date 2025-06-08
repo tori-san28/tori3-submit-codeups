@@ -3,8 +3,8 @@
       <h1 class="sub-main-visual__title">Information</h1>
       <div class="sub-main-visual__item">
         <picture>
-          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info-sub-mv-pc.png'>
-          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info-sub-mv-sp.png' alt='aboutus-mv'>
+          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info-sub-mv-pc.webp'>
+          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info-sub-mv-sp.webp' alt='aboutus-mv'>
         </picture>
       </div>
     </section>
@@ -29,8 +29,8 @@
             </div>
             <div class="archive-information__img">
               <picture>
-                <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info1-pc.png'>
-                <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info1-sp.png' alt='info1'>
+                <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info1-pc.webp'>
+                <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info1-sp.webp' alt='info1'>
               </picture>
             </div>
           </div>
@@ -46,8 +46,8 @@
             </div>
             <div class="archive-information__img">
               <picture>
-                <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info2-pc.png'>
-                <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info2-sp.png' alt='info2'>
+                <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info2-pc.webp'>
+                <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info2-sp.webp' alt='info2'>
               </picture>
             </div>
           </div>
@@ -63,8 +63,8 @@
             </div>
             <div class="archive-information__img">
               <picture>
-                <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info3-pc.png'>
-                <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info3-sp.png' alt='info3'>
+                <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info3-pc.webp'>
+                <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/info3-sp.webp' alt='info3'>
               </picture>
             </div>
           </div>

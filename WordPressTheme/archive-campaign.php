@@ -4,8 +4,8 @@
       <h1 class="sub-main-visual__title">Campaign</h1>
       <div class="sub-main-visual__item">
         <picture>
-          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/campaign-sub-mv-pc.png'>
-          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/campaign-sub-mv-sp.png' alt='campaign-mv'>
+          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/campaign-sub-mv-pc.webp'>
+          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/campaign-sub-mv-sp.webp' alt='campaign-mv'>
         </picture>
       </div>
     </section>
@@ -21,11 +21,13 @@
             'taxonomy' => 'campaign_category',
             'hide_empty' => true,
             ));
-            foreach ( $terms as $term ) {
-              echo '<div><a class="business-types__type" href="' 
-              . esc_url( get_term_link( $term ) ) . '">' 
-              . esc_html( $term->name ) . '</a></div>';
-            }
+            if (!empty($terms) && !is_wp_error($terms)) : ?>
+              <?php foreach ($terms as $term) : ?>
+                  <a href="<?php echo esc_url(get_term_link($term)); ?>" class="business-types__type">
+                      <?php echo esc_html($term->name); ?>
+                  </a>
+              <?php endforeach; ?>
+            <?php endif; ?>  
           ?>  
         </div>
         <div class="archive-campaign__items archive-campaign-cards">

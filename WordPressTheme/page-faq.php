@@ -4,8 +4,8 @@
       <h1 class="sub-main-visual__title">FAQ</h1>
       <div class="sub-main-visual__item">
         <picture>
-          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/faq-sub-mv-pc.png'>
-          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/faq-sub-mv-sp.png' alt='faq-mv'>
+          <source media='(min-width: 768px)' srcset='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/faq-sub-mv-pc.webp'>
+          <img src='<?php echo esc_url(get_theme_file_uri());?>/assets/images/common/faq-sub-mv-sp.webp' alt='faq-mv'>
         </picture>
       </div>
     </section>
