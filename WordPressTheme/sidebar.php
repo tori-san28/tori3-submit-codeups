@@ -103,34 +103,45 @@
     </div>
 
     <div class="archive-blog-sub__archive-news blog-archive-news">
-    <h2 class="blog-archive-news__title blog-sub-title">アーカイブ</h2>
-    <div class="blog-archive-news__lists blog-archive-lists">
-        <?php
-        $year_prev = null;
-        $months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month ,
-                                    YEAR( post_date ) AS year,
-                                    COUNT( id ) as post_count FROM $wpdb->posts
-                                    WHERE post_status = 'publish' and post_date <=now( )
-                                    and post_type = 'post' GROUP BY month , year
-                                    ORDER BY post_date DESC");
-        foreach($months as $month) :
-        $year_current = $month->year;
-        if ($year_current != $year_prev){
-            if ($year_prev != null){ ?>
-            <?php } ?>
-            <div class="blog-archive-lists__list blog-archive-list">  
-            <div class="blog-archive-list__year"><?php echo $month->year; ?>年</div>
-            <ul class="blog-archive-list__months">
-                <?php } ?>
-                <li class="blog-archive-list__month">
-                <a href="<?php bloginfo('url') ?>/<?php echo $month->year; ?>/<?php echo date("m", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>">
-                <?php echo date("n", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>月
-                </a>
-                </li>
-                <?php $year_prev = $year_current; ?>
-            </div>
-        <?php endforeach; ?>
-        </ul>
-    </div>
+        <h2 class="blog-archive-news__title blog-sub-title">アーカイブ</h2>
+        <div class="blog-archive-news__lists blog-archive-lists">
+            <?php
+            $year_prev = null;
+            $months = $wpdb->get_results("
+                SELECT DISTINCT MONTH(post_date) AS month,
+                                YEAR(post_date) AS year,
+                                COUNT(id) AS post_count
+                FROM $wpdb->posts
+                WHERE post_status = 'publish'
+                AND post_date <= NOW()
+                AND post_type = 'post'
+                GROUP BY month, year
+                ORDER BY post_date DESC
+            ");
+
+            foreach ($months as $month):
+                $year_current = $month->year;
+                if ($year_current != $year_prev):
+                    if ($year_prev !== null):
+                        echo '</ul></div>'; // 前の年を閉じる
+                    endif;
+            ?>
+            <div class="blog-archive-lists__list blog-archive-list">
+                <div class="blog-archive-list__year"><?php echo esc_html($month->year); ?>年</div>
+                <ul class="blog-archive-list__months">
+            <?php
+                endif;
+            ?>
+                    <li class="blog-archive-list__month">
+                        <a href="<?php echo esc_url(get_bloginfo('url') . '/' . $month->year . '/' . date('m', mktime(0, 0, 0, $month->month, 1, $month->year))); ?>">
+                            <?php echo esc_html(date('n', mktime(0, 0, 0, $month->month, 1, $month->year))); ?>月
+                        </a>
+                    </li>
+            <?php
+                $year_prev = $year_current;
+            endforeach;
+            ?>
+            </ul></div> <!-- 最後の年を閉じる -->
+        </div>
     </div>
 </aside>
