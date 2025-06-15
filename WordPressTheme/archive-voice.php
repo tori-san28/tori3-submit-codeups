@@ -27,8 +27,7 @@
                       <?php echo esc_html($term->name); ?>
                   </a>
               <?php endforeach; ?>
-            <?php endif; ?>  
-          ?>  
+            <?php endif; ?>
        </div>
        <div class="archive-voice__cards voice-cards voice-cards--sub">
         <?php if(have_posts()):?>
