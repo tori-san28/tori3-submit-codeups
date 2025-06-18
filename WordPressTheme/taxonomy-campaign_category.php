@@ -60,8 +60,13 @@
                     <div class="archive-campaign-card__price-wrapper">
                       <div class="archive-campaign-card__price-title">全部コミコミ(お一人様)</div>
                       <div class="archive-campaign-card__price-pre-after">
-                        <div class="archive-campaign-card__price-pre"><?php echo format_price_yen(get_field('price-pre')) ?></div>
-                        <div class="archive-campaign-card__price-after"><?php echo format_price_yen(get_field('price-after')); ?></div>
+                         <?php 
+                         $price =get_field('price');
+                         $price1 = format_price_yen($price['price1']);
+                         $price2 = format_price_yen($price['price2']);
+                        ?>
+                        <div class="archive-campaign-card__price-pre"><?php echo esc_html($price1);?></div>
+                        <div class="archive-campaign-card__price-after"><?php echo esc_html($price2);?></div>
                       </div>
                       <div class="archive-campaign-card__texts u-desktop">
                         <div class="archive-campaign-card__text">
@@ -70,7 +75,16 @@
                            echo get_custom_excerpt_with_br($post_content,154);
                            ?>
                         </div>
-                        <div class="archive-campaign-card__dates"><?php echo get_field('campaign-dates'); ?></div>
+                        <div class="archive-campaign-card__dates">
+                          <?php
+                          $start_dates =get_field('campaign-dates'); 
+                          $start_date_raw = $start_dates['campaign-start']; // 例: 2025/6/1
+                          $end_date_raw   = $start_dates['campaign-end'];   // 例: 2025/6/10
+                          $start_date = $start_date_raw;
+                          $end_date = format_end_date($start_date_raw,$end_date_raw);
+                          echo esc_html($start_date) . " - " . esc_html($end_date);
+                          ?>
+                        </div>
                         <div class="archive-campaign-card__link">ご予約・お問い合わせはコチラ</div>
                       </div>
                     </div>

@@ -70,8 +70,13 @@
                       <div class="campaign-card__price-wrapper">
                         <div class="campaign-card__price-title">全部コミコミ(お一人様)</div>
                         <div class="campaign-card__price-pre-after">
-                          <div class="campaign-card__price-pre"><?php echo format_price_yen(get_field('price-pre')); ?></div>
-                          <div class="campaign-card__price-after"><?php echo format_price_yen(get_field('price-after')); ?></div>
+                          <?php 
+                          $price =get_field('price');
+                          $price1 = format_price_yen($price['price1']);
+                          $price2 = format_price_yen($price['price2']);
+                          ?>
+                          <div class="campaign-card__price-pre"><?php echo esc_html($price1);?></div>
+                          <div class="campaign-card__price-after"><?php echo esc_html($price2);?></div>
                         </div>
                       </div>
                     </div>

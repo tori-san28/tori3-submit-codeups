@@ -69,6 +69,12 @@ function remove_dashboard_widgets() {
 }
 add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 
+/* ダッシュボードにスタイルシートを読み込む */
+  function custom_admin_enqueue(){
+    wp_enqueue_style('custom_admin_enqueue', get_theme_file_uri('/assets/css/dashboard_styles.css'), false);
+  }
+  add_action( 'admin_enqueue_scripts', 'custom_admin_enqueue' );
+
 //カスタムダッシュボードウィジェットのメニュー
 //カスタムダッシュボードウィジェットでよく使うメニューへのリンクを表示
 function custom_dashboard_widget() {
@@ -157,9 +163,6 @@ function disable_editor_for_specific_page() {
 }
 add_action('admin_init', 'disable_editor_for_specific_page');
 
-
-
-
 //各ページのurlを取得する関数
 function get_homepage_url() {return esc_url( home_url( '/' ) );}
 function get_campaign_url() {return esc_url( home_url( '/campaign/' ) );}
@@ -180,6 +183,23 @@ function format_price_yen($price) {
         return $price; // 数字でなければそのまま返す
     }
     return esc_html('&yen;' . number_format($price));
+}
+
+// 開始日と終了日を比較し、終了日を整形する関数　日付はY/n/j形式
+function format_end_date($start_date, $end_date) {
+    // 日付をDateTimeオブジェクトに変換
+    $start = DateTime::createFromFormat('Y/n/j', $start_date);
+    $end = DateTime::createFromFormat('Y/n/j', $end_date);
+    // 無効な日付の場合はfalseを返す
+    if (!$start || !$end) {
+        return false;
+    }
+    // 年が同じなら m/d を返す
+    if ($start->format('Y') === $end->format('Y')) {
+        return $end->format('n/j');
+    }
+    // 年が異なるなら yyyy/m/d を返す
+    return $end->format('Y/n/j');
 }
 
 // home.php（つまりブログのホームページ）に表示される投稿数（記事数）を変更
