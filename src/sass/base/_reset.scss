@@ -82,12 +82,12 @@ img:not([alt]) {
   filter: blur(10px);
 }
 
-
 /* フォームリセット */
+/*textareaは削除*/
 input,
 button,
-select,
-textarea {
+select
+ {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

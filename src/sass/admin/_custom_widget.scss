@@ -1,0 +1,47 @@
+@use 'global' as *;
+
+/*=================================================================
+      【管理画面】アイコン付きの直接リンク
+==================================================================*/
+
+.custom_widget{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(20);
+  text-align: center;
+}
+
+.custom_widget a{
+  text-decoration: none;
+}
+
+.custom_widget li{
+  border: rem(1) solid #A2C2C4;
+  border-radius: rem(30);
+  padding: rem(10) 0;
+}
+
+.custom_widget li p{
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.custom_widget .dashicons{
+  width: auto;
+  font-size: rem(40);
+  margin-top: rem(4);
+}
+
+.custom_widget .post-name {
+  margin-top: rem(32);
+  margin-bottom: rem(4);
+}
+
+.custom_widget .post-name--2lines {
+  margin-top: rem(22);
+  margin-bottom: rem(0);
+}
+
+

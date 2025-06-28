@@ -71,72 +71,47 @@ add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 
 /* ダッシュボードにスタイルシートを読み込む */
   function custom_admin_enqueue(){
-    wp_enqueue_style('custom_admin_enqueue', get_theme_file_uri('/assets/css/dashboard_styles.css'), false);
+    wp_enqueue_style('custom_admin_enqueue', get_theme_file_uri('/assets/css/style.css'), false);
   }
   add_action( 'admin_enqueue_scripts', 'custom_admin_enqueue' );
 
 //カスタムダッシュボードウィジェットのメニュー
 //カスタムダッシュボードウィジェットでよく使うメニューへのリンクを表示
 function custom_dashboard_widget() {
-	wp_add_dashboard_widget(
+    wp_add_dashboard_widget(
         'custom_quick_links_1', // ウィジェットID
-        'ブログのメニュー',   // タイトル
-        'custom_dashboard_widget_display_blog' // 表示関数
+        '新規投稿メニュー',   // タイトル
+        'custom_dashboard_widget_display_new_summary' // 表示関数
     );
-	wp_add_dashboard_widget(
-        'custom_quick_links_campaign', // ウィジェットID
-        'キャンペーンのメニュー',   // タイトル
-        'custom_dashboard_widget_display_campaign' // 表示関数
-    );
-	wp_add_dashboard_widget(
-        'custom_quick_links_voice', // ウィジェットID
-        'お客様の声のメニュー',   // タイトル
-        'custom_dashboard_widget_display_voice' // 表示関数
-    );
-	wp_add_dashboard_widget(
-        'custom_quick_links_others', // ウィジェットID
-        'その他のメニュー',   // タイトル
-        'custom_dashboard_widget_display_others' // 表示関数
+    wp_add_dashboard_widget(
+        'custom_quick_links_lists', // ウィジェットID
+        '固定ページメニュー',   // タイトル
+        'custom_dashboard_widget_display_fixed_lists' // 表示関数
     );
 }
 
 add_action('wp_dashboard_setup', 'custom_dashboard_widget');
 
-//ブログ
-function custom_dashboard_widget_display_blog() {
-    echo '<ul>';
-	echo '<li><a href="' . admin_url('post-new.php?post_type=post') . '">新規投稿</a></li>';
-	echo '<li><a href="' . admin_url('edit.php?post_type=post') . '">一覧ページ</a></li>';
-	echo '</ul>';
-}
+//新規投稿サマリー
+function custom_dashboard_widget_display_new_summary() {
+     echo '<ul class="custom_widget">
+            <a href="post-new.php?post_type=post"><li><p>ブログ</p><div class="dashicons dashicons-edit"></div><p class="post-name"><span>新しい記事</span></p></li></a>
+            <a href="post-new.php?post_type=campaign"><li><p>キャンペーン</p><div class="dashicons dashicons-star-filled"></div><p class="post-name"><span>新しい記事</span></p></li></a>           
+            <a href="post-new.php?post_type=voice"><li><p>お客様の声</p><div class="dashicons dashicons-admin-users"></div><p class="post-name"><span>新しい記事</span></p></li></a>
+            </ul>'; 
+    }
 
-//キャンペーン
-function custom_dashboard_widget_display_campaign() {
-    echo '<ul>';
-	echo '<li><a href="' . admin_url('post-new.php?post_type=campaign') . '">新規投稿</a></li>';
-	echo '<li><a href="' . admin_url('edit.php?post_type=campaign') . '">一覧ページ</a></li>';
-	echo '</ul>';
-}
-
-//お客様の声
-function custom_dashboard_widget_display_voice() {
-    echo '<ul>';
-	echo '<li><a href="' . admin_url('post-new.php?post_type=voice') . '">新規投稿</a></li>';
-	echo '<li><a href="' . admin_url('edit.php?post_type=voice') . '">一覧ページ</a></li>';
-	echo '</ul>';
-}
-
-//固定メニュー
-function custom_dashboard_widget_display_others() {
-    echo '<ul>';
-	echo '<li><a href="' . admin_url('post.php?post=' . 7 . '&action=edit') . '">トップページへのリンク（メインビュー写真の追加変更）</a></li>';
-	echo '<li><a href="' . admin_url('post.php?post=' . 11 . '&action=edit') . '">私たちについてページへのリンク（ギャラリーの写真追加）</a></li>';
-	echo '<li><a href="' . admin_url('post.php?post=' . 19 . '&action=edit') . '">料金ページへのリンク(新しい料金コースリストの追加)</a></li>';
-	echo '<li><a href="' . admin_url('post.php?post=' . 27 . '&action=edit') . '">FAQページへのリンク(新しい質問と回答の追加)</a></li>';
-    echo '<li><a href="' . admin_url('post.php?post=' . 21 . '&action=edit') . '">プライバシーポリシーページへのリンク</a></li>';
-	echo '<li><a href="' . admin_url('post.php?post=' . 23 . '&action=edit') . '">利用規約ページへのリンク</a></li>';
-	echo '</ul>';
-}
+//固定ページ（リスト）
+function custom_dashboard_widget_display_fixed_lists() {
+     echo '<ul class="custom_widget">
+            <a href="post.php?post=27&action=edit"><li><p>FAQページ</p><div class="dashicons dashicons-list-view"></div><p class="post-name"><span>リストの追加</span></p></li></a>
+            <a href="post.php?post=19&action=edit"><li><p>料金ページ</p><div class="dashicons dashicons-list-view"></div><p class="post-name post-name--2lines"><span>コース名変更<br>価格リスト追加</span></p></li></a>
+            <a href="post.php?post=7&action=edit"><li><p>トップページ</p><div class="dashicons dashicons-format-gallery"></div><p class="post-name post-name--2lines"><span>メインビュー写真<br>追加変更</span></p></li></a>
+            <a href="post.php?post=11&action=edit"><li><p>私たちについて</p><div class="dashicons dashicons-format-gallery"></div><p class="post-name post-name--2lines"><span>ギャラリー写真<br>追加変更</span></p></li></a>
+            <a href="post.php?post=21&action=edit"><li><p>プライバシーポリシー</p><div class="dashicons dashicons-edit-page"></div><p class="post-name"><span>規約の変更</span></p></li></a>
+            <a href="post.php?post=23&action=edit"><li><p>利用規約</p><div class="dashicons dashicons-edit-page"></div><p class="post-name"><span>規約の変更</span></p></li></a>
+           </ul>';
+    }
 
 //その他のメニューの表示を変更
 function disable_editor_for_specific_page() {
