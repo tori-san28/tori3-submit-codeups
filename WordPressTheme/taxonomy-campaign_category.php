@@ -89,7 +89,7 @@
                       </div>
                     </div>
                     <div class="archive-campaign-card__button u-desktop">
-                      <a href="page-contactform.html" class="main-button">contact us<span class="main-button__arrow"></span></a>
+                      <a href="<?php echo get_contactform_url();?>" class="main-button">contact us<span class="main-button__arrow"></span></a>
                     </div>
                   </div>
                 </div>

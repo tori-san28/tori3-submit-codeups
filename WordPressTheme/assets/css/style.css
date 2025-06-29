@@ -1760,8 +1760,8 @@ a {
 .form-field__item dd input,
 .form-field__item dd textarea {
 	border: 0.0625rem solid #408F95;
-	line-height: 1.1875;
-	padding: 0.5rem 0 0.73rem 1rem;
+	line-height: 1.325;
+	padding: 0.5rem 0 0.6rem 1rem;
 	width: 100%;
 }
 
