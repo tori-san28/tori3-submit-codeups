@@ -1765,8 +1765,8 @@ a {
 	width: 100%;
 }
 
-.form-field__item dd input.invalid,
-.form-field__item dd textarea.invalid {
+.form-field__item dd input.wpcf7-not-valid,
+.form-field__item dd textarea.wpcf7-not-valid {
 	background-color: rgba(201, 72, 0, 0.2);
 	border: #C94800;
 }
