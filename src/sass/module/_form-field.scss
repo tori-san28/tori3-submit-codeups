@@ -81,8 +81,8 @@
     }
 }
 
-.form-field__item dd input,
-.form-field__item dd textarea
+.form-field__item dd span input,
+.form-field__item dd span textarea
 {
     width: 100%;
     border:rem(1) solid $c-accent;
@@ -90,10 +90,10 @@
     padding: rem(8) 0 rem(9.6) rem(16);
 }
 
-.form-field__item dd input.wpcf7-not-valid,
-.form-field__item dd textarea.wpcf7-not-valid {
-    border: $c-red;
-    background-color:rgba(201, 72, 0, 0.20);
+.form-field__item dd span input.wpcf7-not-valid,
+.form-field__item dd span textarea.wpcf7-not-valid {
+    border: $c-red !important;
+    background-color:rgba(201, 72, 0, 0.20) !important;
 }
 
 .form-field__item dd textarea {

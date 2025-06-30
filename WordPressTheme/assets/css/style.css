@@ -1757,18 +1757,18 @@ a {
 	padding-bottom: 1.5rem;
 }
 
-.form-field__item dd input,
-.form-field__item dd textarea {
+.form-field__item dd span input,
+.form-field__item dd span textarea {
 	border: 0.0625rem solid #408F95;
 	line-height: 1.325;
 	padding: 0.5rem 0 0.6rem 1rem;
 	width: 100%;
 }
 
-.form-field__item dd input.wpcf7-not-valid,
-.form-field__item dd textarea.wpcf7-not-valid {
-	background-color: rgba(201, 72, 0, 0.2);
-	border: #C94800;
+.form-field__item dd span input.wpcf7-not-valid,
+.form-field__item dd span textarea.wpcf7-not-valid {
+	background-color: rgba(201, 72, 0, 0.2) !important;
+	border: #C94800 !important;
 }
 
 .form-field__item dd textarea {
