@@ -71,7 +71,7 @@ add_action('wp_dashboard_setup', 'remove_dashboard_widgets');
 
 /* ダッシュボードにスタイルシートを読み込む */
   function custom_admin_enqueue(){
-    wp_enqueue_style('custom_admin_enqueue', get_theme_file_uri('/assets/css/admin.css'), false);
+    wp_enqueue_style('custom_admin_enqueue', get_theme_file_uri('/admin/admin.css'), false);
   }
   add_action( 'admin_enqueue_scripts', 'custom_admin_enqueue' );
 
