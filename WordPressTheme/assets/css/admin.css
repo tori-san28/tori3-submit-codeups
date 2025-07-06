@@ -1,0 +1,104 @@
+.wp-admin{
+  background-color: #F2F2F2;
+  color:#2271b1;
+}
+
+/*=================================================================
+      【管理画面】ACFカスタムフィールドカスタマイズ
+==================================================================*/
+/* ACF説明文 */
+.acf-fields .acf-field p.description{
+  color: #C94800;
+}
+
+/*=================================================================
+      【管理画面】アイコン付きの直接リンク
+==================================================================*/
+
+.custom_widget{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.custom_widget a{
+  text-decoration: none;
+}
+
+.custom_widget li{
+  border: 1px solid #A2C2C4;
+  border-radius: 30px;
+  padding: 10px 0;
+}
+
+.custom_widget li p{
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.custom_widget .dashicons{
+  width: auto;
+  font-size: 40px;
+  margin-top: 4px;
+}
+
+.custom_widget .post-name {
+  margin-top: 32px;
+  margin-bottom:4px;
+}
+
+.custom_widget .post-name--2lines {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+
+/*=================================================================
+      【管理画面】SCFカスタムフィールドカスタマイズ
+==================================================================*/
+/* SCFフィールド[ラベル] */
+.smart-cf-meta-box-table th{
+  font-weight: bold;
+  color:#796A64;
+}
+
+/* SCFフィールド[手順]文 */
+.smart-cf-meta-box-table td .instruction{
+  color: red;
+}
+
+/* 追加ボタンのカスタマイズ*/
+.smart-cf-meta-box-table .dashicons-plus-alt:before {
+  color:#408F95;
+}
+
+/* SCF繰り返し追加ボタン説明 */
+.smart-cf-meta-box-table .dashicons-plus-alt::after{
+  content: "追加";
+  margin-left: 5px;
+  font-size: 10px;
+  color: #408F95;
+  vertical-align: super;
+}
+
+/* 削除ボタンのカスタマイズ*/
+.smart-cf-meta-box-table .dashicons-dismiss:before {
+  color: #C94800;
+}
+
+/* SCF繰り返し削除ボタン説明 */
+.smart-cf-meta-box-table .dashicons-dismiss::after{
+  content: "削除";
+  margin-left: 5px;
+  font-size: 10px;
+  color:  #C94800;
+  vertical-align: super;
+}
+
+.smart-cf-meta-box-table {
+  border:1px;
+}
+
+
